@@ -1,9 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { getAllPosts } from "@/lib/content";
-import { PostCard } from "@/components/blog/PostCard";
-import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/blog")({
+  component: BlogLayout,
+});
+
+function BlogLayout() {
+  return <Outlet />;
+}
   head: () => ({
     meta: [
       { title: "All Articles — Home Appliance Cost Guide" },
