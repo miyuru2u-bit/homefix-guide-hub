@@ -4,7 +4,7 @@ slug: "refrigerator-repair-cost"
 metaDescription: "Typical 2026 refrigerator repair costs by part — compressor, evaporator fan, control board — plus when it's smarter to replace the fridge."
 category: "repair-cost-guides"
 tags: ["refrigerator", "repair cost", "compressor", "appliance repair"]
-date: "2026-05-14"
+date: "2026-05-28"
 author: "Editorial Team"
 image: "fridge"
 imageAlt: "Hands holding a multimeter next to an open refrigerator panel"

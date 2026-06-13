@@ -4,7 +4,7 @@ slug: "repair-or-replace-appliance-guide"
 metaDescription: "Repair or replace your appliance? Use the 50% rule, age guidelines, energy-cost math, and a step-by-step checklist to make the smart, cost-effective choice."
 category: "repair-vs-replace"
 tags: ["repair vs replace", "appliance lifespan", "repair cost", "50% rule"]
-date: "2026-06-10"
+date: "2026-06-12"
 author: "Editorial Team"
 image: "repair-or-replace"
 imageAlt: "Technician evaluating an appliance for repair or replacement"

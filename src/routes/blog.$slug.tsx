@@ -95,7 +95,7 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function ArticlePage() {
-  const post = Route.useLoaderData();
+  const post = Route.useLoaderData() as import("@/lib/content").Post;
   const category = getCategory(post.category);
   const related = getRelatedPosts(post);
 
@@ -212,18 +212,24 @@ function ArticlePage() {
         {/* Sidebar */}
         <aside className="mt-12 hidden lg:mt-0 lg:block">
           <div className="sticky top-24 space-y-6">
-            <div className="rounded-xl border border-border bg-card p-5">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                In this guide
-              </p>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-ink-soft hover:text-primary">Quick answer</a></li>
-                <li><a href="#" className="text-ink-soft hover:text-primary">Cost table</a></li>
-                <li><a href="#" className="text-ink-soft hover:text-primary">When to call a pro</a></li>
-                <li><a href="#" className="text-ink-soft hover:text-primary">Repair vs replace</a></li>
-                <li><a href="#" className="text-ink-soft hover:text-primary">Warranty notes</a></li>
-              </ul>
-            </div>
+            {post.toc.filter((t) => t.level === 2).length > 0 && (
+              <div className="rounded-xl border border-border bg-card p-5">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  In this guide
+                </p>
+                <ul className="space-y-2 text-sm">
+                  {post.toc
+                    .filter((t) => t.level === 2)
+                    .map((t) => (
+                      <li key={t.id}>
+                        <a href={`#${t.id}`} className="text-ink-soft hover:text-primary">
+                          {t.text}
+                        </a>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            )}
             <AdSlot label="Advertisement — Sidebar" className="min-h-[600px]" />
           </div>
         </aside>

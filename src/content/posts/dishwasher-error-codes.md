@@ -4,7 +4,7 @@ slug: "dishwasher-error-codes"
 metaDescription: "Decode the most common dishwasher error codes across Bosch, Whirlpool, KitchenAid, and GE — plus what the repair typically costs."
 category: "appliance-error-codes"
 tags: ["dishwasher", "error codes", "troubleshooting"]
-date: "2026-03-18"
+date: "2026-05-20"
 author: "Editorial Team"
 image: "dishwasher"
 imageAlt: "Modern dishwasher with the door partially open showing the racks"

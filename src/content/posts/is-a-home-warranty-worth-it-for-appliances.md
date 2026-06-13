@@ -4,7 +4,7 @@ slug: "is-a-home-warranty-worth-it-for-appliances"
 metaDescription: "Is a home warranty worth it for appliances? See real cost math, what's covered, when it pays off, and when to skip it. A clear 2026 guide for US homeowners."
 category: "home-warranty-guides"
 tags: ["home warranty", "appliance coverage", "repair costs", "homeowner tips"]
-date: "2026-06-10"
+date: "2026-06-09"
 author: "Editorial Team"
 image: "home-warranty"
 imageAlt: "Homeowner comparing appliance repair costs"

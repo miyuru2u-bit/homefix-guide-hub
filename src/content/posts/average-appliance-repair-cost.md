@@ -4,7 +4,7 @@ slug: "average-appliance-repair-cost"
 metaDescription: "What does appliance repair cost in 2026? See average repair prices for refrigerators, washers, dryers, dishwashers, and ovens, plus what drives the bill and how to save."
 category: "repair-cost-guides"
 tags: ["appliance repair cost", "repair prices", "refrigerator", "washer", "dryer"]
-date: "2026-06-10"
+date: "2026-06-08"
 author: "Editorial Team"
 image: "average-repair-cost"
 imageAlt: "Appliance repair invoice with cost breakdown"

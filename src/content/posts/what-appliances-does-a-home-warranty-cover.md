@@ -4,7 +4,7 @@ slug: "what-appliances-does-a-home-warranty-cover"
 metaDescription: "What appliances does a home warranty cover? See the standard covered appliances, common add-ons, what's excluded, how coverage caps work, and how to read your contract."
 category: "home-warranty-guides"
 tags: ["home warranty", "covered appliances", "coverage limits", "add-ons"]
-date: "2026-06-10"
+date: "2026-06-11"
 author: "Editorial Team"
 image: "what-home-warranty-covers"
 imageAlt: "Kitchen appliances covered by a home warranty"
