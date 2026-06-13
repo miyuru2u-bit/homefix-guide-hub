@@ -95,7 +95,7 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function ArticlePage() {
-  const post = Route.useLoaderData();
+  const post = Route.useLoaderData() as import("@/lib/content").Post;
   const category = getCategory(post.category);
   const related = getRelatedPosts(post);
 
