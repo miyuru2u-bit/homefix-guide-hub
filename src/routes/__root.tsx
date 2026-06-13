@@ -83,19 +83,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Home Appliance Cost Guide — Repair, Replace, Warranty" },
+      { title: "Appliance Repair Cost & Warranty Guide" },
       {
         name: "description",
         content:
-          "Plain-English repair pricing, home warranty breakdowns, and repair-vs-replace guides for US homeowners.",
+          "Honest appliance repair cost guides, repair-vs-replace advice, and home warranty tips for US homeowners. Make smart, money-saving decisions with confidence.",
       },
       { name: "author", content: "Home Appliance Cost Guide" },
       { name: "theme-color", content: "#f7f3e8" },
       { property: "og:site_name", content: "Home Appliance Cost Guide" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Home Appliance Cost Guide — Repair, Replace, Warranty" },
-      { name: "twitter:title", content: "Home Appliance Cost Guide — Repair, Replace, Warranty" },
+      { property: "og:title", content: "Appliance Repair Cost & Warranty Guide" },
+      { name: "twitter:title", content: "Appliance Repair Cost & Warranty Guide" },
       { name: "description", content: "Honest appliance repair cost guides, repair-vs-replace advice, and home warranty tips for US homeowners. Make smart, money-saving decisions with confidence." },
       { property: "og:description", content: "Honest appliance repair cost guides, repair-vs-replace advice, and home warranty tips for US homeowners. Make smart, money-saving decisions with confidence." },
       { name: "twitter:description", content: "Honest appliance repair cost guides, repair-vs-replace advice, and home warranty tips for US homeowners. Make smart, money-saving decisions with confidence." },
