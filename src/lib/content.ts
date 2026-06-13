@@ -8,6 +8,7 @@ import homeWarrantyImg from "@/assets/post-home-warranty.jpg";
 import warrantyVsInsuranceImg from "@/assets/post-warranty-vs-insurance.jpg";
 import repairOrReplaceImg from "@/assets/post-repair-or-replace.jpg";
 import avgRepairCostImg from "@/assets/post-average-repair-cost.jpg";
+import whatCoversImg from "@/assets/post-what-home-warranty-covers.jpg";
 
 export type Category = {
   slug: string;
