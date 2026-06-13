@@ -94,6 +94,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Home Appliance Cost Guide" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Home Appliance Cost Guide — Repair, Replace, Warranty" },
+      { name: "twitter:title", content: "Home Appliance Cost Guide — Repair, Replace, Warranty" },
+      { name: "description", content: "Honest appliance repair cost guides, repair-vs-replace advice, and home warranty tips for US homeowners. Make smart, money-saving decisions with confidence." },
+      { property: "og:description", content: "Honest appliance repair cost guides, repair-vs-replace advice, and home warranty tips for US homeowners. Make smart, money-saving decisions with confidence." },
+      { name: "twitter:description", content: "Honest appliance repair cost guides, repair-vs-replace advice, and home warranty tips for US homeowners. Make smart, money-saving decisions with confidence." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/0994116f-e122-4146-8db9-926371f21fff" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/0994116f-e122-4146-8db9-926371f21fff" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
