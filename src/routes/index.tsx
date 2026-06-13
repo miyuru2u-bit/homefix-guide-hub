@@ -86,6 +86,8 @@ function HomePage() {
               alt="Modern kitchen with refrigerator and washing machine"
               width={1600}
               height={1024}
+              fetchPriority="high"
+              decoding="async"
               className="aspect-[5/4] w-full rounded-xl object-cover shadow-card"
             />
           </div>
