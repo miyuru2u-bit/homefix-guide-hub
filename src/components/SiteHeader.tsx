@@ -2,6 +2,10 @@ import { Link } from "@tanstack/react-router";
 import { CATEGORIES } from "@/lib/content";
 import { Wrench } from "lucide-react";
 
+const navLinkClass =
+  "rounded-md px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-muted hover:text-ink";
+const activeClass = { className: "bg-muted text-ink" };
+
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
@@ -15,12 +19,14 @@ export function SiteHeader() {
           </span>
         </Link>
         <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
-          <NavLink to="/" label="Home" />
-          <NavLink to="/blog" label="All Articles" />
+          <Link to="/" activeOptions={{ exact: true }} activeProps={activeClass} className={navLinkClass}>
+            Home
+          </Link>
+          <Link to="/blog" activeProps={activeClass} className={navLinkClass}>
+            All Articles
+          </Link>
           <div className="group relative">
-            <button className="rounded-md px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-muted hover:text-ink">
-              Categories
-            </button>
+            <button className={navLinkClass}>Categories</button>
             <div className="invisible absolute right-0 top-full w-72 rounded-xl border border-border bg-card p-2 opacity-0 shadow-card transition-all group-hover:visible group-hover:opacity-100">
               {CATEGORIES.map((c) => (
                 <Link
@@ -34,23 +40,14 @@ export function SiteHeader() {
               ))}
             </div>
           </div>
-          <NavLink to="/about" label="About" />
-          <NavLink to="/contact" label="Contact" />
+          <Link to="/about" activeProps={activeClass} className={navLinkClass}>
+            About
+          </Link>
+          <Link to="/contact" activeProps={activeClass} className={navLinkClass}>
+            Contact
+          </Link>
         </nav>
       </div>
     </header>
-  );
-}
-
-function NavLink({ to, label }: { to: "/" | "/blog" | "/about" | "/contact"; label: string }) {
-  return (
-    <Link
-      to={to}
-      activeOptions={{ exact: to === "/" }}
-      activeProps={{ className: "bg-muted text-ink" }}
-      className="rounded-md px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-muted hover:text-ink"
-    >
-      {label}
-    </Link>
   );
 }

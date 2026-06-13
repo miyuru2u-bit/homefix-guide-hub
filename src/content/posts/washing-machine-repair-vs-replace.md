@@ -4,7 +4,7 @@ slug: "washing-machine-repair-vs-replace"
 metaDescription: "When to repair vs replace a washing machine: lifespan benchmarks, repair-cost thresholds, and the warranty coverage most people overlook."
 category: "repair-vs-replace"
 tags: ["washing machine", "repair vs replace", "appliance lifespan"]
-date: "2026-04-22"
+date: "2026-06-02"
 author: "Editorial Team"
 image: "washer"
 imageAlt: "Modern front-load washing machine in a bright laundry room"

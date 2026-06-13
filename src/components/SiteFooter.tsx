@@ -4,7 +4,7 @@ import { CATEGORIES } from "@/lib/content";
 export function SiteFooter() {
   return (
     <footer className="mt-20 border-t border-border bg-secondary/40">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-5">
         <div className="md:col-span-2">
           <p className="font-display text-lg font-semibold text-ink">
             Home Appliance Cost Guide
@@ -35,6 +35,17 @@ export function SiteFooter() {
         <div>
           <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             Site
+          </p>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/" className="text-ink-soft hover:text-primary">Home</Link></li>
+            <li><Link to="/blog" className="text-ink-soft hover:text-primary">All Articles</Link></li>
+            <li><Link to="/about" className="text-ink-soft hover:text-primary">About</Link></li>
+            <li><Link to="/contact" className="text-ink-soft hover:text-primary">Contact</Link></li>
+          </ul>
+        </div>
+        <div>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            Legal
           </p>
           <ul className="space-y-2 text-sm">
             <li><Link to="/about" className="text-ink-soft hover:text-primary">About</Link></li>
