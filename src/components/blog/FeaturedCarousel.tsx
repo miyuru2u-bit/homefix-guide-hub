@@ -36,7 +36,7 @@ export function FeaturedCarousel({ posts }: { posts: Post[] }) {
                 key={post.slug}
                 to="/blog/$slug"
                 params={{ slug: post.slug }}
-                className="group grid w-full shrink-0 grid-cols-1 gap-8 md:grid-cols-2"
+                className="group grid min-w-full shrink-0 grid-cols-1 gap-8 md:grid-cols-2"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-muted md:aspect-auto">
                   <img
