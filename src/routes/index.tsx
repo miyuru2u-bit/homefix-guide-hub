@@ -21,13 +21,13 @@ const categoryImages: Record<string, string> = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Home Appliance Cost Guide — Repair, Replace, Warranty" },
+      { title: "Home Appliance Cost Guide — 2026 Prices" },
       {
         name: "description",
         content:
           "Honest US repair pricing, home warranty coverage breakdowns, and repair-vs-replace guides for refrigerators, washers, dishwashers, and more.",
       },
-      { property: "og:title", content: "Home Appliance Cost Guide" },
+      { property: "og:title", content: "Home Appliance Cost Guide — 2026 Prices" },
       {
         property: "og:description",
         content: "Plain-English repair pricing and warranty guides for US homeowners.",
