@@ -13,6 +13,7 @@ import fridgeGuideImg from "@/assets/post-refrigerator-repair-cost-guide.jpg";
 import washerGuideImg from "@/assets/post-washing-machine-repair-cost-guide.jpg";
 import dishwasherGuideImg from "@/assets/post-dishwasher-repair-cost-guide.jpg";
 import dryerGuideImg from "@/assets/post-dryer-repair-cost-guide.jpg";
+import ovenStoveGuideImg from "@/assets/post-oven-stove-repair-cost-guide.jpg";
 
 export type Category = {
   slug: string;
@@ -113,6 +114,7 @@ const imageMap: Record<string, string> = {
   "washing-machine-repair-cost-guide": washerGuideImg,
   "dishwasher-repair-cost-guide": dishwasherGuideImg,
   "dryer-repair-cost-guide": dryerGuideImg,
+  "oven-stove-repair-cost-guide": ovenStoveGuideImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
