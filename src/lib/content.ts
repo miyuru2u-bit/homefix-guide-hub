@@ -114,6 +114,7 @@ const imageMap: Record<string, string> = {
   "washing-machine-repair-cost-guide": washerGuideImg,
   "dishwasher-repair-cost-guide": dishwasherGuideImg,
   "dryer-repair-cost-guide": dryerGuideImg,
+  "oven-stove-repair-cost-guide": ovenStoveGuideImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
