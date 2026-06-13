@@ -13,6 +13,7 @@ import fridgeGuideImg from "@/assets/post-refrigerator-repair-cost-guide.jpg";
 import washerGuideImg from "@/assets/post-washing-machine-repair-cost-guide.jpg";
 import dishwasherGuideImg from "@/assets/post-dishwasher-repair-cost-guide.jpg";
 import dryerGuideImg from "@/assets/post-dryer-repair-cost-guide.jpg";
+import ovenStoveGuideImg from "@/assets/post-oven-stove-repair-cost-guide.jpg";
 
 export type Category = {
   slug: string;
