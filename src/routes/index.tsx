@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { CATEGORIES, getAllPosts } from "@/lib/content";
 import { PostCard } from "@/components/blog/PostCard";
+import { FeaturedCarousel } from "@/components/blog/FeaturedCarousel";
 import heroImg from "@/assets/hero-kitchen.jpg";
 import catRepairVsReplace from "@/assets/cat-repair-vs-replace.jpg";
 import catRepairCost from "@/assets/cat-repair-cost.jpg";
@@ -89,43 +90,17 @@ function HomePage() {
       </section>
 
       {/* Featured */}
-      {featured && (
+      {posts.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <div className="mb-6 flex items-end justify-between">
             <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
-              Featured guide
+              Featured guides
             </h2>
             <Link to="/blog" className="text-sm font-medium text-primary hover:underline">
               All articles →
             </Link>
           </div>
-          <Link
-            to="/blog/$slug"
-            params={{ slug: featured.slug }}
-            className="group grid gap-8 overflow-hidden rounded-2xl border border-border bg-card md:grid-cols-2"
-          >
-            <div className="aspect-[4/3] overflow-hidden bg-muted md:aspect-auto">
-              <img
-                src={featured.image}
-                alt={featured.imageAlt}
-                width={1280}
-                height={800}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-              />
-            </div>
-            <div className="flex flex-col justify-center gap-4 p-6 md:p-10">
-              <span className="text-xs font-semibold uppercase tracking-wider text-accent">
-                {CATEGORIES.find((c) => c.slug === featured.category)?.name}
-              </span>
-              <h3 className="font-display text-2xl font-semibold leading-tight text-ink sm:text-3xl">
-                {featured.title}
-              </h3>
-              <p className="text-base leading-relaxed text-ink-soft">{featured.metaDescription}</p>
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                Read the guide <ArrowRight className="h-4 w-4" />
-              </span>
-            </div>
-          </Link>
+          <FeaturedCarousel posts={posts.slice(0, Math.min(5, posts.length))} />
         </section>
       )}
 
