@@ -22,7 +22,7 @@ export function SiteHeader() {
           <Link to="/" activeOptions={{ exact: true }} activeProps={activeClass} className={navLinkClass}>
             Home
           </Link>
-          <Link to="/blog" activeProps={activeClass} className={navLinkClass}>
+          <Link to="/blog" className={navLinkClass}>
             All Articles
           </Link>
           <div className="group relative">
