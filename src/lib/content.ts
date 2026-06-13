@@ -46,6 +46,7 @@ export const CATEGORIES: Category[] = [
 
 export type CostRow = { item: string; low: string; high: string };
 export type FaqItem = { q: string; a: string };
+export type TocItem = { id: string; text: string; level: number };
 
 export type Post = {
   slug: string;
@@ -62,7 +63,38 @@ export type Post = {
   faq: FaqItem[];
   html: string;
   excerpt: string;
+  toc: TocItem[];
 };
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/<[^>]+>/g, "")
+    .replace(/&[a-z]+;/g, "")
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .slice(0, 60);
+}
+
+function injectHeadingIds(html: string): { html: string; toc: TocItem[] } {
+  const toc: TocItem[] = [];
+  const used = new Set<string>();
+  const out = html.replace(/<h([23])>([\s\S]*?)<\/h\1>/g, (_m, lvl: string, inner: string) => {
+    const text = inner.replace(/<[^>]+>/g, "").trim();
+    let id = slugify(text) || `section-${toc.length + 1}`;
+    let i = 1;
+    const base = id;
+    while (used.has(id)) {
+      i += 1;
+      id = `${base}-${i}`;
+    }
+    used.add(id);
+    toc.push({ id, text, level: Number(lvl) });
+    return `<h${lvl} id="${id}">${inner}</h${lvl}>`;
+  });
+  return { html: out, toc };
+}
 
 const imageMap: Record<string, string> = {
   fridge: fridgeImg,
@@ -94,7 +126,8 @@ function parseFrontmatter(raw: string): { data: Record<string, any>; content: st
 
 function parsePost(raw: string): Post {
   const { data, content } = parseFrontmatter(raw);
-  const html = marked.parse(content) as string;
+  const rawHtml = marked.parse(content) as string;
+  const { html, toc } = injectHeadingIds(rawHtml);
   const excerpt = content
     .split("\n")
     .find((l: string) => l.trim().length > 60 && !l.startsWith("#"))
@@ -115,6 +148,7 @@ function parsePost(raw: string): Post {
     faq: data.faq ?? [],
     html,
     excerpt,
+    toc,
   };
 }
 
