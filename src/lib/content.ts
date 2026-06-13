@@ -1,4 +1,4 @@
-import matter from "gray-matter";
+import yaml from "js-yaml";
 import { marked } from "marked";
 
 import fridgeImg from "@/assets/post-fridge.jpg";
