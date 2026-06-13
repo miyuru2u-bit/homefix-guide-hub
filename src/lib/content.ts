@@ -4,6 +4,7 @@ import { marked } from "marked";
 import fridgeImg from "@/assets/post-fridge.jpg";
 import washerImg from "@/assets/post-washer.jpg";
 import dishwasherImg from "@/assets/post-dishwasher.jpg";
+import homeWarrantyImg from "@/assets/post-home-warranty.jpg";
 
 export type Category = {
   slug: string;
