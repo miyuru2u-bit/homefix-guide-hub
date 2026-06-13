@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { CATEGORIES, getAllPosts } from "@/lib/content";
 import { PostCard } from "@/components/blog/PostCard";
+import { FeaturedCarousel } from "@/components/blog/FeaturedCarousel";
 import heroImg from "@/assets/hero-kitchen.jpg";
 import catRepairVsReplace from "@/assets/cat-repair-vs-replace.jpg";
 import catRepairCost from "@/assets/cat-repair-cost.jpg";
