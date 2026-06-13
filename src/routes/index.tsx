@@ -3,12 +3,12 @@ import { ArrowRight } from "lucide-react";
 import { CATEGORIES, getAllPosts } from "@/lib/content";
 import { PostCard } from "@/components/blog/PostCard";
 import { FeaturedCarousel } from "@/components/blog/FeaturedCarousel";
-import heroImg from "@/assets/hero-kitchen.jpg";
-import catRepairVsReplace from "@/assets/cat-repair-vs-replace.jpg";
-import catRepairCost from "@/assets/cat-repair-cost.jpg";
-import catErrorCodes from "@/assets/cat-error-codes.jpg";
-import catHomeWarranty from "@/assets/cat-home-warranty.jpg";
-import catBuyerGuides from "@/assets/cat-buyer-guides.jpg";
+import heroImg from "@/assets/hero-kitchen.webp";
+import catRepairVsReplace from "@/assets/cat-repair-vs-replace.webp";
+import catRepairCost from "@/assets/cat-repair-cost.webp";
+import catErrorCodes from "@/assets/cat-error-codes.webp";
+import catHomeWarranty from "@/assets/cat-home-warranty.webp";
+import catBuyerGuides from "@/assets/cat-buyer-guides.webp";
 
 const categoryImages: Record<string, string> = {
   "repair-vs-replace": catRepairVsReplace,
@@ -34,7 +34,10 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" } as any,
+    ],
   }),
   component: HomePage,
 });
@@ -83,6 +86,8 @@ function HomePage() {
               alt="Modern kitchen with refrigerator and washing machine"
               width={1600}
               height={1024}
+              fetchPriority="high"
+              decoding="async"
               className="aspect-[5/4] w-full rounded-xl object-cover shadow-card"
             />
           </div>

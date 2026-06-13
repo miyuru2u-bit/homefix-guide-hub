@@ -1,14 +1,14 @@
 import yaml from "js-yaml";
 import { marked } from "marked";
 
-import fridgeImg from "@/assets/post-fridge.jpg";
-import washerImg from "@/assets/post-washer.jpg";
-import dishwasherImg from "@/assets/post-dishwasher.jpg";
-import homeWarrantyImg from "@/assets/post-home-warranty.jpg";
-import warrantyVsInsuranceImg from "@/assets/post-warranty-vs-insurance.jpg";
-import repairOrReplaceImg from "@/assets/post-repair-or-replace.jpg";
-import avgRepairCostImg from "@/assets/post-average-repair-cost.jpg";
-import whatCoversImg from "@/assets/post-what-home-warranty-covers.jpg";
+import fridgeImg from "@/assets/post-fridge.webp";
+import washerImg from "@/assets/post-washer.webp";
+import dishwasherImg from "@/assets/post-dishwasher.webp";
+import homeWarrantyImg from "@/assets/post-home-warranty.webp";
+import warrantyVsInsuranceImg from "@/assets/post-warranty-vs-insurance.webp";
+import repairOrReplaceImg from "@/assets/post-repair-or-replace.webp";
+import avgRepairCostImg from "@/assets/post-average-repair-cost.webp";
+import whatCoversImg from "@/assets/post-what-home-warranty-covers.webp";
 
 export type Category = {
   slug: string;
