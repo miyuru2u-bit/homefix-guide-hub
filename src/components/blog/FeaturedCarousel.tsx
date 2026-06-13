@@ -27,41 +27,49 @@ export function FeaturedCarousel({ posts }: { posts: Post[] }) {
       <div className="overflow-hidden rounded-2xl border border-border bg-card">
         <div
           className="flex transition-transform duration-700 ease-out"
-          style={{ transform: `translateX(-${index * 100}%)` }}
+          style={{
+            width: `${count * 100}%`,
+            transform: `translateX(-${(100 / count) * index}%)`,
+          }}
         >
           {posts.map((post) => {
             const cat = CATEGORIES.find((c) => c.slug === post.category);
             return (
-              <Link
+              <div
                 key={post.slug}
-                to="/blog/$slug"
-                params={{ slug: post.slug }}
-                className="group grid min-w-full shrink-0 grid-cols-1 gap-8 md:grid-cols-2"
+                className="shrink-0"
+                style={{ width: `${100 / count}%` }}
               >
-                <div className="aspect-[4/3] overflow-hidden bg-muted md:aspect-auto">
-                  <img
-                    src={post.image}
-                    alt={post.imageAlt}
-                    width={1280}
-                    height={800}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                </div>
-                <div className="flex flex-col justify-center gap-4 p-6 md:p-10">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-accent">
-                    {cat?.name}
-                  </span>
-                  <h3 className="font-display text-2xl font-semibold leading-tight text-ink sm:text-3xl">
-                    {post.title}
-                  </h3>
-                  <p className="text-base leading-relaxed text-ink-soft">
-                    {post.metaDescription}
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                    Read the guide <ArrowRight className="h-4 w-4" />
-                  </span>
-                </div>
-              </Link>
+                <Link
+                  to="/blog/$slug"
+                  params={{ slug: post.slug }}
+                  className="group grid grid-cols-1 gap-8 md:grid-cols-2"
+                >
+                  <div className="aspect-[4/3] overflow-hidden bg-muted md:aspect-auto">
+                    <img
+                      src={post.image}
+                      alt={post.imageAlt}
+                      width={1280}
+                      height={800}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-center gap-4 p-6 md:p-10">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-accent">
+                      {cat?.name}
+                    </span>
+                    <h3 className="font-display text-2xl font-semibold leading-tight text-ink sm:text-3xl">
+                      {post.title}
+                    </h3>
+                    <p className="text-base leading-relaxed text-ink-soft">
+                      {post.metaDescription}
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                      Read the guide <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </div>
+                </Link>
+              </div>
             );
           })}
         </div>
