@@ -3,6 +3,19 @@ import { ArrowRight } from "lucide-react";
 import { CATEGORIES, getAllPosts } from "@/lib/content";
 import { PostCard } from "@/components/blog/PostCard";
 import heroImg from "@/assets/hero-kitchen.jpg";
+import catRepairVsReplace from "@/assets/cat-repair-vs-replace.jpg";
+import catRepairCost from "@/assets/cat-repair-cost.jpg";
+import catErrorCodes from "@/assets/cat-error-codes.jpg";
+import catHomeWarranty from "@/assets/cat-home-warranty.jpg";
+import catBuyerGuides from "@/assets/cat-buyer-guides.jpg";
+
+const categoryImages: Record<string, string> = {
+  "repair-vs-replace": catRepairVsReplace,
+  "repair-cost-guides": catRepairCost,
+  "appliance-error-codes": catErrorCodes,
+  "home-warranty-guides": catHomeWarranty,
+  "buyer-guides": catBuyerGuides,
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -122,18 +135,30 @@ function HomePage() {
           <h2 className="mb-8 font-display text-2xl font-semibold text-ink sm:text-3xl">
             Browse by category
           </h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {CATEGORIES.map((c) => (
               <Link
                 key={c.slug}
                 to="/category/$category"
                 params={{ category: c.slug }}
-                className="group rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/50 hover:shadow-soft"
+                className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/50 hover:shadow-soft"
               >
-                <h3 className="font-display text-lg font-semibold text-ink group-hover:text-primary">
-                  {c.name}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.description}</p>
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img
+                    src={categoryImages[c.slug]}
+                    alt={c.name}
+                    width={800}
+                    height={600}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-lg font-semibold text-ink group-hover:text-primary">
+                    {c.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.description}</p>
+                </div>
               </Link>
             ))}
           </div>
