@@ -1,4 +1,4 @@
-import matter from "gray-matter";
+import yaml from "js-yaml";
 import { marked } from "marked";
 
 import fridgeImg from "@/assets/post-fridge.jpg";
@@ -75,12 +75,19 @@ const files = import.meta.glob("../content/posts/*.md", {
 
 marked.setOptions({ gfm: true, breaks: false });
 
+function parseFrontmatter(raw: string): { data: Record<string, any>; content: string } {
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+  if (!match) return { data: {}, content: raw };
+  const data = (yaml.load(match[1]) as Record<string, any>) ?? {};
+  return { data, content: match[2] };
+}
+
 function parsePost(raw: string): Post {
-  const { data, content } = matter(raw);
+  const { data, content } = parseFrontmatter(raw);
   const html = marked.parse(content) as string;
   const excerpt = content
     .split("\n")
-    .find((l) => l.trim().length > 60 && !l.startsWith("#"))
+    .find((l: string) => l.trim().length > 60 && !l.startsWith("#"))
     ?.slice(0, 180)
     .trim() ?? "";
   return {
