@@ -18,6 +18,7 @@ import hwFridgeImg from "@/assets/post-does-home-warranty-cover-refrigerator.jpg
 import hwWasherDryerImg from "@/assets/post-does-home-warranty-cover-washer-dryer.jpg";
 import hwDishwasherImg from "@/assets/post-does-home-warranty-cover-dishwasher.jpg";
 import hwClaimsDeniedImg from "@/assets/post-why-home-warranty-claims-get-denied.jpg";
+import hwWaitingPeriodImg from "@/assets/post-home-warranty-waiting-period-explained.jpg";
 
 export type Category = {
   slug: string;
