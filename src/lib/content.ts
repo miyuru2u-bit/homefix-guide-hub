@@ -16,6 +16,7 @@ import dryerGuideImg from "@/assets/post-dryer-repair-cost-guide.jpg";
 import ovenStoveGuideImg from "@/assets/post-oven-stove-repair-cost-guide.jpg";
 import hwFridgeImg from "@/assets/post-does-home-warranty-cover-refrigerator.jpg";
 import hwWasherDryerImg from "@/assets/post-does-home-warranty-cover-washer-dryer.jpg";
+import hwDishwasherImg from "@/assets/post-does-home-warranty-cover-dishwasher.jpg";
 
 export type Category = {
   slug: string;
