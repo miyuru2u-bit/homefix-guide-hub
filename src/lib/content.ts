@@ -18,6 +18,7 @@ import hwFridgeImg from "@/assets/post-does-home-warranty-cover-refrigerator.jpg
 import hwWasherDryerImg from "@/assets/post-does-home-warranty-cover-washer-dryer.jpg";
 import hwDishwasherImg from "@/assets/post-does-home-warranty-cover-dishwasher.jpg";
 import hwClaimsDeniedImg from "@/assets/post-why-home-warranty-claims-get-denied.jpg";
+import hwWaitingPeriodImg from "@/assets/post-home-warranty-waiting-period-explained.jpg";
 
 export type Category = {
   slug: string;
@@ -123,6 +124,7 @@ const imageMap: Record<string, string> = {
   "does-home-warranty-cover-washer-dryer": hwWasherDryerImg,
   "does-home-warranty-cover-dishwasher": hwDishwasherImg,
   "why-home-warranty-claims-get-denied": hwClaimsDeniedImg,
+  "home-warranty-waiting-period-explained": hwWaitingPeriodImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
