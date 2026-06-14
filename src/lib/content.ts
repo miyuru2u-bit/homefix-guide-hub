@@ -124,6 +124,7 @@ const imageMap: Record<string, string> = {
   "does-home-warranty-cover-washer-dryer": hwWasherDryerImg,
   "does-home-warranty-cover-dishwasher": hwDishwasherImg,
   "why-home-warranty-claims-get-denied": hwClaimsDeniedImg,
+  "home-warranty-waiting-period-explained": hwWaitingPeriodImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
