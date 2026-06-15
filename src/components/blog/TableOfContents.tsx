@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { ChevronDown, List } from "lucide-react";
 import type { TocItem } from "@/lib/content";
 
@@ -11,8 +11,41 @@ interface Props {
 export function TableOfContents({ items, variant = "inline" }: Props) {
   const headings = items.filter((t) => t.level === 2 || t.level === 3);
   const [open, setOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string>("");
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      // Find the first heading that's intersecting and near the top
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+      if (visible.length > 0) {
+        setActiveId(visible[0].target.id);
+      }
+    };
+
+    observerRef.current = new IntersectionObserver(handleIntersection, {
+      rootMargin: "-64px 0px -60% 0px",
+      threshold: 0,
+    });
+
+    // Observe all heading targets in the article body
+    const headingElements = document.querySelectorAll(
+      headings.map((h) => `#${h.id}`).join(", ")
+    );
+    headingElements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => observerRef.current?.disconnect();
+  }, [headings.map((h) => h.id).join(",")]);
 
   if (headings.length === 0) return null;
+
+  const linkClasses = (id: string) =>
+    id === activeId
+      ? "font-semibold text-primary"
+      : "text-ink-soft hover:text-primary";
 
   if (variant === "sidebar") {
     return (
@@ -23,7 +56,7 @@ export function TableOfContents({ items, variant = "inline" }: Props) {
         <ul className="space-y-2 text-sm">
           {headings.map((t) => (
             <li key={t.id} className={t.level === 3 ? "pl-3" : ""}>
-              <a href={`#${t.id}`} className="text-ink-soft hover:text-primary">
+              <a href={`#${t.id}`} className={linkClasses(t.id)}>
                 {t.text}
               </a>
             </li>
@@ -63,7 +96,7 @@ export function TableOfContents({ items, variant = "inline" }: Props) {
               <a
                 href={`#${t.id}`}
                 onClick={() => setOpen(false)}
-                className="text-ink-soft hover:text-primary hover:underline"
+                className={`${linkClasses(t.id)} hover:underline`}
               >
                 {t.text}
               </a>
