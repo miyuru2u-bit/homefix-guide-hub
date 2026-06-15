@@ -12,6 +12,7 @@ import { CostTable } from "@/components/blog/CostTable";
 import { FAQ } from "@/components/blog/FAQ";
 import { AdSlot } from "@/components/blog/AdSlot";
 import { PostCard } from "@/components/blog/PostCard";
+import { TableOfContents } from "@/components/blog/TableOfContents";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -149,6 +150,9 @@ function ArticlePage() {
           {/* Quick answer */}
           <QuickAnswer text={post.quickAnswer} />
 
+          {/* On-page TOC (mobile/tablet) */}
+          <TableOfContents items={post.toc} />
+
           {/* Ad: below intro */}
           <AdSlot label="Advertisement — Below intro" />
 
@@ -214,20 +218,7 @@ function ArticlePage() {
           <div className="sticky top-24 space-y-6">
             {post.toc.filter((t) => t.level === 2).length > 0 && (
               <div className="rounded-xl border border-border bg-card p-5">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  In this guide
-                </p>
-                <ul className="space-y-2 text-sm">
-                  {post.toc
-                    .filter((t) => t.level === 2)
-                    .map((t) => (
-                      <li key={t.id}>
-                        <a href={`#${t.id}`} className="text-ink-soft hover:text-primary">
-                          {t.text}
-                        </a>
-                      </li>
-                    ))}
-                </ul>
+                <TableOfContents items={post.toc} variant="sidebar" />
               </div>
             )}
             <AdSlot label="Advertisement — Sidebar" className="min-h-[600px]" />
