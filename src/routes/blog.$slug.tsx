@@ -12,6 +12,7 @@ import { CostTable } from "@/components/blog/CostTable";
 import { FAQ } from "@/components/blog/FAQ";
 import { AdSlot } from "@/components/blog/AdSlot";
 import { PostCard } from "@/components/blog/PostCard";
+import { TableOfContents } from "@/components/blog/TableOfContents";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
