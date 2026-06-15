@@ -150,6 +150,9 @@ function ArticlePage() {
           {/* Quick answer */}
           <QuickAnswer text={post.quickAnswer} />
 
+          {/* On-page TOC (mobile/tablet) */}
+          <TableOfContents items={post.toc} />
+
           {/* Ad: below intro */}
           <AdSlot label="Advertisement — Below intro" />
 
