@@ -76,11 +76,25 @@ export type Post = {
   toc: TocItem[];
 };
 
-function slugify(text: string): string {
+function decodeHtmlEntities(text: string): string {
   return text
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/&([a-zA-Z]+);/g, (_, name) => {
+      const map: Record<string, string> = {
+        amp: "&",
+        lt: "<",
+        gt: ">",
+        quot: '"',
+        apos: "'",
+      };
+      return map[name] || `&${name};`;
+    });
+}
+
+function slugify(text: string): string {
+  return decodeHtmlEntities(text)
     .toLowerCase()
     .replace(/<[^>]+>/g, "")
-    .replace(/&[a-z]+;/g, "")
     .replace(/[^\w\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-")
@@ -91,7 +105,8 @@ function injectHeadingIds(html: string): { html: string; toc: TocItem[] } {
   const toc: TocItem[] = [];
   const used = new Set<string>();
   const out = html.replace(/<h([23])>([\s\S]*?)<\/h\1>/g, (_m, lvl: string, inner: string) => {
-    const text = inner.replace(/<[^>]+>/g, "").trim();
+    const rawText = inner.replace(/<[^>]+>/g, "").trim();
+    const text = decodeHtmlEntities(rawText);
     let id = slugify(text) || `section-${toc.length + 1}`;
     let i = 1;
     const base = id;
