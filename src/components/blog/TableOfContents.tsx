@@ -31,11 +31,12 @@ export function TableOfContents({ items, variant = "inline" }: Props) {
       threshold: 0,
     });
 
-    // Observe all heading targets in the article body
-    const headingElements = document.querySelectorAll(
-      headings.map((h) => `#${h.id}`).join(", ")
-    );
-    headingElements.forEach((el) => observerRef.current?.observe(el));
+    // Observe all heading targets in the article body (use getElementById to
+    // safely handle IDs that start with digits or contain CSS-special chars).
+    headings.forEach((h) => {
+      const el = document.getElementById(h.id);
+      if (el) observerRef.current?.observe(el);
+    });
 
     return () => observerRef.current?.disconnect();
   }, [headings.map((h) => h.id).join(",")]);
