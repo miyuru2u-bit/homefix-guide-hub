@@ -22,7 +22,11 @@ export const Route = createFileRoute("/blog/$slug")({
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) return { meta: [{ title: "Article not found" }] };
-    const url = `/blog/${params.slug}`;
+    const origin = "https://whatrepaircosts.com";
+    const url = `${origin}/blog/${params.slug}`;
+    const absImage = loaderData.image?.startsWith("http")
+      ? loaderData.image
+      : `${origin}${loaderData.image}`;
     return {
       meta: [
         { title: `${loaderData.title} | Home Appliance Cost Guide` },
@@ -31,8 +35,8 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:description", content: loaderData.metaDescription },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
-        { property: "og:image", content: loaderData.image },
-        { name: "twitter:image", content: loaderData.image },
+        { property: "og:image", content: absImage },
+        { name: "twitter:image", content: absImage },
         { property: "article:published_time", content: loaderData.date },
         { property: "article:author", content: loaderData.author },
         { property: "article:section", content: loaderData.category },
@@ -46,7 +50,7 @@ export const Route = createFileRoute("/blog/$slug")({
             "@type": "Article",
             headline: loaderData.title,
             description: loaderData.metaDescription,
-            image: loaderData.image,
+            image: absImage,
             datePublished: loaderData.date,
             dateModified: loaderData.date,
             author: { "@type": "Organization", name: loaderData.author },
@@ -74,8 +78,8 @@ export const Route = createFileRoute("/blog/$slug")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-              { "@type": "ListItem", position: 2, name: "Articles", item: "/blog" },
+              { "@type": "ListItem", position: 1, name: "Home", item: `${origin}/` },
+              { "@type": "ListItem", position: 2, name: "Articles", item: `${origin}/blog` },
               { "@type": "ListItem", position: 3, name: loaderData.title, item: url },
             ],
           }),
