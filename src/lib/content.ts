@@ -27,6 +27,8 @@ import geF3Img from "@/assets/post-ge-oven-f3-error.jpg";
 import rorFridgeImg from "@/assets/post-repair-or-replace-refrigerator.jpg";
 import rorWasherImg from "@/assets/post-repair-or-replace-washing-machine.jpg";
 import rorDishwasherImg from "@/assets/post-repair-or-replace-dishwasher.jpg";
+import rorDryerImg from "@/assets/post-repair-or-replace-dryer.jpg";
+import rorOvenImg from "@/assets/post-repair-or-replace-oven.jpg";
 
 export type Category = {
   slug: string;
@@ -156,6 +158,8 @@ const imageMap: Record<string, string> = {
   "repair-or-replace-refrigerator": rorFridgeImg,
   "repair-or-replace-washing-machine": rorWasherImg,
   "repair-or-replace-dishwasher": rorDishwasherImg,
+  "repair-or-replace-dryer": rorDryerImg,
+  "repair-or-replace-oven": rorOvenImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
