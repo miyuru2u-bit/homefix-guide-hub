@@ -15,15 +15,15 @@ export function SiteFooter() {
       />
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-5">
         <div className="md:col-span-2">
-          <Link to="/" className="inline-flex items-center gap-3" aria-label="Home Appliance Cost Guide — home">
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 bg-white/10">
+          <Link to="/" className="inline-flex items-center gap-2.5 sm:gap-3" aria-label="Home Appliance Cost Guide — home">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/20 bg-white/10">
               <Wrench className="h-5 w-5 text-white" aria-hidden strokeWidth={2.25} />
             </span>
-            <span className="flex flex-col leading-none">
+            <span className="flex min-w-0 flex-col leading-none">
               <span className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">
                 Home Appliance
               </span>
-              <span className="mt-1 font-display text-lg font-bold tracking-tight text-white">
+              <span className="mt-0.5 font-display text-base font-bold tracking-tight text-white sm:text-lg">
                 Cost<span className="text-white/60">Guide</span>
               </span>
             </span>

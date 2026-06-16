@@ -17,18 +17,18 @@ export function SiteHeader() {
         <div className="flex items-center justify-between gap-6">
           <Link
             to="/"
-            className="group flex items-center gap-3"
+            className="group flex items-center gap-2.5 sm:gap-3"
             aria-label="Home Appliance Cost Guide — home"
             onClick={() => setMobileOpen(false)}
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary shadow-sm ring-1 ring-primary/20 transition-transform duration-300 group-hover:-rotate-3">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary shadow-sm ring-1 ring-primary/20 transition-transform duration-300 group-hover:-rotate-3">
               <Wrench className="h-5 w-5 text-primary-foreground" aria-hidden strokeWidth={2.25} />
             </span>
-            <span className="flex flex-col leading-none">
+            <span className="flex min-w-0 flex-col leading-none">
               <span className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
                 Home Appliance
               </span>
-              <span className="mt-1 font-display text-lg font-bold tracking-tight text-ink">
+              <span className="mt-0.5 font-display text-base font-bold tracking-tight text-ink sm:text-lg">
                 Cost<span className="text-accent">Guide</span>
               </span>
             </span>
