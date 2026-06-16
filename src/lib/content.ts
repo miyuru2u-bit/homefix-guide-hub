@@ -189,15 +189,26 @@ function parseFrontmatter(raw: string): { data: Record<string, any>; content: st
   return { data, content: match[2] };
 }
 
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/`{1,3}[^`]*`{1,3}/g, "")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/[*_~]{1,3}([^*_~]+)[*_~]{1,3}/g, "$1")
+    .replace(/^\s*>\s?/gm, "")
+    .replace(/<[^>]+>/g, "")
+    .trim();
+}
+
 function parsePost(raw: string): Post {
   const { data, content } = parseFrontmatter(raw);
   const rawHtml = marked.parse(content) as string;
   const { html, toc } = injectHeadingIds(rawHtml);
-  const excerpt = content
+  const excerptLine = content
     .split("\n")
-    .find((l: string) => l.trim().length > 60 && !l.startsWith("#"))
-    ?.slice(0, 180)
-    .trim() ?? "";
+    .map((l: string) => stripMarkdown(l))
+    .find((l) => l.length > 60 && !l.startsWith("#"));
+  const excerpt = excerptLine ? excerptLine.slice(0, 180).trim() : "";
   return {
     slug: data.slug,
     title: data.title,
@@ -219,7 +230,7 @@ function parsePost(raw: string): Post {
 
 const allPosts: Post[] = Object.values(files)
   .map(parsePost)
-  .sort((a, b) => (a.date < b.date ? 1 : -1));
+  .sort((a, b) => (b.date > a.date ? 1 : b.date < a.date ? -1 : 0));
 
 export function getAllPosts(): Post[] {
   return allPosts;

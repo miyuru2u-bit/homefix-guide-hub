@@ -67,8 +67,6 @@ export function SiteFooter() {
             Legal
           </p>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/about" className="text-white/70 hover:text-white">About</Link></li>
-            <li><Link to="/contact" className="text-white/70 hover:text-white">Contact</Link></li>
             <li><Link to="/privacy-policy" className="text-white/70 hover:text-white">Privacy Policy</Link></li>
             <li><Link to="/terms" className="text-white/70 hover:text-white">Terms of Service</Link></li>
             <li><Link to="/disclaimer" className="text-white/70 hover:text-white">Disclaimer</Link></li>
