@@ -83,8 +83,8 @@
   --muted: oklch(0.95 0.018 85);
   --muted-foreground: oklch(0.48 0.025 160);
 
-  /* Warm copper accent for highlights */
-  --accent: oklch(0.68 0.14 55);
+  /* Deepened copper accent — meets WCAG AA against cream bg in both directions */
+  --accent: oklch(0.48 0.12 45);
   --accent-foreground: oklch(0.985 0.012 85);
 
   --destructive: oklch(0.55 0.18 28);
