@@ -90,7 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Honest appliance repair cost guides, repair-vs-replace advice, and home warranty tips for US homeowners. Make smart, money-saving decisions with confidence.",
       },
       { name: "author", content: "Home Appliance Cost Guide" },
-      { name: "theme-color", content: "#f7f3e8" },
+      { name: "theme-color", content: "#1F3A5F" },
       { property: "og:site_name", content: "Home Appliance Cost Guide" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -98,10 +98,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "Appliance Repair Cost & Warranty Guide" },
       { property: "og:description", content: "Honest appliance repair cost guides, repair-vs-replace advice, and home warranty tips for US homeowners. Make smart, money-saving decisions with confidence." },
       { name: "twitter:description", content: "Honest appliance repair cost guides, repair-vs-replace advice, and home warranty tips for US homeowners. Make smart, money-saving decisions with confidence." },
+      { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+      { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "icon", type: "image/png", href: "/images/logo.png" },
+      { rel: "apple-touch-icon", href: "/images/logo.png" },
     ],
     scripts: [
       {
