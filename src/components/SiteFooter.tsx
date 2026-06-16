@@ -75,7 +75,7 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10">
+      <div className="relative border-t border-white/10">
         <p className="mx-auto max-w-6xl px-4 py-5 text-xs text-white/50 sm:px-6">
           &copy; {new Date().getFullYear()} Home Appliance Cost Guide. Informational content only &mdash;
           not professional repair advice. Always consult a licensed technician for safety-critical work.
