@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CATEGORIES } from "@/lib/content";
-import { Menu, X } from "lucide-react";
+import { Menu, Wrench, X } from "lucide-react";
 import { useState } from "react";
 
 
@@ -15,10 +15,22 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
         <div className="flex items-center justify-between gap-6">
-          <Link to="/" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
-            <img src="/images/logo.png" alt="" className="h-12 w-auto" />
-            <span className="font-display text-lg font-semibold leading-none text-ink">
-              Home Appliance <span className="text-accent">Cost Guide</span>
+          <Link
+            to="/"
+            className="group flex items-center gap-3"
+            aria-label="Home Appliance Cost Guide — home"
+            onClick={() => setMobileOpen(false)}
+          >
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary shadow-sm ring-1 ring-primary/20 transition-transform duration-300 group-hover:-rotate-3">
+              <Wrench className="h-5 w-5 text-primary-foreground" aria-hidden strokeWidth={2.25} />
+            </span>
+            <span className="flex flex-col leading-none">
+              <span className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
+                Home Appliance
+              </span>
+              <span className="mt-1 font-display text-lg font-bold tracking-tight text-ink">
+                Cost<span className="text-accent">Guide</span>
+              </span>
             </span>
           </Link>
           <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
