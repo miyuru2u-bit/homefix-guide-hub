@@ -15,8 +15,11 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
         <div className="flex items-center justify-between gap-6">
-          <Link to="/" className="flex items-center gap-2.5" onClick={() => setMobileOpen(false)}>
-            <img src="/images/logo.png" alt="Home Appliance Cost Guide" className="h-10 w-auto" />
+          <Link to="/" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
+            <img src="/images/logo.png" alt="" className="h-12 w-auto" />
+            <span className="font-display text-lg font-semibold leading-none text-ink">
+              Home Appliance <span className="text-accent">Cost Guide</span>
+            </span>
           </Link>
           <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
             <Link to="/" activeOptions={{ exact: true }} activeProps={activeClass} className={navLinkClass}>
