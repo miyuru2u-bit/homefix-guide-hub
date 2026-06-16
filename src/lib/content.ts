@@ -24,6 +24,9 @@ import lgOeImg from "@/assets/post-lg-washer-oe-error.jpg";
 import whirlpoolF2e2Img from "@/assets/post-whirlpool-dishwasher-f2e2-error.jpg";
 import boschE15Img from "@/assets/post-bosch-dishwasher-e15-error.jpg";
 import geF3Img from "@/assets/post-ge-oven-f3-error.jpg";
+import rorFridgeImg from "@/assets/post-repair-or-replace-refrigerator.jpg";
+import rorWasherImg from "@/assets/post-repair-or-replace-washing-machine.jpg";
+import rorDishwasherImg from "@/assets/post-repair-or-replace-dishwasher.jpg";
 
 export type Category = {
   slug: string;
@@ -150,6 +153,9 @@ const imageMap: Record<string, string> = {
   "whirlpool-dishwasher-f2e2-error": whirlpoolF2e2Img,
   "bosch-dishwasher-e15-error": boschE15Img,
   "ge-oven-f3-error": geF3Img,
+  "repair-or-replace-refrigerator": rorFridgeImg,
+  "repair-or-replace-washing-machine": rorWasherImg,
+  "repair-or-replace-dishwasher": rorDishwasherImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
