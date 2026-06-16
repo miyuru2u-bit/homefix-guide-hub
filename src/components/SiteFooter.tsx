@@ -1,13 +1,32 @@
 import { Link } from "@tanstack/react-router";
+import { Wrench } from "lucide-react";
 import { CATEGORIES } from "@/lib/content";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-20 bg-[#1F3A5F]">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-5">
+    <footer className="relative mt-20 overflow-hidden bg-[#1F3A5F]">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage: "radial-gradient(#fff 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+      />
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-5">
         <div className="md:col-span-2">
-          <Link to="/" className="inline-block">
-            <img src="/images/logo-white.png" alt="Home Appliance Cost Guide" className="h-14 w-auto" />
+          <Link to="/" className="inline-flex items-center gap-3" aria-label="Home Appliance Cost Guide — home">
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 bg-white/10">
+              <Wrench className="h-5 w-5 text-white" aria-hidden strokeWidth={2.25} />
+            </span>
+            <span className="flex flex-col leading-none">
+              <span className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">
+                Home Appliance
+              </span>
+              <span className="mt-1 font-display text-lg font-bold tracking-tight text-white">
+                Cost<span className="text-white/60">Guide</span>
+              </span>
+            </span>
           </Link>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/70">
             Plain-English repair pricing, warranty breakdowns, and repair-vs-replace
