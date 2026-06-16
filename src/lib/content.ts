@@ -19,6 +19,9 @@ import hwWasherDryerImg from "@/assets/post-does-home-warranty-cover-washer-drye
 import hwDishwasherImg from "@/assets/post-does-home-warranty-cover-dishwasher.jpg";
 import hwClaimsDeniedImg from "@/assets/post-why-home-warranty-claims-get-denied.jpg";
 import hwWaitingPeriodImg from "@/assets/post-home-warranty-waiting-period-explained.jpg";
+import samsung4cImg from "@/assets/post-samsung-washer-4c-error.jpg";
+import lgOeImg from "@/assets/post-lg-washer-oe-error.jpg";
+import whirlpoolF2e2Img from "@/assets/post-whirlpool-dishwasher-f2e2-error.jpg";
 
 export type Category = {
   slug: string;
@@ -140,6 +143,9 @@ const imageMap: Record<string, string> = {
   "does-home-warranty-cover-dishwasher": hwDishwasherImg,
   "why-home-warranty-claims-get-denied": hwClaimsDeniedImg,
   "home-warranty-waiting-period-explained": hwWaitingPeriodImg,
+  "samsung-washer-4c-error": samsung4cImg,
+  "lg-washer-oe-error": lgOeImg,
+  "whirlpool-dishwasher-f2e2-error": whirlpoolF2e2Img,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
