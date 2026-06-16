@@ -37,12 +37,18 @@ export function SiteHeader() {
             <Link to="/" activeOptions={{ exact: true }} activeProps={activeClass} className={navLinkClass}>
               Home
             </Link>
-            <Link to="/blog" className={navLinkClass}>
+            <Link to="/blog" activeProps={activeClass} className={navLinkClass}>
               All Articles
             </Link>
             <div className="group relative">
-              <button className={navLinkClass}>Categories</button>
-              <div className="invisible absolute right-0 top-full w-72 rounded-xl border border-border bg-card p-2 opacity-0 shadow-card transition-all group-hover:visible group-hover:opacity-100">
+              <button
+                type="button"
+                aria-haspopup="menu"
+                className={navLinkClass}
+              >
+                Categories
+              </button>
+              <div className="invisible absolute right-0 top-full w-72 rounded-xl border border-border bg-card p-2 opacity-0 shadow-card transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                 {CATEGORIES.map((c) => (
                   <Link
                     key={c.slug}

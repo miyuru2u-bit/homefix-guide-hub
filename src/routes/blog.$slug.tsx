@@ -24,9 +24,12 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!loaderData) return { meta: [{ title: "Article not found" }] };
     const origin = "https://whatrepaircosts.com";
     const url = `${origin}/blog/${params.slug}`;
-    const absImage = loaderData.image?.startsWith("http")
-      ? loaderData.image
-      : `${origin}${loaderData.image}`;
+    const defaultImage = `${origin}/images/logo-stacked.png`;
+    const absImage = !loaderData.image
+      ? defaultImage
+      : loaderData.image.startsWith("http")
+        ? loaderData.image
+        : `${origin}${loaderData.image}`;
     return {
       meta: [
         { title: `${loaderData.title} | Home Appliance Cost Guide` },
@@ -88,6 +91,19 @@ export const Route = createFileRoute("/blog/$slug")({
     };
   },
   component: ArticlePage,
+  errorComponent: ({ error, reset }) => (
+    <div className="mx-auto max-w-2xl px-4 py-20 text-center">
+      <h1 className="font-display text-3xl font-semibold text-ink">This article didn't load</h1>
+      <p className="mt-3 text-ink-soft">{error.message || "Something went wrong."}</p>
+      <button
+        type="button"
+        onClick={() => reset()}
+        className="mt-6 inline-block font-medium text-primary hover:underline"
+      >
+        Try again
+      </button>
+    </div>
+  ),
   notFoundComponent: () => (
     <div className="mx-auto max-w-2xl px-4 py-20 text-center">
       <h1 className="font-display text-3xl font-semibold text-ink">Article not found</h1>
