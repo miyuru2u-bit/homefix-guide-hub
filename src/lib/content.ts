@@ -29,6 +29,9 @@ import rorWasherImg from "@/assets/post-repair-or-replace-washing-machine.jpg";
 import rorDishwasherImg from "@/assets/post-repair-or-replace-dishwasher.jpg";
 import rorDryerImg from "@/assets/post-repair-or-replace-dryer.jpg";
 import rorOvenImg from "@/assets/post-repair-or-replace-oven.jpg";
+import bestHwImg from "@/assets/post-best-home-warranty-for-appliances.jpg";
+import extVsHwImg from "@/assets/post-extended-warranty-vs-home-warranty.jpg";
+import mostExpensiveImg from "@/assets/post-most-expensive-appliances-to-repair.jpg";
 
 export type Category = {
   slug: string;
