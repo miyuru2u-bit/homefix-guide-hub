@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { CATEGORIES } from "@/lib/content";
-import { Menu, Wrench, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+
 
 const navLinkClass =
   "rounded-md px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-muted hover:text-ink";
@@ -15,12 +16,7 @@ export function SiteHeader() {
       <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
         <div className="flex items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-2.5" onClick={() => setMobileOpen(false)}>
-            <span className="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground">
-              <Wrench className="h-4 w-4" aria-hidden />
-            </span>
-            <span className="font-display text-lg font-semibold leading-none text-ink">
-              Home Appliance <span className="text-accent">Cost Guide</span>
-            </span>
+            <img src="/images/logo.png" alt="Home Appliance Cost Guide" className="h-10 w-auto" />
           </Link>
           <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
             <Link to="/" activeOptions={{ exact: true }} activeProps={activeClass} className={navLinkClass}>

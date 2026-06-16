@@ -73,9 +73,9 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.03 160);
 
-  /* Deep forest green — trustworthy, editorial */
-  --primary: oklch(0.32 0.06 160);
-  --primary-foreground: oklch(0.985 0.012 85);
+  /* Deep navy — trustworthy, professional */
+  --primary: #1F3A5F;
+  --primary-foreground: #FFFFFF;
 
   --secondary: oklch(0.95 0.018 85);
   --secondary-foreground: oklch(0.32 0.06 160);
@@ -83,9 +83,9 @@
   --muted: oklch(0.95 0.018 85);
   --muted-foreground: oklch(0.48 0.025 160);
 
-  /* Deepened copper accent — meets WCAG AA against cream bg in both directions */
-  --accent: oklch(0.48 0.12 45);
-  --accent-foreground: oklch(0.985 0.012 85);
+  /* Teal-green accent */
+  --accent: #1FA37A;
+  --accent-foreground: #FFFFFF;
 
   --destructive: oklch(0.55 0.18 28);
   --destructive-foreground: oklch(0.985 0.012 85);
