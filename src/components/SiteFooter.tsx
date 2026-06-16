@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-5">
         <div className="md:col-span-2">
           <Link to="/" className="inline-block">
-            <img src="/images/logo-white.png" alt="Home Appliance Cost Guide" className="h-10 w-auto" />
+            <img src="/images/logo-white.png" alt="Home Appliance Cost Guide" className="h-14 w-auto" />
           </Link>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/70">
             Plain-English repair pricing, warranty breakdowns, and repair-vs-replace
