@@ -12,7 +12,7 @@ export const Route = createFileRoute("/category/$category")({
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) return { meta: [{ title: "Category not found" }] };
-    const url = `/category/${params.category}`;
+    const url = `https://whatrepaircosts.com/category/${params.category}`;
     return {
       meta: [
         { title: `${loaderData.cat.name} — Home Appliance Cost Guide` },

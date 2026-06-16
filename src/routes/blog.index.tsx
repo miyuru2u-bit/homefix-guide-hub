@@ -14,9 +14,9 @@ export const Route = createFileRoute("/blog/")({
       },
       { property: "og:title", content: "All Articles — Home Appliance Cost Guide" },
       { property: "og:description", content: "Repair pricing, error codes, and warranty guides." },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: "https://whatrepaircosts.com/blog" },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://whatrepaircosts.com/blog" }],
   }),
   component: BlogIndex,
 });
