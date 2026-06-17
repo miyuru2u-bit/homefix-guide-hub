@@ -249,14 +249,63 @@ export function getCategory(slug: string): Category | undefined {
 }
 
 export function getRelatedPosts(post: Post, limit = 3): Post[] {
+  const tagSet = new Set(post.tags.map((t) => t.toLowerCase()));
   return allPosts
     .filter((p) => p.slug !== post.slug)
-    .sort((a, b) => {
-      const aScore = a.category === post.category ? 2 : 0;
-      const bScore = b.category === post.category ? 2 : 0;
-      return bScore - aScore;
+    .map((p) => {
+      const sameCat = p.category === post.category ? 3 : 0;
+      const tagOverlap = p.tags.reduce(
+        (n, t) => n + (tagSet.has(t.toLowerCase()) ? 1 : 0),
+        0,
+      );
+      return { post: p, score: sameCat + tagOverlap };
     })
-    .slice(0, limit);
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((x) => x.post);
+}
+
+export type TagSummary = { slug: string; name: string; count: number };
+
+function tagSlug(t: string): string {
+  return t
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
+
+const tagIndex = (() => {
+  const map = new Map<string, { name: string; count: number }>();
+  for (const p of allPosts) {
+    for (const t of p.tags) {
+      const slug = tagSlug(t);
+      if (!slug) continue;
+      const entry = map.get(slug) ?? { name: t, count: 0 };
+      entry.count += 1;
+      map.set(slug, entry);
+    }
+  }
+  return map;
+})();
+
+export function getAllTags(): TagSummary[] {
+  return [...tagIndex.entries()]
+    .map(([slug, v]) => ({ slug, name: v.name, count: v.count }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}
+
+export function getTag(slug: string): TagSummary | undefined {
+  const v = tagIndex.get(slug);
+  return v ? { slug, name: v.name, count: v.count } : undefined;
+}
+
+export function getPostsByTag(slug: string): Post[] {
+  return allPosts.filter((p) => p.tags.some((t) => tagSlug(t) === slug));
+}
+
+export function tagToSlug(tag: string): string {
+  return tagSlug(tag);
 }
 
 export function formatDate(iso: string): string {
