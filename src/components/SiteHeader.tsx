@@ -133,6 +133,12 @@ export function SiteHeader() {
                   {c.name}
                 </Link>
               ))}
+              <Link to="/tools" className={navLinkClass} onClick={() => setMobileOpen(false)}>
+                Tools
+              </Link>
+              <Link to="/error-codes" className={navLinkClass} onClick={() => setMobileOpen(false)}>
+                Error code lookup
+              </Link>
               <Link to="/about" className={navLinkClass} onClick={() => setMobileOpen(false)}>
                 About
               </Link>
@@ -143,6 +149,7 @@ export function SiteHeader() {
           </nav>
         )}
       </div>
+      <SearchPalette open={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   );
 }
