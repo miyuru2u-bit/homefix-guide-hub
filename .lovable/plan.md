@@ -1,72 +1,44 @@
-## 7 New Features for WhatRepairCosts
+# Add 3 buyer-guide comparison posts
 
-A balanced mix across the four focus areas, powered by Lovable Cloud where storage is needed.
+Create three new markdown files under `src/content/posts/` so they're picked up by the existing `import.meta.glob` loader in `src/lib/content.ts`. No code changes needed — JSON-LD `FAQPage` from `faq[]`, the in-body FAQ section, breadcrumbs, and category routing all already work for any post whose frontmatter matches the schema.
 
-### 1. Repair Cost Calculator (Interactive Tool)
-A guided form: appliance type → brand → symptom/part → ZIP region → estimated low/avg/high cost with a "national average" comparison bar. Results page includes a CTA to the matching cost-guide article and an affiliate widget for home warranty quotes.
-- Data: static JSON pricing matrix in `src/lib/calculator-data.ts` (derived from existing cost guides).
-- Route: `/tools/repair-cost-calculator`.
-- Saves each calculation to Cloud (`calculations` table) for analytics and "popular estimates" insights.
+## Files to create
 
-### 2. Repair vs Replace Decision Tool (Interactive Tool)
-Inputs: appliance age, repair quote, replacement cost. Applies the "50% rule" and age-of-appliance multiplier, returns a clear Repair / Replace / Borderline verdict with reasoning and links to the relevant guide.
-- Route: `/tools/repair-or-replace`.
-- Pure client-side logic, no backend needed.
+- `src/content/posts/choice-vs-american-home-shield.md`
+- `src/content/posts/first-american-vs-american-home-shield.md`
+- `src/content/posts/select-vs-choice-home-warranty.md`
 
-### 3. Error Code Lookup (Interactive Tool + SEO)
-Searchable database of appliance error codes (Bosch E15, LG OE, Samsung 4C, GE F3, Whirlpool F2 E2, etc.) with brand/model filters. Each code gets its own SEO route with JSON-LD `FAQPage` schema.
-- Route: `/error-codes` (index) and `/error-codes/$brand/$code` (detail).
-- Seeded from existing error-code posts; expandable via a Cloud `error_codes` table.
+## Frontmatter schema (adapted to existing site conventions)
 
-### 4. Newsletter Signup + Reader Account (Engagement)
-Email/password + Google auth via Lovable Cloud. Signed-in users get:
-- Bookmark articles (saved to `bookmarks` table).
-- "My Reading List" page at `/account/saved`.
-- Newsletter opt-in stored on profile; weekly digest is out of scope for now (just capture).
-- Inline "Sign in to save" CTA on each article (no redirect-walls on public content).
+The provided frontmatter uses values that don't match this project's loader. Each file's frontmatter will be normalized:
 
-### 5. Article Search + Related Posts (Engagement + SEO)
-- Header search box opens a command-palette (cmd-k style) that fuzzy-matches titles, categories, and tags client-side from a prebuilt index.
-- Each article gets a "Related guides" block (3 posts) computed by shared category + tag overlap.
-- Reading progress bar at the top of every article.
+- `category: "buyer-guides"` — the loader matches on category slug, not display name (the display name `"Buyer Guides & Comparisons"` lives in `CATEGORIES` and resolves automatically). This is what routes `/category/buyer-guides` correctly.
+- `image:` — existing posts use a short key resolved through `imageMap` in `src/lib/content.ts`, not a `/images/...` path. I'll reuse the closest existing buyer-guide image key (`best-home-warranty-for-appliances`) so the hero renders. The `imageAlt` from the source copy is preserved.
+- `quickAnswer:` — added (required by the article template), filled with the verbatim "Quick answer:" paragraph from each post.
+- `costTable: []` — added empty (these are comparison posts, no repair cost table).
+- `tags`, `date`, `author`, `title`, `slug`, `metaDescription`, `faq[]` — kept exactly as given.
 
-### 6. Lead-Gen Quote Form (Monetization)
-"Get a free home warranty quote" form on warranty articles and the calculator results page. Captures name, email, ZIP, appliance count → stores in `warranty_leads` table → shows thank-you with affiliate redirect.
-- Used as a monetization funnel; can later be wired to an affiliate network.
-- Honeypot + rate-limit (server function) for spam protection.
+## Body content
 
-### 7. SEO & Content Ops Upgrades
-- JSON-LD `Article` schema on every blog post (headline, datePublished, author, image).
-- JSON-LD `BreadcrumbList` on category and article pages.
-- JSON-LD `FAQPage` on posts containing the FAQ component.
-- RSS feed at `/rss.xml` generated from posts.
-- Tag pages at `/tag/$tag` (currently only categories exist).
-- Improved `sitemap.xml`: include lastmod from post frontmatter, add tag and tool routes.
-- Author byline + `/about` link on each article.
+The full body copy is included verbatim, including:
 
----
+- The intro paragraphs
+- The "at a glance" comparison table (rendered as a GFM markdown table)
+- All sections (pricing, plans, service fees, claims, contractor network, reviews, which to choose)
+- `> **Tip:**` / `> **Watch out:**` callouts as markdown blockquotes
+- The "Frequently asked questions" section, repeating each Q (as `**bold**`) and A — matches the existing pattern in posts like `best-home-warranty-for-appliances.md` and satisfies the "render the same Q&As in the body FAQ section" requirement
+- "Related articles" list and the disclaimer line
 
-### Technical Notes
+The shared `FAQ` component (`src/components/blog/FAQ.tsx`) also renders `faq[]` as an accordion below the body, and `src/routes/blog.$slug.tsx` already emits `FAQPage` JSON-LD from `faq[]` — both behaviors are automatic.
 
-**Lovable Cloud tables (with RLS + GRANTs):**
-- `profiles` (id, display_name, newsletter_opt_in) — created via `handle_new_user` trigger.
-- `bookmarks` (id, user_id, post_slug, created_at) — RLS scoped to `auth.uid()`.
-- `calculations` (id, user_id nullable, appliance, brand, region, estimate, created_at) — anon-insertable for analytics.
-- `warranty_leads` (id, email, zip, appliance_count, source_url, created_at) — `TO anon` INSERT only; admin-only SELECT via `has_role`.
-- `error_codes` (id, brand, code, appliance, meaning, common_causes, fix_steps) — `TO anon` SELECT.
+## What I'm NOT doing
 
-**Auth:** Email/password + Google (via `lovable.auth.signInWithOAuth`). Provider enabled with `configure_social_auth`.
+- Not editing `src/lib/content.ts`, `imageMap`, or any route — not needed.
+- Not generating new hero images. If you want unique images for these three posts, say so and I'll generate them and wire them into `imageMap`.
+- Not touching `routeTree.gen.ts`, sitemap, or RSS — `getAllPosts()` already feeds them, so new posts appear automatically.
 
-**Routes:** All public routes stay top-level for shareability; only `/account/*` lives under `_authenticated/`.
+## Verification after build
 
-**Server functions:** Lead submission (`submitWarrantyLead`), bookmark toggle (`toggleBookmark`), calculation logging (`logCalculation`) — all `createServerFn` with proper input validation. No edge functions.
-
-### Suggested Build Order
-1. SEO & Content Ops (#7) — lowest risk, biggest immediate organic lift.
-2. Search + Related Posts (#5) — improves engagement on existing traffic.
-3. Repair Cost Calculator (#1) + Repair vs Replace (#2) — pure frontend tools.
-4. Error Code Lookup (#3) — needs Cloud table seed.
-5. Enable Lovable Cloud → Newsletter/Accounts (#4).
-6. Lead-Gen Quote Form (#6) — needs Cloud + the calculator results page as a host.
-
-Would you like me to start with #7 (SEO ops) or jump to a specific feature?
+- `/blog/choice-vs-american-home-shield`, `/blog/first-american-vs-american-home-shield`, `/blog/select-vs-choice-home-warranty` render.
+- `/category/buyer-guides` lists all three new posts alongside the existing buyer guide.
+- Each article page has one `<script type="application/ld+json">` block with `"@type":"FAQPage"` whose `mainEntity` matches the 5 Q&As.
