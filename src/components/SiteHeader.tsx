@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { CATEGORIES } from "@/lib/content";
-import { Menu, Wrench, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, Search, Wrench, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { SearchPalette } from "@/components/SearchPalette";
 
 
 const navLinkClass =
@@ -10,6 +11,22 @@ const activeClass = { className: "bg-muted text-ink" };
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+      if (e.key === "/" && document.activeElement?.tagName !== "INPUT" && document.activeElement?.tagName !== "TEXTAREA") {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
@@ -61,6 +78,9 @@ export function SiteHeader() {
                 ))}
               </div>
             </div>
+            <Link to="/tools" activeProps={activeClass} className={navLinkClass}>
+              Tools
+            </Link>
             <Link to="/about" activeProps={activeClass} className={navLinkClass}>
               About
             </Link>
@@ -68,16 +88,27 @@ export function SiteHeader() {
               Contact
             </Link>
           </nav>
-          <button
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-ink transition-colors hover:bg-muted md:hidden"
-            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-primary-navigation"
-            onClick={() => setMobileOpen((open) => !open)}
-          >
-            {mobileOpen ? <X className="h-5 w-5" aria-hidden /> : <Menu className="h-5 w-5" aria-hidden />}
-          </button>
+          <div className="flex items-center gap-1">
+            <button
+              type="button"
+              onClick={() => setSearchOpen(true)}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-ink-soft transition-colors hover:bg-muted hover:text-ink"
+              aria-label="Search (press / or Cmd+K)"
+              title="Search (press / or Cmd+K)"
+            >
+              <Search className="h-4 w-4" aria-hidden />
+            </button>
+            <button
+              type="button"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-ink transition-colors hover:bg-muted md:hidden"
+              aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-primary-navigation"
+              onClick={() => setMobileOpen((open) => !open)}
+            >
+              {mobileOpen ? <X className="h-5 w-5" aria-hidden /> : <Menu className="h-5 w-5" aria-hidden />}
+            </button>
+          </div>
         </div>
         {mobileOpen && (
           <nav id="mobile-primary-navigation" aria-label="Primary" className="mt-4 border-t border-border pt-4 md:hidden">
@@ -102,6 +133,12 @@ export function SiteHeader() {
                   {c.name}
                 </Link>
               ))}
+              <Link to="/tools" className={navLinkClass} onClick={() => setMobileOpen(false)}>
+                Tools
+              </Link>
+              <Link to="/error-codes" className={navLinkClass} onClick={() => setMobileOpen(false)}>
+                Error code lookup
+              </Link>
               <Link to="/about" className={navLinkClass} onClick={() => setMobileOpen(false)}>
                 About
               </Link>
@@ -112,6 +149,7 @@ export function SiteHeader() {
           </nav>
         )}
       </div>
+      <SearchPalette open={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   );
 }

@@ -13,6 +13,8 @@ import { FAQ } from "@/components/blog/FAQ";
 import { AdSlot } from "@/components/blog/AdSlot";
 import { PostCard } from "@/components/blog/PostCard";
 import { TableOfContents } from "@/components/blog/TableOfContents";
+import { ReadingProgress } from "@/components/blog/ReadingProgress";
+import { tagToSlug } from "@/lib/content";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -122,6 +124,7 @@ function ArticlePage() {
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
+      <ReadingProgress />
       <Breadcrumbs
         items={[
           { label: "Home", to: "/" },
@@ -208,6 +211,25 @@ function ArticlePage() {
 
           {/* FAQ */}
           <FAQ items={post.faq} />
+
+          {/* Tags */}
+          {post.tags.length > 0 && (
+            <div className="mt-10 flex flex-wrap gap-2 border-t border-border pt-6">
+              <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Tagged:
+              </span>
+              {post.tags.map((t) => (
+                <Link
+                  key={t}
+                  to="/tag/$tag"
+                  params={{ tag: tagToSlug(t) }}
+                  className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-ink-soft hover:bg-accent/10 hover:text-accent"
+                >
+                  #{t}
+                </Link>
+              ))}
+            </div>
+          )}
 
           {/* Related */}
           {related.length > 0 && (

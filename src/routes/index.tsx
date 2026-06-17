@@ -71,11 +71,10 @@ function HomePage() {
                 Browse all articles <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
               <Link
-                to="/category/$category"
-                params={{ category: "repair-vs-replace" }}
+                to="/tools/repair-cost-calculator"
                 className="inline-flex items-center rounded-md border border-border bg-background px-5 py-3 text-sm font-semibold text-ink transition-colors hover:bg-muted"
               >
-                Repair or replace?
+                Try the cost calculator
               </Link>
             </div>
           </div>
