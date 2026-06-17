@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { CATEGORIES } from "@/lib/content";
-import { Menu, Wrench, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, Search, Wrench, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { SearchPalette } from "@/components/SearchPalette";
 
 
 const navLinkClass =
@@ -10,6 +11,22 @@ const activeClass = { className: "bg-muted text-ink" };
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+      if (e.key === "/" && document.activeElement?.tagName !== "INPUT" && document.activeElement?.tagName !== "TEXTAREA") {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
