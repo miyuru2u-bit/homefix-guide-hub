@@ -78,6 +78,9 @@ export function SiteHeader() {
                 ))}
               </div>
             </div>
+            <Link to="/tools" activeProps={activeClass} className={navLinkClass}>
+              Tools
+            </Link>
             <Link to="/about" activeProps={activeClass} className={navLinkClass}>
               About
             </Link>
@@ -85,6 +88,28 @@ export function SiteHeader() {
               Contact
             </Link>
           </nav>
+          <div className="flex items-center gap-1">
+            <button
+              type="button"
+              onClick={() => setSearchOpen(true)}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-ink-soft transition-colors hover:bg-muted hover:text-ink"
+              aria-label="Search (press / or Cmd+K)"
+              title="Search (press / or Cmd+K)"
+            >
+              <Search className="h-4 w-4" aria-hidden />
+            </button>
+            <button
+              type="button"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-ink transition-colors hover:bg-muted md:hidden"
+              aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-primary-navigation"
+              onClick={() => setMobileOpen((open) => !open)}
+            >
+              {mobileOpen ? <X className="h-5 w-5" aria-hidden /> : <Menu className="h-5 w-5" aria-hidden />}
+            </button>
+          </div>
+        </div>
           <button
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-ink transition-colors hover:bg-muted md:hidden"
