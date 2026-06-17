@@ -34,6 +34,11 @@ import extVsHwImg from "@/assets/post-extended-warranty-vs-home-warranty.jpg";
 import mostExpensiveImg from "@/assets/post-most-expensive-appliances-to-repair.jpg";
 import reliableBrandsImg from "@/assets/post-most-reliable-appliance-brands.jpg";
 import cheapestMaintainImg from "@/assets/post-cheapest-appliances-to-maintain.jpg";
+import choiceVsAhsImg from "@/assets/post-choice-vs-ahs.jpg";
+import firstAmericanVsAhsImg from "@/assets/post-first-american-vs-ahs.jpg";
+import selectVsChoiceImg from "@/assets/post-select-vs-choice.jpg";
+import libertyVsAhsImg from "@/assets/post-liberty-vs-ahs.jpg";
+import cinchVsAhsImg from "@/assets/post-cinch-vs-ahs.jpg";
 
 export type Category = {
   slug: string;
@@ -170,6 +175,11 @@ const imageMap: Record<string, string> = {
   "most-expensive-appliances-to-repair": mostExpensiveImg,
   "most-reliable-appliance-brands": reliableBrandsImg,
   "cheapest-appliances-to-maintain": cheapestMaintainImg,
+  "choice-vs-ahs": choiceVsAhsImg,
+  "first-american-vs-ahs": firstAmericanVsAhsImg,
+  "select-vs-choice": selectVsChoiceImg,
+  "liberty-vs-ahs": libertyVsAhsImg,
+  "cinch-vs-ahs": cinchVsAhsImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just

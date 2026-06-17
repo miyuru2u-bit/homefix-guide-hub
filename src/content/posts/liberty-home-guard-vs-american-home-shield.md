@@ -6,7 +6,7 @@ category: "buyer-guides"
 tags: ["home warranty", "liberty home guard", "american home shield", "comparison"]
 date: "2026-06-15"
 author: "Editorial Team"
-image: "best-home-warranty-for-appliances"
+image: "liberty-vs-ahs"
 imageAlt: "Liberty Home Guard and American Home Shield comparison"
 quickAnswer: "Liberty Home Guard (LHG) wins on customer service, claim-approval reputation, and the widest selection of add-ons (40+) — making it the better experience for most buyers. American Home Shield wins on coverage caps, systems depth, and decades of track record. Pick LHG for service quality and customization; pick AHS for high-value systems and maximum payout limits."
 costTable: []
