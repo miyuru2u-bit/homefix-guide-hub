@@ -110,17 +110,6 @@ export function SiteHeader() {
             </button>
           </div>
         </div>
-          <button
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-ink transition-colors hover:bg-muted md:hidden"
-            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-primary-navigation"
-            onClick={() => setMobileOpen((open) => !open)}
-          >
-            {mobileOpen ? <X className="h-5 w-5" aria-hidden /> : <Menu className="h-5 w-5" aria-hidden />}
-          </button>
-        </div>
         {mobileOpen && (
           <nav id="mobile-primary-navigation" aria-label="Primary" className="mt-4 border-t border-border pt-4 md:hidden">
             <div className="grid gap-1">
