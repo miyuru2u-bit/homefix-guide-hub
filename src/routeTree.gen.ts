@@ -9,18 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ToolsRouteImport } from './routes/tools'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as ErrorCodesRouteImport } from './routes/error-codes'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ToolsIndexRouteImport } from './routes/tools.index'
+import { Route as ErrorCodesIndexRouteImport } from './routes/error-codes.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as ToolsRepairOrReplaceRouteImport } from './routes/tools.repair-or-replace'
+import { Route as ToolsRepairCostCalculatorRouteImport } from './routes/tools.repair-cost-calculator'
+import { Route as TagTagRouteImport } from './routes/tag.$tag'
 import { Route as CategoryCategoryRouteImport } from './routes/category.$category'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ErrorCodesBrandCodeRouteImport } from './routes/error-codes.$brand.$code'
 
+const ToolsRoute = ToolsRouteImport.update({
+  id: '/tools',
+  path: '/tools',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -31,9 +45,19 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RssDotxmlRoute = RssDotxmlRouteImport.update({
+  id: '/rss.xml',
+  path: '/rss.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   id: '/privacy-policy',
   path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErrorCodesRoute = ErrorCodesRouteImport.update({
+  id: '/error-codes',
+  path: '/error-codes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DisclaimerRoute = DisclaimerRouteImport.update({
@@ -61,10 +85,36 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsIndexRoute = ToolsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ToolsRoute,
+} as any)
+const ErrorCodesIndexRoute = ErrorCodesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ErrorCodesRoute,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => BlogRoute,
+} as any)
+const ToolsRepairOrReplaceRoute = ToolsRepairOrReplaceRouteImport.update({
+  id: '/repair-or-replace',
+  path: '/repair-or-replace',
+  getParentRoute: () => ToolsRoute,
+} as any)
+const ToolsRepairCostCalculatorRoute =
+  ToolsRepairCostCalculatorRouteImport.update({
+    id: '/repair-cost-calculator',
+    path: '/repair-cost-calculator',
+    getParentRoute: () => ToolsRoute,
+  } as any)
+const TagTagRoute = TagTagRouteImport.update({
+  id: '/tag/$tag',
+  path: '/tag/$tag',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const CategoryCategoryRoute = CategoryCategoryRouteImport.update({
   id: '/category/$category',
@@ -76,6 +126,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => BlogRoute,
 } as any)
+const ErrorCodesBrandCodeRoute = ErrorCodesBrandCodeRouteImport.update({
+  id: '/$brand/$code',
+  path: '/$brand/$code',
+  getParentRoute: () => ErrorCodesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -83,12 +138,21 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/error-codes': typeof ErrorCodesRouteWithChildren
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/rss.xml': typeof RssDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/tools': typeof ToolsRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
+  '/tag/$tag': typeof TagTagRoute
+  '/tools/repair-cost-calculator': typeof ToolsRepairCostCalculatorRoute
+  '/tools/repair-or-replace': typeof ToolsRepairOrReplaceRoute
   '/blog/': typeof BlogIndexRoute
+  '/error-codes/': typeof ErrorCodesIndexRoute
+  '/tools/': typeof ToolsIndexRoute
+  '/error-codes/$brand/$code': typeof ErrorCodesBrandCodeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -96,11 +160,18 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/rss.xml': typeof RssDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
+  '/tag/$tag': typeof TagTagRoute
+  '/tools/repair-cost-calculator': typeof ToolsRepairCostCalculatorRoute
+  '/tools/repair-or-replace': typeof ToolsRepairOrReplaceRoute
   '/blog': typeof BlogIndexRoute
+  '/error-codes': typeof ErrorCodesIndexRoute
+  '/tools': typeof ToolsIndexRoute
+  '/error-codes/$brand/$code': typeof ErrorCodesBrandCodeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -109,12 +180,21 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/error-codes': typeof ErrorCodesRouteWithChildren
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/rss.xml': typeof RssDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/tools': typeof ToolsRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
+  '/tag/$tag': typeof TagTagRoute
+  '/tools/repair-cost-calculator': typeof ToolsRepairCostCalculatorRoute
+  '/tools/repair-or-replace': typeof ToolsRepairOrReplaceRoute
   '/blog/': typeof BlogIndexRoute
+  '/error-codes/': typeof ErrorCodesIndexRoute
+  '/tools/': typeof ToolsIndexRoute
+  '/error-codes/$brand/$code': typeof ErrorCodesBrandCodeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -124,12 +204,21 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/disclaimer'
+    | '/error-codes'
     | '/privacy-policy'
+    | '/rss.xml'
     | '/sitemap.xml'
     | '/terms'
+    | '/tools'
     | '/blog/$slug'
     | '/category/$category'
+    | '/tag/$tag'
+    | '/tools/repair-cost-calculator'
+    | '/tools/repair-or-replace'
     | '/blog/'
+    | '/error-codes/'
+    | '/tools/'
+    | '/error-codes/$brand/$code'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -137,11 +226,18 @@ export interface FileRouteTypes {
     | '/contact'
     | '/disclaimer'
     | '/privacy-policy'
+    | '/rss.xml'
     | '/sitemap.xml'
     | '/terms'
     | '/blog/$slug'
     | '/category/$category'
+    | '/tag/$tag'
+    | '/tools/repair-cost-calculator'
+    | '/tools/repair-or-replace'
     | '/blog'
+    | '/error-codes'
+    | '/tools'
+    | '/error-codes/$brand/$code'
   id:
     | '__root__'
     | '/'
@@ -149,12 +245,21 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/disclaimer'
+    | '/error-codes'
     | '/privacy-policy'
+    | '/rss.xml'
     | '/sitemap.xml'
     | '/terms'
+    | '/tools'
     | '/blog/$slug'
     | '/category/$category'
+    | '/tag/$tag'
+    | '/tools/repair-cost-calculator'
+    | '/tools/repair-or-replace'
     | '/blog/'
+    | '/error-codes/'
+    | '/tools/'
+    | '/error-codes/$brand/$code'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -163,14 +268,25 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
+  ErrorCodesRoute: typeof ErrorCodesRouteWithChildren
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  RssDotxmlRoute: typeof RssDotxmlRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
+  ToolsRoute: typeof ToolsRouteWithChildren
   CategoryCategoryRoute: typeof CategoryCategoryRoute
+  TagTagRoute: typeof TagTagRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tools': {
+      id: '/tools'
+      path: '/tools'
+      fullPath: '/tools'
+      preLoaderRoute: typeof ToolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -185,11 +301,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/rss.xml': {
+      id: '/rss.xml'
+      path: '/rss.xml'
+      fullPath: '/rss.xml'
+      preLoaderRoute: typeof RssDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy-policy': {
       id: '/privacy-policy'
       path: '/privacy-policy'
       fullPath: '/privacy-policy'
       preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/error-codes': {
+      id: '/error-codes'
+      path: '/error-codes'
+      fullPath: '/error-codes'
+      preLoaderRoute: typeof ErrorCodesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/disclaimer': {
@@ -227,12 +357,47 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/': {
+      id: '/tools/'
+      path: '/'
+      fullPath: '/tools/'
+      preLoaderRoute: typeof ToolsIndexRouteImport
+      parentRoute: typeof ToolsRoute
+    }
+    '/error-codes/': {
+      id: '/error-codes/'
+      path: '/'
+      fullPath: '/error-codes/'
+      preLoaderRoute: typeof ErrorCodesIndexRouteImport
+      parentRoute: typeof ErrorCodesRoute
+    }
     '/blog/': {
       id: '/blog/'
       path: '/'
       fullPath: '/blog/'
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
+    }
+    '/tools/repair-or-replace': {
+      id: '/tools/repair-or-replace'
+      path: '/repair-or-replace'
+      fullPath: '/tools/repair-or-replace'
+      preLoaderRoute: typeof ToolsRepairOrReplaceRouteImport
+      parentRoute: typeof ToolsRoute
+    }
+    '/tools/repair-cost-calculator': {
+      id: '/tools/repair-cost-calculator'
+      path: '/repair-cost-calculator'
+      fullPath: '/tools/repair-cost-calculator'
+      preLoaderRoute: typeof ToolsRepairCostCalculatorRouteImport
+      parentRoute: typeof ToolsRoute
+    }
+    '/tag/$tag': {
+      id: '/tag/$tag'
+      path: '/tag/$tag'
+      fullPath: '/tag/$tag'
+      preLoaderRoute: typeof TagTagRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/category/$category': {
       id: '/category/$category'
@@ -247,6 +412,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
+    }
+    '/error-codes/$brand/$code': {
+      id: '/error-codes/$brand/$code'
+      path: '/$brand/$code'
+      fullPath: '/error-codes/$brand/$code'
+      preLoaderRoute: typeof ErrorCodesBrandCodeRouteImport
+      parentRoute: typeof ErrorCodesRoute
     }
   }
 }
@@ -263,16 +435,48 @@ const BlogRouteChildren: BlogRouteChildren = {
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
+interface ErrorCodesRouteChildren {
+  ErrorCodesIndexRoute: typeof ErrorCodesIndexRoute
+  ErrorCodesBrandCodeRoute: typeof ErrorCodesBrandCodeRoute
+}
+
+const ErrorCodesRouteChildren: ErrorCodesRouteChildren = {
+  ErrorCodesIndexRoute: ErrorCodesIndexRoute,
+  ErrorCodesBrandCodeRoute: ErrorCodesBrandCodeRoute,
+}
+
+const ErrorCodesRouteWithChildren = ErrorCodesRoute._addFileChildren(
+  ErrorCodesRouteChildren,
+)
+
+interface ToolsRouteChildren {
+  ToolsRepairCostCalculatorRoute: typeof ToolsRepairCostCalculatorRoute
+  ToolsRepairOrReplaceRoute: typeof ToolsRepairOrReplaceRoute
+  ToolsIndexRoute: typeof ToolsIndexRoute
+}
+
+const ToolsRouteChildren: ToolsRouteChildren = {
+  ToolsRepairCostCalculatorRoute: ToolsRepairCostCalculatorRoute,
+  ToolsRepairOrReplaceRoute: ToolsRepairOrReplaceRoute,
+  ToolsIndexRoute: ToolsIndexRoute,
+}
+
+const ToolsRouteWithChildren = ToolsRoute._addFileChildren(ToolsRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
+  ErrorCodesRoute: ErrorCodesRouteWithChildren,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  RssDotxmlRoute: RssDotxmlRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
+  ToolsRoute: ToolsRouteWithChildren,
   CategoryCategoryRoute: CategoryCategoryRoute,
+  TagTagRoute: TagTagRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -58,7 +58,7 @@ export const Route = createFileRoute("/error-codes/$brand/$code")({
 });
 
 function ErrorCodeDetail() {
-  const e = Route.useLoaderData();
+  const e = Route.useLoaderData() as import("@/lib/error-codes-data").ErrorCodeEntry;
   const related = e.relatedPostSlug ? getPost(e.relatedPostSlug) : undefined;
 
   return (

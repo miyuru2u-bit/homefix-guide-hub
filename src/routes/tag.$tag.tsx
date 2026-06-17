@@ -38,7 +38,10 @@ export const Route = createFileRoute("/tag/$tag")({
 });
 
 function TagPage() {
-  const { tag, posts } = Route.useLoaderData();
+  const { tag, posts } = Route.useLoaderData() as {
+    tag: import("@/lib/content").TagSummary;
+    posts: import("@/lib/content").Post[];
+  };
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <Breadcrumbs
