@@ -106,6 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "icon", type: "image/png", href: "/images/logo.png" },
       { rel: "apple-touch-icon", href: "/images/logo.png" },
+      { rel: "alternate", type: "application/rss+xml", title: "Home Appliance Cost Guide RSS", href: "/rss.xml" },
     ],
     scripts: [
       {
