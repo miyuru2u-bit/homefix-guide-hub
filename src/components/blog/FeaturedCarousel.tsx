@@ -32,8 +32,9 @@ export function FeaturedCarousel({ posts }: { posts: Post[] }) {
             transform: `translateX(-${(100 / count) * index}%)`,
           }}
         >
-          {posts.map((post) => {
+          {posts.map((post, i) => {
             const cat = CATEGORIES.find((c) => c.slug === post.category);
+            const isFirst = i === 0;
             return (
               <div
                 key={post.slug}
@@ -51,8 +52,9 @@ export function FeaturedCarousel({ posts }: { posts: Post[] }) {
                       alt={post.imageAlt}
                       width={1280}
                       height={800}
-                      loading="lazy"
+                      loading={isFirst ? "eager" : "lazy"}
                       decoding="async"
+                      {...(isFirst ? { fetchPriority: "high" as const } : {})}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>
