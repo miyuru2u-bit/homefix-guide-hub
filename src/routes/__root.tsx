@@ -104,6 +104,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+        crossOrigin: "anonymous",
+      } as any,
+      {
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "https://fonts.gstatic.com/s/fraunces/v38/6NUu8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0K7iN7iQcIfJD58njt0oc7qv8.woff2",
+        crossOrigin: "anonymous",
+      } as any,
       { rel: "icon", type: "image/png", href: "/images/logo.png" },
       { rel: "apple-touch-icon", href: "/images/logo.png" },
       { rel: "alternate", type: "application/rss+xml", title: "Home Appliance Cost Guide RSS", href: "/rss.xml" },

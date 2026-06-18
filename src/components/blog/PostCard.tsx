@@ -15,6 +15,7 @@ export function PostCard({ post }: { post: Post }) {
           src={post.image}
           alt={post.imageAlt}
           loading="lazy"
+          decoding="async"
           width={1280}
           height={800}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
