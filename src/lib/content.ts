@@ -42,6 +42,8 @@ import cinchVsAhsImg from "@/assets/post-cinch-vs-ahs.jpg";
 import bestHwOlderHomesImg from "@/assets/post-best-hw-older-homes.jpg";
 import bestHwHvacImg from "@/assets/post-best-hw-hvac.jpg";
 import bestHwNoWaitingImg from "@/assets/post-best-hw-no-waiting.jpg";
+import bestHwRentalImg from "@/assets/post-best-hw-rental.jpg";
+import cheapestHwImg from "@/assets/post-cheapest-hw.jpg";
 
 export type Category = {
   slug: string;
@@ -186,6 +188,8 @@ const imageMap: Record<string, string> = {
   "best-hw-older-homes": bestHwOlderHomesImg,
   "best-hw-hvac": bestHwHvacImg,
   "best-hw-no-waiting": bestHwNoWaitingImg,
+  "best-hw-rental": bestHwRentalImg,
+  "cheapest-hw": cheapestHwImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
