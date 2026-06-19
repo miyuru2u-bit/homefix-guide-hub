@@ -310,8 +310,42 @@ function pickToolsForPost(post: import("@/lib/content").Post): ToolLink[] {
   return Array.from(picks);
 }
 
-function RelatedTools({ post }: { post: import("@/lib/content").Post }) {
+function RelatedTools({
+  post,
+  variant = "inline",
+}: {
+  post: import("@/lib/content").Post;
+  variant?: "inline" | "sidebar";
+}) {
   const tools = pickToolsForPost(post);
+  if (variant === "sidebar") {
+    return (
+      <div className="rounded-xl border border-border bg-card p-5">
+        <h2 className="mb-1 font-display text-base font-semibold text-ink">Helpful tools</h2>
+        <p className="mb-4 text-xs text-ink-soft">Free calculators for this topic.</p>
+        <ul className="space-y-2">
+          {tools.map(({ to, title, desc, Icon }) => (
+            <li key={to}>
+              <Link
+                to={to}
+                className="group flex items-start gap-3 rounded-lg border border-transparent p-2 -mx-2 transition-colors hover:border-border hover:bg-accent/5"
+              >
+                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-md bg-accent/10 text-accent">
+                  <Icon className="h-4 w-4" aria-hidden />
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-sm font-semibold text-ink group-hover:text-accent">
+                    {title}
+                  </span>
+                  <span className="block text-xs leading-snug text-ink-soft">{desc}</span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
   return (
     <section className="mt-12 border-t border-border pt-10">
       <h2 className="mb-2 font-display text-2xl font-semibold text-ink">Helpful tools</h2>
@@ -340,3 +374,4 @@ function RelatedTools({ post }: { post: import("@/lib/content").Post }) {
     </section>
   );
 }
+
