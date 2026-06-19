@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ShieldAlert } from "lucide-react";
+import { ShieldAlert, Calculator, Scale, SearchCode, ArrowRight } from "lucide-react";
 import {
   getPost,
   getCategory,
