@@ -4,7 +4,7 @@ slug: "bosch-dishwasher-e15-error-code"
 metaDescription: "Bosch dishwasher showing E15? It means water is in the base pan and the leak-protection float has triggered. Here's what causes it, how to fix it step by step, costs, and when to call a pro."
 category: "appliance-error-codes"
 tags: ["Bosch dishwasher", "E15 error", "leak protection", "AquaStop", "troubleshooting"]
-date: "2026-06-23"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "bosch-dishwasher-e15-error"
 imageAlt: "Bosch dishwasher with the E15 leak-protection error code"

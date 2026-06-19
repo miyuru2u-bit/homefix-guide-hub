@@ -4,7 +4,7 @@ slug: "cheapest-home-warranty"
 metaDescription: "The cheapest home warranty plans in 2026 that are actually worth it. Compare low-cost providers, real coverage caps, and how to save without gutting your protection."
 category: "buyer-guides"
 tags: ["home warranty", "cheapest home warranty", "budget", "affordable"]
-date: "2026-06-21"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "cheapest-hw"
 imageAlt: "Affordable home warranty plans compared on a budget"

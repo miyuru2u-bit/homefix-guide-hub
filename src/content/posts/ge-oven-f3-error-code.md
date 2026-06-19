@@ -4,7 +4,7 @@ slug: "ge-oven-f3-error-code"
 metaDescription: "GE oven showing an F3 error code? It points to a faulty oven temperature sensor (or its wiring). Here's what it means, how to test and fix it, repair costs, and when to call a pro."
 category: "appliance-error-codes"
 tags: ["GE oven", "F3 error", "oven temperature sensor", "RTD sensor", "troubleshooting"]
-date: "2026-06-22"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "ge-oven-f3-error"
 imageAlt: "GE oven control panel showing the F3 error code"

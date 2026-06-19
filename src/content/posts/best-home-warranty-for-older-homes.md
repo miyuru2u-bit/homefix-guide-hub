@@ -4,7 +4,7 @@ slug: "best-home-warranty-for-older-homes"
 metaDescription: "The best home warranty for older homes in 2026, ranked by coverage caps, age limits, and pre-existing terms. See top picks for aging HVAC, plumbing, and appliances."
 category: "buyer-guides"
 tags: ["home warranty", "older homes", "best home warranty", "coverage"]
-date: "2026-06-25"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "best-hw-older-homes"
 imageAlt: "Older home protected by a home warranty plan"

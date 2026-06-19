@@ -4,7 +4,7 @@ slug: "does-home-warranty-cover-refrigerator"
 metaDescription: "Does a home warranty cover a refrigerator? See what's covered, what's excluded, how caps work, claim examples, and whether the coverage is worth it in 2026."
 category: "home-warranty-guides"
 tags: ["home warranty", "refrigerator coverage", "appliance warranty", "claims"]
-date: "2026-06-21"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "does-home-warranty-cover-refrigerator"
 imageAlt: "Open refrigerator full of food in a bright modern kitchen"

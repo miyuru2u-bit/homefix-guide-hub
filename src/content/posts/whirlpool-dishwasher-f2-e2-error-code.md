@@ -4,7 +4,7 @@ slug: "whirlpool-dishwasher-f2-e2-error-code"
 metaDescription: "Whirlpool dishwasher showing F2 E2? It means the control panel can't communicate with the main board. Here's what causes it, how to reset and fix it, costs, and when to call a pro."
 category: "appliance-error-codes"
 tags: ["Whirlpool dishwasher", "F2 E2 error", "control panel", "user interface", "troubleshooting"]
-date: "2026-06-24"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "whirlpool-dishwasher-f2e2-error"
 imageAlt: "Whirlpool dishwasher control panel showing the F2 E2 error code"

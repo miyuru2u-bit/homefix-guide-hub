@@ -4,7 +4,7 @@ slug: "does-home-warranty-cover-washer-dryer"
 metaDescription: "Does a home warranty cover a washer and dryer? See what's covered, what's excluded, how caps and add-ons work, claim examples, and whether it's worth it in 2026."
 category: "home-warranty-guides"
 tags: ["home warranty", "washer dryer coverage", "laundry appliances", "claims"]
-date: "2026-06-20"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "does-home-warranty-cover-washer-dryer"
 imageAlt: "Stacked washer and dryer in a home laundry room"
