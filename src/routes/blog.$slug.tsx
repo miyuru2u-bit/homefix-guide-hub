@@ -231,9 +231,6 @@ function ArticlePage() {
             </div>
           )}
 
-          {/* Related tools */}
-          <RelatedTools post={post} />
-
           {/* Related */}
           {related.length > 0 && (
             <section className="mt-12 border-t border-border pt-10">
@@ -266,6 +263,7 @@ function ArticlePage() {
                 <TableOfContents items={post.toc} variant="sidebar" />
               </div>
             )}
+            <RelatedTools post={post} variant="sidebar" />
             <AdSlot label="Advertisement — Sidebar" className="min-h-[600px]" />
           </div>
         </aside>
