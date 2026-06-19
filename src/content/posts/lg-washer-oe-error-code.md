@@ -4,7 +4,7 @@ slug: "lg-washer-oe-error-code"
 metaDescription: "LG washer showing an OE error code? It means a drain problem. Here's what causes it, step-by-step DIY fixes for the pump filter and hose, repair costs, and when to call a pro."
 category: "appliance-error-codes"
 tags: ["LG washer", "OE error", "drain error", "drain pump", "troubleshooting"]
-date: "2026-06-25"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "lg-washer-oe-error"
 imageAlt: "LG washer display showing the OE drain error code"

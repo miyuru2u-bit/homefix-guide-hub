@@ -4,7 +4,7 @@ slug: "samsung-washer-4c-error-code"
 metaDescription: "Samsung washer showing a 4C (or 4E) error code? Here's what it means, the most common causes, step-by-step DIY fixes, repair costs, and when to call a pro."
 category: "appliance-error-codes"
 tags: ["Samsung washer", "4C error", "4E error", "water supply", "troubleshooting"]
-date: "2026-06-26"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "samsung-washer-4c-error"
 imageAlt: "Samsung washer display showing the 4C error code"

@@ -4,7 +4,7 @@ slug: "best-home-warranty-for-rental-property"
 metaDescription: "The best home warranty for rental property and landlords in 2026. Compare plans that cover investment properties, multi-unit discounts, and tenant-friendly claims."
 category: "buyer-guides"
 tags: ["home warranty", "rental property", "landlords", "investment property"]
-date: "2026-06-22"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "best-hw-rental"
 imageAlt: "Rental property protected by a landlord home warranty"

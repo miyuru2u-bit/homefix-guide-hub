@@ -4,7 +4,7 @@ slug: "best-home-warranty-for-hvac"
 metaDescription: "The best home warranty for HVAC coverage in 2026, ranked by coverage caps, AC and furnace protection, and service fees. Protect your heating and cooling system."
 category: "buyer-guides"
 tags: ["home warranty", "hvac", "air conditioning", "best home warranty"]
-date: "2026-06-24"
+date: "2026-06-19"
 author: "Editorial Team"
 image: "best-hw-hvac"
 imageAlt: "HVAC unit covered by a home warranty plan"
