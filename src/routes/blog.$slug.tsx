@@ -273,3 +273,72 @@ function ArticlePage() {
     </article>
   );
 }
+
+type ToolLink = {
+  to: "/tools/repair-cost-calculator" | "/tools/repair-or-replace" | "/error-codes";
+  title: string;
+  desc: string;
+  Icon: typeof Calculator;
+};
+
+const ALL_TOOLS: ToolLink[] = [
+  {
+    to: "/tools/repair-cost-calculator",
+    title: "Repair Cost Calculator",
+    desc: "Estimate parts + labor for your appliance and ZIP region in seconds.",
+    Icon: Calculator,
+  },
+  {
+    to: "/tools/repair-or-replace",
+    title: "Repair vs Replace Tool",
+    desc: "Apply the 50% rule and get a clear keep-or-swap recommendation.",
+    Icon: Scale,
+  },
+  {
+    to: "/error-codes",
+    title: "Appliance Error Code Lookup",
+    desc: "Decode brand-specific error codes and see likely fixes.",
+    Icon: SearchCode,
+  },
+];
+
+function pickToolsForPost(post: import("@/lib/content").Post): ToolLink[] {
+  const hay = `${post.slug} ${post.category} ${post.tags.join(" ")} ${post.title}`.toLowerCase();
+  const picks = new Set<ToolLink>();
+  if (/error|code|e15|f3|oe|4c|f2/.test(hay)) picks.add(ALL_TOOLS[2]);
+  if (/repair|cost|price/.test(hay)) picks.add(ALL_TOOLS[0]);
+  if (/replace|worth|vs|guide/.test(hay)) picks.add(ALL_TOOLS[1]);
+  if (picks.size === 0) ALL_TOOLS.forEach((t) => picks.add(t));
+  return Array.from(picks);
+}
+
+function RelatedTools({ post }: { post: import("@/lib/content").Post }) {
+  const tools = pickToolsForPost(post);
+  return (
+    <section className="mt-12 border-t border-border pt-10">
+      <h2 className="mb-2 font-display text-2xl font-semibold text-ink">Helpful tools</h2>
+      <p className="mb-6 text-sm text-ink-soft">
+        Free calculators and lookups to take the next step on this topic.
+      </p>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {tools.map(({ to, title, desc, Icon }) => (
+          <Link
+            key={to}
+            to={to}
+            className="group flex flex-col gap-3 rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/60 hover:bg-accent/5"
+          >
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
+              <Icon className="h-5 w-5" aria-hidden />
+            </span>
+            <span className="font-display text-lg font-semibold text-ink">{title}</span>
+            <span className="text-sm leading-relaxed text-ink-soft">{desc}</span>
+            <span className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-accent">
+              Open tool
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
