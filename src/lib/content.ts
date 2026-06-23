@@ -49,6 +49,9 @@ import whoPaysHwImg from "@/assets/post-who-pays-home-warranty.jpg";
 import hwAtClosingImg from "@/assets/post-home-warranty-at-closing.jpg";
 import hwFirstTimeImg from "@/assets/post-home-warranty-first-time-buyers.jpg";
 import hwTransferImg from "@/assets/post-does-home-warranty-transfer.jpg";
+import ahsReviewImg from "@/assets/post-american-home-shield-review.jpg";
+import choiceReviewImg from "@/assets/post-choice-home-warranty-review.jpg";
+import lhgReviewImg from "@/assets/post-liberty-home-guard-review.jpg";
 
 export type Category = {
   slug: string;
@@ -200,6 +203,9 @@ const imageMap: Record<string, string> = {
   "home-warranty-at-closing": hwAtClosingImg,
   "home-warranty-first-time-buyers": hwFirstTimeImg,
   "does-home-warranty-transfer": hwTransferImg,
+  "american-home-shield-review": ahsReviewImg,
+  "choice-home-warranty-review": choiceReviewImg,
+  "liberty-home-guard-review": lhgReviewImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
