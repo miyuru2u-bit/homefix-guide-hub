@@ -321,7 +321,6 @@ function linkifyRelatedPosts(posts: Post[]): void {
     );
 
     // 2) Linkify the first plain-text mention of any other post title in body paragraphs.
-    const linkedSlugs = new Set<string>();
     for (const other of posts) {
       if (other.slug === post.slug) continue;
       const candidates = [other.title, other.title.split(":")[0]].filter(
