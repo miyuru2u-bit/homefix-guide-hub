@@ -42,6 +42,18 @@ export const Route = createFileRoute("/error-codes/$brand/$code")({
             ],
           }),
         },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://whatrepaircosts.com/" },
+              { "@type": "ListItem", position: 2, name: "Error codes", item: "https://whatrepaircosts.com/error-codes" },
+              { "@type": "ListItem", position: 3, name: `${loaderData.brand} ${loaderData.code}`, item: url },
+            ],
+          }),
+        },
       ],
     };
   },
