@@ -310,6 +310,37 @@ function pickToolsForPost(post: import("@/lib/content").Post): ToolLink[] {
   return Array.from(picks);
 }
 
+function trackToolClick(params: {
+  toolTitle: string;
+  toolPath: string;
+  postSlug: string;
+  postCategory: string;
+  placement: "inline" | "sidebar";
+}) {
+  if (typeof window === "undefined") return;
+  const payload = {
+    tool_title: params.toolTitle,
+    tool_path: params.toolPath,
+    post_slug: params.postSlug,
+    post_category: params.postCategory,
+    placement: params.placement,
+  };
+  try {
+    const w = window as unknown as {
+      gtag?: (...args: unknown[]) => void;
+      dataLayer?: unknown[];
+      plausible?: (event: string, opts?: { props?: Record<string, unknown> }) => void;
+    };
+    w.gtag?.("event", "helpful_tool_click", payload);
+    w.dataLayer?.push({ event: "helpful_tool_click", ...payload });
+    w.plausible?.("Helpful Tool Click", { props: payload });
+    window.dispatchEvent(new CustomEvent("helpful_tool_click", { detail: payload }));
+    if (import.meta.env.DEV) console.debug("[track] helpful_tool_click", payload);
+  } catch {
+    // never let tracking break navigation
+  }
+}
+
 function RelatedTools({
   post,
   variant = "inline",
@@ -318,16 +349,30 @@ function RelatedTools({
   variant?: "inline" | "sidebar";
 }) {
   const tools = pickToolsForPost(post);
+  const handleClick = (tool: ToolLink, placement: "inline" | "sidebar") => () =>
+    trackToolClick({
+      toolTitle: tool.title,
+      toolPath: tool.to,
+      postSlug: post.slug,
+      postCategory: post.category,
+      placement,
+    });
   if (variant === "sidebar") {
     return (
       <div className="rounded-xl border border-border bg-card p-5">
         <h2 className="mb-1 font-display text-base font-semibold text-ink">Helpful tools</h2>
         <p className="mb-4 text-xs text-ink-soft">Free calculators for this topic.</p>
         <ul className="space-y-2">
-          {tools.map(({ to, title, desc, Icon }) => (
+          {tools.map((tool) => {
+            const { to, title, desc, Icon } = tool;
+            return (
             <li key={to}>
               <Link
                 to={to}
+                onClick={handleClick(tool, "sidebar")}
+                data-track="helpful_tool_click"
+                data-tool-title={title}
+                data-placement="sidebar"
                 className="group flex items-start gap-3 rounded-lg border border-transparent p-2 -mx-2 transition-colors hover:border-border hover:bg-accent/5"
               >
                 <span className="flex h-8 w-8 flex-none items-center justify-center rounded-md bg-accent/10 text-accent">
@@ -341,7 +386,8 @@ function RelatedTools({
                 </span>
               </Link>
             </li>
-          ))}
+            );
+          })}
         </ul>
       </div>
     );
