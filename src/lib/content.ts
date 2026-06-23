@@ -268,9 +268,100 @@ function parsePost(raw: string): Post {
   };
 }
 
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function normalizeTitle(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/&amp;/g, "&")
+    .replace(/[\u2018\u2019\u2032]/g, "'")
+    .replace(/[\u201C\u201D\u2033]/g, '"')
+    .replace(/[\u2013\u2014]/g, "-")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function linkifyRelatedPosts(posts: Post[]): void {
+  // Build lookup of title (and a shortened "before colon" variant) -> slug
+  const titleToSlug = new Map<string, string>();
+  for (const p of posts) {
+    titleToSlug.set(normalizeTitle(p.title), p.slug);
+    const short = p.title.split(":")[0];
+    if (short && short !== p.title) {
+      const key = normalizeTitle(short);
+      if (!titleToSlug.has(key)) titleToSlug.set(key, p.slug);
+    }
+  }
+
+  for (const post of posts) {
+    let html = post.html;
+
+    // 1) Linkify <li> items inside the "Related articles" section.
+    html = html.replace(
+      /(<h2[^>]*>\s*Related articles\s*<\/h2>)([\s\S]*?)(?=<h2|$)/i,
+      (_m, heading: string, body: string) => {
+        const newBody = body.replace(
+          /<li>([\s\S]*?)<\/li>/g,
+          (liMatch: string, inner: string) => {
+            // Skip if already a link
+            if (/<a\s/i.test(inner)) return liMatch;
+            const plain = inner.replace(/<[^>]+>/g, "").trim();
+            const key = normalizeTitle(plain);
+            const slug =
+              titleToSlug.get(key) ??
+              titleToSlug.get(normalizeTitle(plain.split(":")[0]));
+            if (!slug || slug === post.slug) return liMatch;
+            return `<li><a href="/blog/${slug}">${inner.trim()}</a></li>`;
+          },
+        );
+        return heading + newBody;
+      },
+    );
+
+    // 2) Linkify the first plain-text mention of any other post title in body paragraphs.
+    for (const other of posts) {
+      if (other.slug === post.slug) continue;
+      const candidates = [other.title, other.title.split(":")[0]].filter(
+        (t, i, arr) => t && (i === 0 || t !== arr[0]),
+      );
+      for (const candidate of candidates) {
+        if (candidate.length < 12) continue;
+        const pattern = new RegExp(
+          `(?<![\\w>])(${escapeRegExp(candidate)})(?![\\w<])`,
+          "i",
+        );
+        let replaced = false;
+        html = html.replace(
+          /<p>([\s\S]*?)<\/p>/g,
+          (pMatch: string, inner: string) => {
+            if (replaced) return pMatch;
+            if (/<a\s/i.test(inner)) return pMatch;
+            if (!pattern.test(inner)) return pMatch;
+            const newInner = inner.replace(
+              pattern,
+              `<a href="/blog/${other.slug}">$1</a>`,
+            );
+            if (newInner === inner) return pMatch;
+            replaced = true;
+            
+            return `<p>${newInner}</p>`;
+          },
+        );
+        if (replaced) break;
+      }
+    }
+
+    post.html = html;
+  }
+}
+
 const allPosts: Post[] = Object.values(files)
   .map(parsePost)
   .sort((a, b) => (b.date > a.date ? 1 : b.date < a.date ? -1 : 0));
+
+linkifyRelatedPosts(allPosts);
 
 export function getAllPosts(): Post[] {
   return allPosts;
