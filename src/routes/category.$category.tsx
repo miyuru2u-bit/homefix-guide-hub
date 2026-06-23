@@ -1,21 +1,36 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { z } from "zod";
 import { getCategory, getPostsByCategory } from "@/lib/content";
 import { PostCard } from "@/components/blog/PostCard";
 import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 
+const PAGE_SIZE = 12;
+
+const searchSchema = z.object({
+  page: z.coerce.number().int().min(1).optional().catch(undefined),
+});
+
 export const Route = createFileRoute("/category/$category")({
-  loader: ({ params }) => {
+  validateSearch: searchSchema,
+  loaderDeps: ({ search }) => ({ page: search.page ?? 1 }),
+  loader: ({ params, deps }) => {
     const cat = getCategory(params.category);
     if (!cat) throw notFound();
-    const posts = getPostsByCategory(cat.slug);
-    return { cat, posts };
+    const allPosts = getPostsByCategory(cat.slug);
+    const totalPages = Math.max(1, Math.ceil(allPosts.length / PAGE_SIZE));
+    const page = Math.min(Math.max(1, deps.page), totalPages);
+    const start = (page - 1) * PAGE_SIZE;
+    const posts = allPosts.slice(start, start + PAGE_SIZE);
+    return { cat, posts, page, totalPages, total: allPosts.length };
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) return { meta: [{ title: "Category not found" }] };
-    const url = `https://whatrepaircosts.com/category/${params.category}`;
+    const base = `https://whatrepaircosts.com/category/${params.category}`;
+    const url = loaderData.page > 1 ? `${base}?page=${loaderData.page}` : base;
+    const titleSuffix = loaderData.page > 1 ? ` — Page ${loaderData.page}` : "";
     return {
       meta: [
-        { title: `${loaderData.cat.name} — Home Appliance Cost Guide` },
+        { title: `${loaderData.cat.name}${titleSuffix} — Home Appliance Cost Guide` },
         { name: "description", content: loaderData.cat.description },
         { property: "og:title", content: loaderData.cat.name },
         { property: "og:description", content: loaderData.cat.description },
@@ -49,7 +64,8 @@ export const Route = createFileRoute("/category/$category")({
 });
 
 function CategoryPage() {
-  const { cat, posts } = Route.useLoaderData();
+  const { cat, posts, page, totalPages, total } = Route.useLoaderData();
+  const params = Route.useParams();
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <Breadcrumbs
@@ -63,17 +79,62 @@ function CategoryPage() {
         <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">Category</p>
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">{cat.name}</h1>
         <p className="mt-3 max-w-2xl text-lg text-ink-soft">{cat.description}</p>
+        {total > 0 && (
+          <p className="mt-4 text-sm text-ink-soft">
+            {total} article{total === 1 ? "" : "s"}
+            {totalPages > 1 ? ` · Page ${page} of ${totalPages}` : ""}
+          </p>
+        )}
       </header>
       {posts.length === 0 ? (
         <p className="text-ink-soft">
-          No articles in this category yet. <Link to="/blog" className="text-primary hover:underline">Browse all articles →</Link>
+          No articles in this category yet.{" "}
+          <Link to="/blog" className="text-primary hover:underline">
+            Browse all articles →
+          </Link>
         </p>
       ) : (
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((p: typeof posts[number]) => (
-            <PostCard key={p.slug} post={p} />
-          ))}
-        </div>
+        <>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((p: typeof posts[number]) => (
+              <PostCard key={p.slug} post={p} />
+            ))}
+          </div>
+          {totalPages > 1 && (
+            <nav
+              aria-label="Pagination"
+              className="mt-12 flex items-center justify-between border-t border-border pt-6"
+            >
+              {page > 1 ? (
+                <Link
+                  to="/category/$category"
+                  params={{ category: params.category }}
+                  search={page - 1 === 1 ? {} : { page: page - 1 }}
+                  className="text-sm font-medium text-primary hover:underline"
+                >
+                  ← Previous
+                </Link>
+              ) : (
+                <span className="text-sm text-muted-foreground">← Previous</span>
+              )}
+              <span className="text-sm text-ink-soft">
+                Page {page} of {totalPages}
+              </span>
+              {page < totalPages ? (
+                <Link
+                  to="/category/$category"
+                  params={{ category: params.category }}
+                  search={{ page: page + 1 }}
+                  className="text-sm font-medium text-primary hover:underline"
+                >
+                  Next →
+                </Link>
+              ) : (
+                <span className="text-sm text-muted-foreground">Next →</span>
+              )}
+            </nav>
+          )}
+        </>
       )}
     </div>
   );
