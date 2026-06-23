@@ -345,7 +345,7 @@ function linkifyRelatedPosts(posts: Post[]): void {
             );
             if (newInner === inner) return pMatch;
             replaced = true;
-            linkedSlugs.add(other.slug);
+            
             return `<p>${newInner}</p>`;
           },
         );
