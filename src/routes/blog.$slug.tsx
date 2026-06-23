@@ -399,10 +399,16 @@ function RelatedTools({
         Free calculators and lookups to take the next step on this topic.
       </p>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {tools.map(({ to, title, desc, Icon }) => (
+        {tools.map((tool) => {
+          const { to, title, desc, Icon } = tool;
+          return (
           <Link
             key={to}
             to={to}
+            onClick={handleClick(tool, "inline")}
+            data-track="helpful_tool_click"
+            data-tool-title={title}
+            data-placement="inline"
             className="group flex flex-col gap-3 rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/60 hover:bg-accent/5"
           >
             <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
@@ -415,7 +421,8 @@ function RelatedTools({
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
             </span>
           </Link>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
