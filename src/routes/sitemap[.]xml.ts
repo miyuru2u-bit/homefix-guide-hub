@@ -18,6 +18,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/tools/repair-cost-calculator", priority: "0.85", changefreq: "monthly" as const },
           { path: "/tools/repair-or-replace", priority: "0.85", changefreq: "monthly" as const },
           { path: "/error-codes", priority: "0.85", changefreq: "weekly" as const },
+          { path: "/rss.xml", priority: "0.3", changefreq: "daily" as const },
           { path: "/about", priority: "0.5", changefreq: "monthly" as const },
           { path: "/contact", priority: "0.4", changefreq: "yearly" as const },
           { path: "/privacy-policy", priority: "0.3", changefreq: "yearly" as const },
