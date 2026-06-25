@@ -129,8 +129,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Home Appliance Cost Guide",
+          url: "https://whatrepaircosts.com",
           description:
             "Plain-English repair pricing, home warranty breakdowns, and repair-vs-replace guides for US homeowners.",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://whatrepaircosts.com/blog?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Home Appliance Cost Guide",
+          url: "https://whatrepaircosts.com",
+          logo: "https://whatrepaircosts.com/images/logo-stacked.png",
         }),
       },
     ],
