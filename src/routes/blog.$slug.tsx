@@ -93,10 +93,10 @@ export const Route = createFileRoute("/blog/$slug")({
     };
   },
   component: ArticlePage,
-  errorComponent: ({ error, reset }) => (
+  errorComponent: ({ reset }) => (
     <div className="mx-auto max-w-2xl px-4 py-20 text-center">
       <h1 className="font-display text-3xl font-semibold text-ink">This article didn't load</h1>
-      <p className="mt-3 text-ink-soft">{error.message || "Something went wrong."}</p>
+      <p className="mt-3 text-ink-soft">Something went wrong. Please try again.</p>
       <button
         type="button"
         onClick={() => reset()}
