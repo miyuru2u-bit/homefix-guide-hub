@@ -8,9 +8,9 @@ export const Route = createFileRoute("/terms")({
       { name: "description", content: "Terms governing use of the Home Appliance Cost Guide website and content." },
       { property: "og:title", content: "Terms of Service" },
       { property: "og:description", content: "Terms governing use of this website and its content." },
-      { property: "og:url", content: "/terms" },
+      { property: "og:url", content: "https://whatrepaircosts.com/terms" },
     ],
-    links: [{ rel: "canonical", href: "/terms" }],
+    links: [{ rel: "canonical", href: "https://whatrepaircosts.com/terms" }],
   }),
   component: TermsPage,
 });

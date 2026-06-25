@@ -12,9 +12,9 @@ export const Route = createFileRoute("/about")({
       },
       { property: "og:title", content: "About — Home Appliance Cost Guide" },
       { property: "og:description", content: "Independent appliance repair and warranty guidance." },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://whatrepaircosts.com/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://whatrepaircosts.com/about" }],
   }),
   component: AboutPage,
 });

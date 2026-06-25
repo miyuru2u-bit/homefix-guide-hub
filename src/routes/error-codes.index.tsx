@@ -17,6 +17,28 @@ export const Route = createFileRoute("/error-codes/")({
       { property: "og:url", content: "https://whatrepaircosts.com/error-codes" },
     ],
     links: [{ rel: "canonical", href: "https://whatrepaircosts.com/error-codes" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Appliance Error Code Lookup",
+          url: "https://whatrepaircosts.com/error-codes",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://whatrepaircosts.com/" },
+            { "@type": "ListItem", position: 2, name: "Error codes", item: "https://whatrepaircosts.com/error-codes" },
+          ],
+        }),
+      },
+    ],
   }),
   component: ErrorCodesIndex,
 });

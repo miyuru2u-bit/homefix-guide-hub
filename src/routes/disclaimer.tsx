@@ -8,9 +8,9 @@ export const Route = createFileRoute("/disclaimer")({
       { name: "description", content: "Repair safety, affiliate, and informational disclaimers for Home Appliance Cost Guide." },
       { property: "og:title", content: "Disclaimer" },
       { property: "og:description", content: "Repair safety, affiliate, and informational disclaimers." },
-      { property: "og:url", content: "/disclaimer" },
+      { property: "og:url", content: "https://whatrepaircosts.com/disclaimer" },
     ],
-    links: [{ rel: "canonical", href: "/disclaimer" }],
+    links: [{ rel: "canonical", href: "https://whatrepaircosts.com/disclaimer" }],
   }),
   component: DisclaimerPage,
 });

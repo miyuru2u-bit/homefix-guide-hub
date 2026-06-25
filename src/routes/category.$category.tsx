@@ -37,6 +37,30 @@ export const Route = createFileRoute("/category/$category")({
         { property: "og:url", content: url },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: loaderData.cat.name,
+            description: loaderData.cat.description,
+            url: base,
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://whatrepaircosts.com/" },
+              { "@type": "ListItem", position: 2, name: "Articles", item: "https://whatrepaircosts.com/blog" },
+              { "@type": "ListItem", position: 3, name: loaderData.cat.name, item: base },
+            ],
+          }),
+        },
+      ],
     };
   },
   component: CategoryPage,

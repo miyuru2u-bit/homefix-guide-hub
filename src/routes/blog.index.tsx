@@ -17,6 +17,28 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:url", content: "https://whatrepaircosts.com/blog" },
     ],
     links: [{ rel: "canonical", href: "https://whatrepaircosts.com/blog" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "All Articles — Home Appliance Cost Guide",
+          url: "https://whatrepaircosts.com/blog",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://whatrepaircosts.com/" },
+            { "@type": "ListItem", position: 2, name: "Articles", item: "https://whatrepaircosts.com/blog" },
+          ],
+        }),
+      },
+    ],
   }),
   component: BlogIndex,
 });
