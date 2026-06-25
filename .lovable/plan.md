@@ -1,44 +1,82 @@
-# Add 3 buyer-guide comparison posts
+# Complete SEO Plan for whatrepaircosts.com
 
-Create three new markdown files under `src/content/posts/` so they're picked up by the existing `import.meta.glob` loader in `src/lib/content.ts`. No code changes needed — JSON-LD `FAQPage` from `faq[]`, the in-body FAQ section, breadcrumbs, and category routing all already work for any post whose frontmatter matches the schema.
+## Current state (audit)
 
-## Files to create
+Strengths already in place:
+- Per-route `head()` with title, description, og:* on key routes (`__root.tsx`, `index.tsx`, `error-codes.$brand.$code.tsx`).
+- Dynamic `sitemap.xml` server route covering static, category, tag, error-code, and post URLs.
+- `robots.txt` with sitemap pointer.
+- RSS feed linked from root.
+- JSON-LD WebSite on root, FAQPage + BreadcrumbList on error-code pages.
+- Hero image preloaded with `fetchPriority="high"`; category images lazy-loaded.
 
-- `src/content/posts/choice-vs-american-home-shield.md`
-- `src/content/posts/first-american-vs-american-home-shield.md`
-- `src/content/posts/select-vs-choice-home-warranty.md`
+Gaps found:
+1. **Canonical tags missing** on most leaf routes (blog list, category, tag, tools, about, contact, legal, error-codes index, blog post detail not verified).
+2. **og:image** uses logo on all routes — leaf routes (blog posts, error codes) should use their hero/cover image.
+3. **Organization JSON-LD** missing sitewide (only WebSite present, no `url`, no `SearchAction`).
+4. **BreadcrumbList JSON-LD** only on error-code detail — should be on blog posts, categories, tags too.
+5. **Article JSON-LD** likely missing on blog posts (need to verify).
+6. **H1 audit**: every page should have exactly one H1 — needs verification across routes.
+7. **Image alt text**: verify all `<img>` have meaningful alt; category images currently use category name only.
+8. **Lazy loading**: confirm non-LCP images use `loading="lazy"` + `decoding="async"`.
+9. **Internal linking**: blog post pages could add "related posts" by tag/category; category pages could cross-link.
+10. **robots.txt** — already good, will leave as-is.
+11. **Performance**: hero already preloaded; confirm fonts preloaded (yes, two woff2 preloads).
 
-## Frontmatter schema (adapted to existing site conventions)
+## Implementation
 
-The provided frontmatter uses values that don't match this project's loader. Each file's frontmatter will be normalized:
+### 1. Head metadata + canonicals
+Add `rel="canonical"` and `og:url` to every leaf route currently missing them:
+- `blog.index.tsx`, `blog.$slug.tsx`
+- `category.$category.tsx`, `tag.$tag.tsx`
+- `error-codes.index.tsx`
+- `tools.index.tsx`, `tools.repair-cost-calculator.tsx`, `tools.repair-or-replace.tsx`
+- `about.tsx`, `contact.tsx`, `privacy-policy.tsx`, `terms.tsx`, `disclaimer.tsx`
 
-- `category: "buyer-guides"` — the loader matches on category slug, not display name (the display name `"Buyer Guides & Comparisons"` lives in `CATEGORIES` and resolves automatically). This is what routes `/category/buyer-guides` correctly.
-- `image:` — existing posts use a short key resolved through `imageMap` in `src/lib/content.ts`, not a `/images/...` path. I'll reuse the closest existing buyer-guide image key (`best-home-warranty-for-appliances`) so the hero renders. The `imageAlt` from the source copy is preserved.
-- `quickAnswer:` — added (required by the article template), filled with the verbatim "Quick answer:" paragraph from each post.
-- `costTable: []` — added empty (these are comparison posts, no repair cost table).
-- `tags`, `date`, `author`, `title`, `slug`, `metaDescription`, `faq[]` — kept exactly as given.
+### 2. Per-page og:image
+- Blog posts: use post hero/cover image (from frontmatter) for `og:image` + `twitter:image`; `og:type: article`.
+- Category pages: use category image.
+- Error code pages already self-describe — leave logo fallback.
 
-## Body content
+### 3. Structured data (JSON-LD)
+- **Root**: extend WebSite schema with `url`, `potentialAction` (SearchAction). Add Organization schema with `logo`, `sameAs` (if any).
+- **Blog post**: add Article + BreadcrumbList.
+- **Category / Tag**: add CollectionPage + BreadcrumbList.
+- **Error codes index**: add CollectionPage.
 
-The full body copy is included verbatim, including:
+### 4. Heading structure
+Audit each route component, ensure exactly one `<h1>` per page; demote stray h1s in components (e.g., footer, cards) to h2/h3.
 
-- The intro paragraphs
-- The "at a glance" comparison table (rendered as a GFM markdown table)
-- All sections (pricing, plans, service fees, claims, contractor network, reviews, which to choose)
-- `> **Tip:**` / `> **Watch out:**` callouts as markdown blockquotes
-- The "Frequently asked questions" section, repeating each Q (as `**bold**`) and A — matches the existing pattern in posts like `best-home-warranty-for-appliances.md` and satisfies the "render the same Q&As in the body FAQ section" requirement
-- "Related articles" list and the disclaimer line
+### 5. Images / alt / lazy
+- Verify every `<img>` has descriptive alt (not filename, not empty unless decorative).
+- Add `loading="lazy"` + `decoding="async"` to non-LCP images that are missing it.
+- Ensure width/height present to reserve space (CLS).
 
-The shared `FAQ` component (`src/components/blog/FAQ.tsx`) also renders `faq[]` as an accordion below the body, and `src/routes/blog.$slug.tsx` already emits `FAQPage` JSON-LD from `faq[]` — both behaviors are automatic.
+### 6. Internal linking
+- Blog post: add a "Related articles" block (same category or shared tags, top 3).
+- Category page: link to related categories / popular tags.
+- Error code detail already links to related post — keep.
 
-## What I'm NOT doing
+### 7. Sitemap
+Already comprehensive. Add `lastmod` to category pages when feasible (use newest post date in category). Low priority.
 
-- Not editing `src/lib/content.ts`, `imageMap`, or any route — not needed.
-- Not generating new hero images. If you want unique images for these three posts, say so and I'll generate them and wire them into `imageMap`.
-- Not touching `routeTree.gen.ts`, sitemap, or RSS — `getAllPosts()` already feeds them, so new posts appear automatically.
+### 8. Performance / Core Web Vitals
+- Hero preload — done.
+- Fonts preloaded — done.
+- Confirm `aspect-*` wrappers on all hero images to avoid CLS.
+- Defer non-critical JS — TanStack handles this; nothing to do.
 
-## Verification after build
+### 9. Accessibility
+- Verify icon-only buttons have `aria-label`.
+- Verify single `<main>` per page (in `__root.tsx` already).
+- Ensure form inputs (search palette, contact) have labels.
 
-- `/blog/choice-vs-american-home-shield`, `/blog/first-american-vs-american-home-shield`, `/blog/select-vs-choice-home-warranty` render.
-- `/category/buyer-guides` lists all three new posts alongside the existing buyer guide.
-- Each article page has one `<script type="application/ld+json">` block with `"@type":"FAQPage"` whose `mainEntity` matches the 5 Q&As.
+## Out of scope (won't change)
+- robots.txt (already correct).
+- Existing sitemap mechanism (already a dynamic server route covering all routes).
+- Visual design / copy.
+- Server functions / business logic.
+
+## Verification
+- Run `bun run build:dev` after changes.
+- Trigger SEO scan and report findings count.
