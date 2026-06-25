@@ -8,9 +8,9 @@ export const Route = createFileRoute("/privacy-policy")({
       { name: "description", content: "How Home Appliance Cost Guide collects, uses, and protects visitor data." },
       { property: "og:title", content: "Privacy Policy" },
       { property: "og:description", content: "How we collect, use, and protect visitor data." },
-      { property: "og:url", content: "/privacy-policy" },
+      { property: "og:url", content: "https://whatrepaircosts.com/privacy-policy" },
     ],
-    links: [{ rel: "canonical", href: "/privacy-policy" }],
+    links: [{ rel: "canonical", href: "https://whatrepaircosts.com/privacy-policy" }],
   }),
   component: PrivacyPage,
 });
