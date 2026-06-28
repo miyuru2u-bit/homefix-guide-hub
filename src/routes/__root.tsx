@@ -149,6 +149,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           logo: "https://whatrepaircosts.com/images/logo-stacked.png",
         }),
       },
+      {
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7045300333101923",
+        async: true,
+        crossOrigin: "anonymous",
+      } as any,
     ],
   }),
   shellComponent: RootShell,
