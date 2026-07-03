@@ -59,6 +59,9 @@ import hwVsApplianceWarrantyImg from "@/assets/post-home-warranty-vs-appliance-w
 import bestAppExtWarrantyImg from "@/assets/post-best-appliances-extended-warranty.jpg";
 import whatApplianceWarrantyCoversImg from "@/assets/post-what-appliance-warranty-covers.jpg";
 import applianceWarrantyClaimImg from "@/assets/post-appliance-warranty-claim-process.jpg";
+import hwOldAppliancesImg from "@/assets/post-do-home-warranties-cover-old-appliances.jpg";
+import applianceWarrantyVsRepairImg from "@/assets/post-appliance-warranty-vs-repair-cost.jpg";
+import hwWorthItAppliancesImg from "@/assets/post-are-home-warranties-worth-it-for-appliances.jpg";
 
 export type Category = {
   slug: string;
