@@ -54,6 +54,8 @@ import choiceReviewImg from "@/assets/post-choice-home-warranty-review.jpg";
 import lhgReviewImg from "@/assets/post-liberty-home-guard-review.jpg";
 import selectReviewImg from "@/assets/post-select-home-warranty-review.jpg";
 import cinchReviewImg from "@/assets/post-cinch-home-services-review.jpg";
+import extAppWarrantiesWorthItImg from "@/assets/post-are-extended-appliance-warranties-worth-it.jpg";
+import hwVsApplianceWarrantyImg from "@/assets/post-home-warranty-vs-appliance-warranty.jpg";
 
 export type Category = {
   slug: string;
