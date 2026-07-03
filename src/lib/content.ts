@@ -212,6 +212,8 @@ const imageMap: Record<string, string> = {
   "liberty-home-guard-review": lhgReviewImg,
   "select-home-warranty-review": selectReviewImg,
   "cinch-home-services-review": cinchReviewImg,
+  "are-extended-appliance-warranties-worth-it": extAppWarrantiesWorthItImg,
+  "home-warranty-vs-appliance-warranty": hwVsApplianceWarrantyImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
