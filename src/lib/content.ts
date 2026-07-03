@@ -54,6 +54,8 @@ import choiceReviewImg from "@/assets/post-choice-home-warranty-review.jpg";
 import lhgReviewImg from "@/assets/post-liberty-home-guard-review.jpg";
 import selectReviewImg from "@/assets/post-select-home-warranty-review.jpg";
 import cinchReviewImg from "@/assets/post-cinch-home-services-review.jpg";
+import extAppWarrantiesWorthItImg from "@/assets/post-are-extended-appliance-warranties-worth-it.jpg";
+import hwVsApplianceWarrantyImg from "@/assets/post-home-warranty-vs-appliance-warranty.jpg";
 
 export type Category = {
   slug: string;
@@ -210,6 +212,8 @@ const imageMap: Record<string, string> = {
   "liberty-home-guard-review": lhgReviewImg,
   "select-home-warranty-review": selectReviewImg,
   "cinch-home-services-review": cinchReviewImg,
+  "are-extended-appliance-warranties-worth-it": extAppWarrantiesWorthItImg,
+  "home-warranty-vs-appliance-warranty": hwVsApplianceWarrantyImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
