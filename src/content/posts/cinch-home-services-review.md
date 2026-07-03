@@ -4,7 +4,7 @@ slug: "cinch-home-services-review"
 metaDescription: "Cinch Home Services review: plan options, pricing, the 180-day workmanship guarantee, unique rust and pre-existing coverage, and whether Cinch is worth it in 2026."
 category: "buyer-guides"
 tags: ["cinch home services", "home warranty review", "totalprotect", "HMS"]
-date: "2026-07-05"
+date: "2026-07-03"
 author: "Editorial Team"
 image: "cinch-home-services-review"
 imageAlt: "Cinch Home Services home warranty review and plan breakdown"
