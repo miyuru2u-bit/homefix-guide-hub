@@ -62,6 +62,7 @@ import applianceWarrantyClaimImg from "@/assets/post-appliance-warranty-claim-pr
 import hwOldAppliancesImg from "@/assets/post-do-home-warranties-cover-old-appliances.jpg";
 import applianceWarrantyVsRepairImg from "@/assets/post-appliance-warranty-vs-repair-cost.jpg";
 import hwWorthItAppliancesImg from "@/assets/post-are-home-warranties-worth-it-for-appliances.jpg";
+import applianceRepairVsReplacementImg from "@/assets/post-appliance-repair-vs-replacement.jpg";
 
 export type Category = {
   slug: string;
