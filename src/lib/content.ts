@@ -59,6 +59,9 @@ import hwVsApplianceWarrantyImg from "@/assets/post-home-warranty-vs-appliance-w
 import bestAppExtWarrantyImg from "@/assets/post-best-appliances-extended-warranty.jpg";
 import whatApplianceWarrantyCoversImg from "@/assets/post-what-appliance-warranty-covers.jpg";
 import applianceWarrantyClaimImg from "@/assets/post-appliance-warranty-claim-process.jpg";
+import hwOldAppliancesImg from "@/assets/post-do-home-warranties-cover-old-appliances.jpg";
+import applianceWarrantyVsRepairImg from "@/assets/post-appliance-warranty-vs-repair-cost.jpg";
+import hwWorthItAppliancesImg from "@/assets/post-are-home-warranties-worth-it-for-appliances.jpg";
 
 export type Category = {
   slug: string;
@@ -220,6 +223,9 @@ const imageMap: Record<string, string> = {
   "best-appliances-extended-warranty": bestAppExtWarrantyImg,
   "what-appliance-warranty-covers": whatApplianceWarrantyCoversImg,
   "appliance-warranty-claim-process": applianceWarrantyClaimImg,
+  "do-home-warranties-cover-old-appliances": hwOldAppliancesImg,
+  "appliance-warranty-vs-repair-cost": applianceWarrantyVsRepairImg,
+  "are-home-warranties-worth-it-for-appliances": hwWorthItAppliancesImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
