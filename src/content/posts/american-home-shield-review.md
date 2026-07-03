@@ -4,7 +4,7 @@ slug: "american-home-shield-review"
 metaDescription: "American Home Shield review for 2026: plan options, real pricing, the selectable service fee, coverage caps, complaints, and who AHS is actually best for."
 category: "buyer-guides"
 tags: ["american home shield", "home warranty review", "AHS", "home warranty"]
-date: "2026-07-09"
+date: "2026-07-03"
 author: "Editorial Team"
 image: "american-home-shield-review"
 imageAlt: "American Home Shield home warranty review and plan comparison"

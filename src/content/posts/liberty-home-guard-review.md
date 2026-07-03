@@ -4,7 +4,7 @@ slug: "liberty-home-guard-review"
 metaDescription: "Liberty Home Guard review: pricing, 40+ add-ons, claim-approval reputation, customer ratings, and whether this newer home warranty provider is worth it in 2026."
 category: "buyer-guides"
 tags: ["liberty home guard", "home warranty review", "home warranty add-ons"]
-date: "2026-07-07"
+date: "2026-07-03"
 author: "Editorial Team"
 image: "liberty-home-guard-review"
 imageAlt: "Liberty Home Guard home warranty review and ratings"

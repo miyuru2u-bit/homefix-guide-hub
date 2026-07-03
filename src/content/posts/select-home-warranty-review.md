@@ -4,7 +4,7 @@ slug: "select-home-warranty-review"
 metaDescription: "Select Home Warranty review: low monthly pricing, free roof-leak coverage, lower coverage caps, and whether this budget home warranty is worth it in 2026."
 category: "buyer-guides"
 tags: ["select home warranty", "home warranty review", "budget home warranty"]
-date: "2026-07-06"
+date: "2026-07-03"
 author: "Editorial Team"
 image: "select-home-warranty-review"
 imageAlt: "Select Home Warranty budget home warranty review"
