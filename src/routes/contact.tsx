@@ -22,6 +22,38 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError(null);
+    setSubmitting(true);
+    const fd = new FormData(e.currentTarget);
+    const payload = {
+      name: String(fd.get("name") || ""),
+      email: String(fd.get("email") || ""),
+      topic: String(fd.get("topic") || ""),
+      message: String(fd.get("message") || ""),
+    };
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error || "Failed to send message");
+      }
+      setSent(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send message");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
       <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Contact" }]} />
@@ -41,13 +73,7 @@ function ContactPage() {
           <p className="mt-2 text-sm">We'll be in touch within a few business days.</p>
         </div>
       ) : (
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSent(true);
-          }}
-          className="space-y-5 rounded-xl border border-border bg-card p-6"
-        >
+        <form onSubmit={handleSubmit} className="space-y-5 rounded-xl border border-border bg-card p-6">
           <div>
             <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">
               Name
@@ -57,6 +83,7 @@ function ContactPage() {
               name="name"
               type="text"
               required
+              maxLength={100}
               className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
@@ -69,6 +96,7 @@ function ContactPage() {
               name="email"
               type="email"
               required
+              maxLength={255}
               className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
@@ -96,14 +124,21 @@ function ContactPage() {
               name="message"
               rows={6}
               required
+              maxLength={5000}
               className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
+          {error && (
+            <p role="alert" className="text-sm text-destructive">
+              {error}
+            </p>
+          )}
           <button
             type="submit"
-            className="rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            disabled={submitting}
+            className="rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 disabled:opacity-60"
           >
-            Send message
+            {submitting ? "Sending…" : "Send message"}
           </button>
         </form>
       )}

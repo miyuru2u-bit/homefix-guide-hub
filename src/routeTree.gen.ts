@@ -28,6 +28,7 @@ import { Route as ToolsRepairCostCalculatorRouteImport } from './routes/tools.re
 import { Route as TagTagRouteImport } from './routes/tag.$tag'
 import { Route as CategoryCategoryRouteImport } from './routes/category.$category'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ApiContactRouteImport } from './routes/api/contact'
 import { Route as ErrorCodesBrandCodeRouteImport } from './routes/error-codes.$brand.$code'
 
 const ToolsRoute = ToolsRouteImport.update({
@@ -126,6 +127,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => BlogRoute,
 } as any)
+const ApiContactRoute = ApiContactRouteImport.update({
+  id: '/api/contact',
+  path: '/api/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ErrorCodesBrandCodeRoute = ErrorCodesBrandCodeRouteImport.update({
   id: '/$brand/$code',
   path: '/$brand/$code',
@@ -144,6 +150,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRouteWithChildren
+  '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
   '/tag/$tag': typeof TagTagRoute
@@ -163,6 +170,7 @@ export interface FileRoutesByTo {
   '/rss.xml': typeof RssDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
   '/tag/$tag': typeof TagTagRoute
@@ -186,6 +194,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRouteWithChildren
+  '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
   '/tag/$tag': typeof TagTagRoute
@@ -210,6 +219,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/tools'
+    | '/api/contact'
     | '/blog/$slug'
     | '/category/$category'
     | '/tag/$tag'
@@ -229,6 +239,7 @@ export interface FileRouteTypes {
     | '/rss.xml'
     | '/sitemap.xml'
     | '/terms'
+    | '/api/contact'
     | '/blog/$slug'
     | '/category/$category'
     | '/tag/$tag'
@@ -251,6 +262,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/tools'
+    | '/api/contact'
     | '/blog/$slug'
     | '/category/$category'
     | '/tag/$tag'
@@ -274,6 +286,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   ToolsRoute: typeof ToolsRouteWithChildren
+  ApiContactRoute: typeof ApiContactRoute
   CategoryCategoryRoute: typeof CategoryCategoryRoute
   TagTagRoute: typeof TagTagRoute
 }
@@ -413,6 +426,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/api/contact': {
+      id: '/api/contact'
+      path: '/api/contact'
+      fullPath: '/api/contact'
+      preLoaderRoute: typeof ApiContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/error-codes/$brand/$code': {
       id: '/error-codes/$brand/$code'
       path: '/$brand/$code'
@@ -475,19 +495,10 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   ToolsRoute: ToolsRouteWithChildren,
+  ApiContactRoute: ApiContactRoute,
   CategoryCategoryRoute: CategoryCategoryRoute,
   TagTagRoute: TagTagRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
