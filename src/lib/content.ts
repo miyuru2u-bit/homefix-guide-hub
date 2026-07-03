@@ -56,6 +56,9 @@ import selectReviewImg from "@/assets/post-select-home-warranty-review.jpg";
 import cinchReviewImg from "@/assets/post-cinch-home-services-review.jpg";
 import extAppWarrantiesWorthItImg from "@/assets/post-are-extended-appliance-warranties-worth-it.jpg";
 import hwVsApplianceWarrantyImg from "@/assets/post-home-warranty-vs-appliance-warranty.jpg";
+import bestAppExtWarrantyImg from "@/assets/post-best-appliances-extended-warranty.jpg";
+import whatApplianceWarrantyCoversImg from "@/assets/post-what-appliance-warranty-covers.jpg";
+import applianceWarrantyClaimImg from "@/assets/post-appliance-warranty-claim-process.jpg";
 
 export type Category = {
   slug: string;
@@ -214,6 +217,9 @@ const imageMap: Record<string, string> = {
   "cinch-home-services-review": cinchReviewImg,
   "are-extended-appliance-warranties-worth-it": extAppWarrantiesWorthItImg,
   "home-warranty-vs-appliance-warranty": hwVsApplianceWarrantyImg,
+  "best-appliances-extended-warranty": bestAppExtWarrantyImg,
+  "what-appliance-warranty-covers": whatApplianceWarrantyCoversImg,
+  "appliance-warranty-claim-process": applianceWarrantyClaimImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
