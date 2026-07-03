@@ -250,8 +250,27 @@ function stripMarkdown(text: string): string {
     .trim();
 }
 
+const POST_IMPORT_MODE: "clamp" | "throw" = "clamp";
+
+function validatePostDate(slug: string, date: string): string {
+  if (!/^\d{4}-\d{2}-\d{2}/.test(date)) {
+    throw new Error(`[content] Post "${slug}" has invalid date "${date}" (expected YYYY-MM-DD).`);
+  }
+  const today = new Date().toISOString().slice(0, 10);
+  const postDay = date.slice(0, 10);
+  if (postDay > today) {
+    if (POST_IMPORT_MODE === "throw") {
+      throw new Error(`[content] Post "${slug}" has future date ${postDay} (today is ${today}).`);
+    }
+    console.warn(`[content] Post "${slug}" had future date ${postDay}; clamped to ${today}.`);
+    return today;
+  }
+  return date;
+}
+
 function parsePost(raw: string): Post {
   const { data, content } = parseFrontmatter(raw);
+  data.date = validatePostDate(data.slug, data.date);
   const rawHtml = marked.parse(content) as string;
   const { html, toc } = injectHeadingIds(rawHtml);
   const excerptLine = content
