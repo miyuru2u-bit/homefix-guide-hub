@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getTag, getPostsByTag } from "@/lib/content";
+import { getTag, getPostsByTag, getCategory } from "@/lib/content";
 import { PostCard } from "@/components/blog/PostCard";
 import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 
