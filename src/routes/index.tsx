@@ -33,6 +33,8 @@ export const Route = createFileRoute("/")({
         content: "Plain-English repair pricing and warranty guides for US homeowners.",
       },
       { property: "og:url", content: "https://whatrepaircosts.com/" },
+      { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+      { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
     ],
     links: [
       { rel: "canonical", href: "https://whatrepaircosts.com/" },

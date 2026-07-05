@@ -4,7 +4,8 @@ import { PostCard } from "@/components/blog/PostCard";
 import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 
 export const Route = createFileRoute("/blog/")({
-  head: () => ({
+  loader: () => getAllPosts(),
+  head: ({ loaderData }) => ({
     meta: [
       { title: "All Articles — Home Appliance Cost Guide" },
       {
@@ -15,6 +16,8 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:title", content: "All Articles — Home Appliance Cost Guide" },
       { property: "og:description", content: "Repair pricing, error codes, and warranty guides." },
       { property: "og:url", content: "https://whatrepaircosts.com/blog" },
+      { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+      { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
     ],
     links: [{ rel: "canonical", href: "https://whatrepaircosts.com/blog" }],
     scripts: [
@@ -38,13 +41,26 @@ export const Route = createFileRoute("/blog/")({
           ],
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          itemListElement: (loaderData ?? []).slice(0, 25).map((p, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            url: `https://whatrepaircosts.com/blog/${p.slug}`,
+            name: p.title,
+          })),
+        }),
+      },
     ],
   }),
   component: BlogIndex,
 });
 
 function BlogIndex() {
-  const posts = getAllPosts();
+  const posts = Route.useLoaderData();
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">

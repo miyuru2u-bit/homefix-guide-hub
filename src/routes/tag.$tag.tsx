@@ -22,6 +22,8 @@ export const Route = createFileRoute("/tag/$tag")({
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
         { property: "og:url", content: url },
+        { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+        { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
@@ -45,6 +47,19 @@ export const Route = createFileRoute("/tag/$tag")({
               { "@type": "ListItem", position: 2, name: "Articles", item: "https://whatrepaircosts.com/blog" },
               { "@type": "ListItem", position: 3, name: `#${loaderData.tag.name}`, item: url },
             ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: loaderData.posts.slice(0, 25).map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `https://whatrepaircosts.com/blog/${p.slug}`,
+              name: p.title,
+            })),
           }),
         },
       ],
