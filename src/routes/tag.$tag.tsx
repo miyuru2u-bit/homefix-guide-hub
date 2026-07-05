@@ -100,6 +100,29 @@ function TagPage() {
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((p) => <PostCard key={p.slug} post={p} />)}
       </div>
+      {(() => {
+        const cats = Array.from(new Set(posts.map((p) => p.category)))
+          .map((slug) => getCategory(slug))
+          .filter((c): c is NonNullable<ReturnType<typeof getCategory>> => Boolean(c));
+        if (cats.length === 0) return null;
+        return (
+          <section className="mt-14 border-t border-border pt-8">
+            <h2 className="mb-4 font-display text-xl font-semibold text-ink">Related categories</h2>
+            <div className="flex flex-wrap gap-2">
+              {cats.map((c) => (
+                <Link
+                  key={c.slug}
+                  to="/category/$category"
+                  params={{ category: c.slug }}
+                  className="rounded-full border border-border bg-muted px-4 py-1.5 text-sm font-medium text-ink-soft hover:bg-accent/10 hover:text-accent"
+                >
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
     </div>
   );
 }
