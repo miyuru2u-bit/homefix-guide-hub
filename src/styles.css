@@ -81,7 +81,7 @@
   --secondary-foreground: oklch(0.32 0.06 160);
 
   --muted: oklch(0.95 0.018 85);
-  --muted-foreground: oklch(0.48 0.025 160);
+  --muted-foreground: oklch(0.42 0.025 160);
 
   /* Teal-green accent */
   --accent: #1FA37A;
