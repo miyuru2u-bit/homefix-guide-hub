@@ -13,6 +13,8 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About — Home Appliance Cost Guide" },
       { property: "og:description", content: "Independent appliance repair and warranty guidance." },
       { property: "og:url", content: "https://whatrepaircosts.com/about" },
+      { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+      { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
     ],
     links: [{ rel: "canonical", href: "https://whatrepaircosts.com/about" }],
   }),

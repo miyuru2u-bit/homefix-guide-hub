@@ -17,6 +17,8 @@ export const Route = createFileRoute("/tools/repair-or-replace")({
         content: "Should you repair or replace? Get a clear verdict based on age, repair cost, and replacement price.",
       },
       { property: "og:url", content: "https://whatrepaircosts.com/tools/repair-or-replace" },
+      { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+      { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
     ],
     links: [{ rel: "canonical", href: "https://whatrepaircosts.com/tools/repair-or-replace" }],
   }),

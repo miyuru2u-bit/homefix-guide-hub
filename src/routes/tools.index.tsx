@@ -14,6 +14,8 @@ export const Route = createFileRoute("/tools/")({
       { property: "og:title", content: "Free Appliance Repair Tools" },
       { property: "og:description", content: "Repair cost calculator, decision tool, and error code lookup." },
       { property: "og:url", content: "https://whatrepaircosts.com/tools" },
+      { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+      { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
     ],
     links: [{ rel: "canonical", href: "https://whatrepaircosts.com/tools" }],
   }),
