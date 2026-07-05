@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getTag, getPostsByTag } from "@/lib/content";
+import { getTag, getPostsByTag, getCategory } from "@/lib/content";
 import { PostCard } from "@/components/blog/PostCard";
 import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 
@@ -22,6 +22,8 @@ export const Route = createFileRoute("/tag/$tag")({
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
         { property: "og:url", content: url },
+        { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+        { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
@@ -45,6 +47,19 @@ export const Route = createFileRoute("/tag/$tag")({
               { "@type": "ListItem", position: 2, name: "Articles", item: "https://whatrepaircosts.com/blog" },
               { "@type": "ListItem", position: 3, name: `#${loaderData.tag.name}`, item: url },
             ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: loaderData.posts.slice(0, 25).map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `https://whatrepaircosts.com/blog/${p.slug}`,
+              name: p.title,
+            })),
           }),
         },
       ],
@@ -85,6 +100,29 @@ function TagPage() {
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((p) => <PostCard key={p.slug} post={p} />)}
       </div>
+      {(() => {
+        const cats = Array.from(new Set(posts.map((p) => p.category)))
+          .map((slug) => getCategory(slug))
+          .filter((c): c is NonNullable<ReturnType<typeof getCategory>> => Boolean(c));
+        if (cats.length === 0) return null;
+        return (
+          <section className="mt-14 border-t border-border pt-8">
+            <h2 className="mb-4 font-display text-xl font-semibold text-ink">Related categories</h2>
+            <div className="flex flex-wrap gap-2">
+              {cats.map((c) => (
+                <Link
+                  key={c.slug}
+                  to="/category/$category"
+                  params={{ category: c.slug }}
+                  className="rounded-full border border-border bg-muted px-4 py-1.5 text-sm font-medium text-ink-soft hover:bg-accent/10 hover:text-accent"
+                >
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
     </div>
   );
 }

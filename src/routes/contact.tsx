@@ -14,6 +14,8 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact — Home Appliance Cost Guide" },
       { property: "og:description", content: "Send us a question, correction, or topic idea." },
       { property: "og:url", content: "https://whatrepaircosts.com/contact" },
+      { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+      { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
     ],
     links: [{ rel: "canonical", href: "https://whatrepaircosts.com/contact" }],
   }),

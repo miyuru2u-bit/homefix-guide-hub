@@ -15,6 +15,8 @@ export const Route = createFileRoute("/error-codes/")({
       { property: "og:title", content: "Appliance Error Code Lookup" },
       { property: "og:description", content: "Decode brand-specific error codes from major appliance brands." },
       { property: "og:url", content: "https://whatrepaircosts.com/error-codes" },
+      { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+      { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
     ],
     links: [{ rel: "canonical", href: "https://whatrepaircosts.com/error-codes" }],
     scripts: [

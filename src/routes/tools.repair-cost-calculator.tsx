@@ -18,6 +18,8 @@ export const Route = createFileRoute("/tools/repair-cost-calculator")({
         content: "Estimate appliance repair costs in seconds — by symptom, brand, and region.",
       },
       { property: "og:url", content: "https://whatrepaircosts.com/tools/repair-cost-calculator" },
+      { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+      { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
     ],
     links: [{ rel: "canonical", href: "https://whatrepaircosts.com/tools/repair-cost-calculator" }],
   }),
