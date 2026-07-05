@@ -60,7 +60,7 @@ export const Route = createFileRoute("/blog/")({
 });
 
 function BlogIndex() {
-  const posts = Route.useLoaderData();
+  const posts = Route.useLoaderData() as ReturnType<typeof getAllPosts>;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
