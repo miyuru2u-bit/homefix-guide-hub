@@ -14,6 +14,7 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ErrorCodesRouteImport } from './routes/error-codes'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -29,7 +30,10 @@ import { Route as TagTagRouteImport } from './routes/tag.$tag'
 import { Route as CategoryCategoryRouteImport } from './routes/category.$category'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
+import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as ErrorCodesBrandCodeRouteImport } from './routes/error-codes.$brand.$code'
+import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 
 const ToolsRoute = ToolsRouteImport.update({
   id: '/tools',
@@ -54,6 +58,11 @@ const RssDotxmlRoute = RssDotxmlRouteImport.update({
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   id: '/privacy-policy',
   path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ErrorCodesRoute = ErrorCodesRouteImport.update({
@@ -132,11 +141,29 @@ const ApiContactRoute = ApiContactRouteImport.update({
   path: '/api/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char91DotmcpChar93ListToolsRoute =
+  Char91DotmcpChar93ListToolsRouteImport.update({
+    id: '/.mcp/list-tools',
+    path: '/.mcp/list-tools',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ErrorCodesBrandCodeRoute = ErrorCodesBrandCodeRouteImport.update({
   id: '/$brand/$code',
   path: '/$brand/$code',
   getParentRoute: () => ErrorCodesRoute,
 } as any)
+const Char91DotmcpChar93InvokeToolToolRoute =
+  Char91DotmcpChar93InvokeToolToolRouteImport.update({
+    id: '/.mcp/invoke-tool/$tool',
+    path: '/.mcp/invoke-tool/$tool',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -145,11 +172,14 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/error-codes': typeof ErrorCodesRouteWithChildren
+  '/mcp': typeof McpRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/rss.xml': typeof RssDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRouteWithChildren
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
@@ -159,6 +189,7 @@ export interface FileRoutesByFullPath {
   '/blog/': typeof BlogIndexRoute
   '/error-codes/': typeof ErrorCodesIndexRoute
   '/tools/': typeof ToolsIndexRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/error-codes/$brand/$code': typeof ErrorCodesBrandCodeRoute
 }
 export interface FileRoutesByTo {
@@ -166,10 +197,13 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/mcp': typeof McpRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/rss.xml': typeof RssDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
@@ -179,6 +213,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogIndexRoute
   '/error-codes': typeof ErrorCodesIndexRoute
   '/tools': typeof ToolsIndexRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/error-codes/$brand/$code': typeof ErrorCodesBrandCodeRoute
 }
 export interface FileRoutesById {
@@ -189,11 +224,14 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/error-codes': typeof ErrorCodesRouteWithChildren
+  '/mcp': typeof McpRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/rss.xml': typeof RssDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/tools': typeof ToolsRouteWithChildren
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
@@ -203,6 +241,7 @@ export interface FileRoutesById {
   '/blog/': typeof BlogIndexRoute
   '/error-codes/': typeof ErrorCodesIndexRoute
   '/tools/': typeof ToolsIndexRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/error-codes/$brand/$code': typeof ErrorCodesBrandCodeRoute
 }
 export interface FileRouteTypes {
@@ -214,11 +253,14 @@ export interface FileRouteTypes {
     | '/contact'
     | '/disclaimer'
     | '/error-codes'
+    | '/mcp'
     | '/privacy-policy'
     | '/rss.xml'
     | '/sitemap.xml'
     | '/terms'
     | '/tools'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
     | '/api/contact'
     | '/blog/$slug'
     | '/category/$category'
@@ -228,6 +270,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/error-codes/'
     | '/tools/'
+    | '/.mcp/invoke-tool/$tool'
     | '/error-codes/$brand/$code'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -235,10 +278,13 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/disclaimer'
+    | '/mcp'
     | '/privacy-policy'
     | '/rss.xml'
     | '/sitemap.xml'
     | '/terms'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
     | '/api/contact'
     | '/blog/$slug'
     | '/category/$category'
@@ -248,6 +294,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/error-codes'
     | '/tools'
+    | '/.mcp/invoke-tool/$tool'
     | '/error-codes/$brand/$code'
   id:
     | '__root__'
@@ -257,11 +304,14 @@ export interface FileRouteTypes {
     | '/contact'
     | '/disclaimer'
     | '/error-codes'
+    | '/mcp'
     | '/privacy-policy'
     | '/rss.xml'
     | '/sitemap.xml'
     | '/terms'
     | '/tools'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
     | '/api/contact'
     | '/blog/$slug'
     | '/category/$category'
@@ -271,6 +321,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/error-codes/'
     | '/tools/'
+    | '/.mcp/invoke-tool/$tool'
     | '/error-codes/$brand/$code'
   fileRoutesById: FileRoutesById
 }
@@ -281,14 +332,18 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
   ErrorCodesRoute: typeof ErrorCodesRouteWithChildren
+  McpRoute: typeof McpRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RssDotxmlRoute: typeof RssDotxmlRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   ToolsRoute: typeof ToolsRouteWithChildren
+  Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
+  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   ApiContactRoute: typeof ApiContactRoute
   CategoryCategoryRoute: typeof CategoryCategoryRoute
   TagTagRoute: typeof TagTagRoute
+  Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -326,6 +381,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy-policy'
       fullPath: '/privacy-policy'
       preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/error-codes': {
@@ -433,12 +495,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.mcp/list-tools': {
+      id: '/.mcp/list-tools'
+      path: '/.mcp/list-tools'
+      fullPath: '/.mcp/list-tools'
+      preLoaderRoute: typeof Char91DotmcpChar93ListToolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/error-codes/$brand/$code': {
       id: '/error-codes/$brand/$code'
       path: '/$brand/$code'
       fullPath: '/error-codes/$brand/$code'
       preLoaderRoute: typeof ErrorCodesBrandCodeRouteImport
       parentRoute: typeof ErrorCodesRoute
+    }
+    '/.mcp/invoke-tool/$tool': {
+      id: '/.mcp/invoke-tool/$tool'
+      path: '/.mcp/invoke-tool/$tool'
+      fullPath: '/.mcp/invoke-tool/$tool'
+      preLoaderRoute: typeof Char91DotmcpChar93InvokeToolToolRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -490,15 +573,30 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
   ErrorCodesRoute: ErrorCodesRouteWithChildren,
+  McpRoute: McpRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RssDotxmlRoute: RssDotxmlRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   ToolsRoute: ToolsRouteWithChildren,
+  Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
+  Char91DotwellKnownChar93OauthProtectedResourceRoute:
+    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   ApiContactRoute: ApiContactRoute,
   CategoryCategoryRoute: CategoryCategoryRoute,
   TagTagRoute: TagTagRoute,
+  Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

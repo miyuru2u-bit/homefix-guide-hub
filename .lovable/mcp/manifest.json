@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "sdk_version": "0.20.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "home-appliance-cost-guide-mcp",
+      "version": "0.1.0",
+      "title": "Home Appliance Cost Guide"
+    },
+    "tools": [
+      {
+        "name": "list_categories",
+        "title": "List content categories",
+        "description": "List all article categories on Home Appliance Cost Guide (repair-vs-replace, repair cost guides, buyer guides, home warranty topics, etc.) with slugs and descriptions.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_posts",
+        "title": "List articles",
+        "description": "List articles on Home Appliance Cost Guide. Optionally filter by category slug or tag slug. Returns slug, title, category, tags, date, and meta description.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "category": {
+              "description": "Category slug (e.g. 'repair-cost-guides')",
+              "type": "string"
+            },
+            "tag": {
+              "description": "Tag slug",
+              "type": "string"
+            },
+            "limit": {
+              "description": "Max items to return (default 50)",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_post",
+        "title": "Get article by slug",
+        "description": "Fetch a full article by its slug. Returns title, meta description, quick answer, cost table, FAQ, tags, and the rendered HTML body.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The article slug, e.g. 'refrigerator-repair-cost-guide'"
+            }
+          },
+          "required": [
+            "slug"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "search_posts",
+        "title": "Search articles",
+        "description": "Full-text search across articles on Home Appliance Cost Guide. Matches title, meta description, tags, and body text (case-insensitive).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "minLength": 2,
+              "description": "Search query"
+            },
+            "limit": {
+              "description": "Max results (default 10)",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50
+            }
+          },
+          "required": [
+            "query"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "estimate_repair_cost",
+        "title": "Estimate appliance repair cost",
+        "description": "Estimate a US appliance repair cost (parts + labor) by appliance, symptom, and region. Returns low/avg/high in USD, both region-adjusted and national.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "appliance": {
+              "type": "string",
+              "enum": [
+                "refrigerator",
+                "washer",
+                "dryer",
+                "dishwasher",
+                "oven"
+              ],
+              "description": "Appliance id"
+            },
+            "symptom": {
+              "type": "string",
+              "description": "Symptom id — call this tool with no symptom to see the list first, or omit to receive available options"
+            },
+            "region": {
+              "description": "US region (defaults to national average)",
+              "type": "string",
+              "enum": [
+                "northeast",
+                "west",
+                "midwest",
+                "south",
+                "mountain",
+                "rural"
+              ]
+            }
+          },
+          "required": [
+            "appliance",
+            "symptom"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "lookup_error_code",
+        "title": "Look up appliance error code",
+        "description": "Look up an appliance error code (e.g. Bosch dishwasher E15, LG washer OE). Provide brand and code slugs, or omit both to list every documented code.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "brand": {
+              "description": "Brand slug, e.g. 'bosch', 'lg', 'samsung', 'whirlpool', 'ge'",
+              "type": "string"
+            },
+            "code": {
+              "description": "Code slug, e.g. 'e15', 'oe', '4c', 'f2-e2', 'f3'",
+              "type": "string"
+            }
+          }
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
