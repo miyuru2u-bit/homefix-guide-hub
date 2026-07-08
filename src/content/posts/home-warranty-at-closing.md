@@ -1,14 +1,14 @@
 ---
-title: "Home Warranty at Closing: How It Works"
+title: "Home Warranty at Closing 2026: How It Works + Buyer's Checklist"
 slug: "home-warranty-at-closing"
-metaDescription: "How a home warranty works at closing: who sets it up, when coverage starts, whether there's a waiting period, and how it's paid through escrow. A buyer's guide."
+metaDescription: "Home warranty at closing in 2026: who arranges it, how escrow pays it, when coverage starts, why the waiting period is waived — plus a step-by-step buyer's checklist."
 category: "home-warranty-guides"
 tags: ["home warranty", "closing", "escrow", "real estate", "buyer"]
-date: "2026-06-30"
+date: "2026-07-08"
 author: "Editorial Team"
 image: "home-warranty-at-closing"
 imageAlt: "Home warranty paperwork being signed at a real-estate closing"
-quickAnswer: "Buying a home warranty at closing is one of the easiest and best-timed ways to get coverage. The agent or escrow company arranges it, the cost is often paid through escrow/closing costs, coverage usually starts on the closing date, and — a key perk — the standard ~30-day waiting period is typically waived because it's part of the transaction. That means the buyer has protection the moment they take ownership."
+quickAnswer: "Buying a home warranty at closing is the best-timed way to get coverage. The agent or escrow company arranges it, the ~$300–$600 premium is typically paid through escrow (or by the seller as a concession), coverage starts on the closing date, and — the key perk — the standard ~30-day waiting period is waived because it's part of the transaction. That means immediate protection the moment you take ownership."
 costTable: []
 faq:
   - q: "Can you buy a home warranty at closing?"
@@ -61,20 +61,32 @@ Normally, a new home warranty comes with a **~30-day waiting period** before you
 
 > ⚠️ **Watch out:** Even with no waiting period, the warranty still won't cover **pre-existing conditions** — items that were already broken before closing. This is exactly why you should still get a **home inspection** before buying. The inspection catches existing problems (which the seller may need to address), while the warranty covers *future* breakdowns from normal wear and tear.
 
-## How to make sure it's done right
+## The buyer's closing checklist
 
-1. **Specify the warranty in your purchase contract** — who pays, which provider, and the coverage level.
-2. **Confirm with your agent or escrow officer** that it's on the closing checklist.
-3. **Verify the start date** is the closing date and the waiting period is waived.
-4. **Check the policy is in your name** as the buyer.
-5. **Save the contract and claim phone number** so you can file the moment you need to.
+Use this before you sign to make sure the warranty is actually in place and set up in your favor:
+
+1. **Name the provider and plan in the purchase contract** — don't leave "TBD"; specify the company (e.g., American Home Shield ShieldGold, Choice Total Plan) and coverage tier.
+2. **Confirm who pays** — buyer, seller, or split. Seller-paid coverage is a common concession worth $300–$600.
+3. **Get the warranty added to the closing disclosure** so it's paid through escrow, not out of pocket.
+4. **Verify the effective date is the closing date** — not "30 days after."
+5. **Confirm the waiting period is waived** — this should be automatic for transaction purchases; get it in writing.
+6. **Check the policy is issued in the buyer's name** (not the seller's) so claims route to you from day one.
+7. **Compare 2–3 providers before accepting the agent's default** — the agent's preferred vendor is not always the best fit for your home's age or systems.
+8. **Save the contract PDF and the 24/7 claim number** to your phone before you get the keys.
+9. **File the first claim promptly** if something breaks in month one — insurers scrutinize early claims, and waiting muddies the "sudden failure" case.
+10. **Set a calendar reminder 60 days before renewal** to re-shop pricing before auto-renew hits.
+
+> 💡 **Tip:** If the home is older or has aging HVAC, push for a plan with higher payout caps (like [AHS ShieldPlatinum](/blog/american-home-shield-review)) rather than the cheapest option. One HVAC failure can eat a decade of premium savings.
 
 ## Related articles
 
-- Who Pays for a Home Warranty — Buyer or Seller?
-- Is a Seller's Home Warranty Worth It?
-- Best Home Warranty With No Waiting Period
-- Home Warranty for First-Time Home Buyers: Do You Need One?
-- Does a Home Warranty Transfer to a New Owner?
+- [Who Pays for a Home Warranty — Buyer or Seller?](/blog/who-pays-for-home-warranty)
+- [Is a Seller's Home Warranty Worth It?](/blog/sellers-home-warranty-worth-it)
+- [Best Home Warranty With No Waiting Period](/blog/best-home-warranty-no-waiting-period)
+- [Home Warranty Waiting Period Explained](/blog/home-warranty-waiting-period-explained)
+- [Home Warranty for First-Time Home Buyers](/blog/home-warranty-first-time-home-buyers)
+- [Does a Home Warranty Transfer to a New Owner?](/blog/does-home-warranty-transfer)
+- [American Home Shield Review 2026](/blog/american-home-shield-review)
+- [Choice Home Warranty vs American Home Shield 2026](/blog/choice-vs-american-home-shield)
 
 *📌 Disclaimer: This article is for general informational purposes only and reflects practices and pricing that change over time. Always confirm current plans, prices, service fees, and contract terms directly with the provider before purchasing. We may earn a commission from links on this page at no extra cost to you.*
