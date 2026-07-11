@@ -93,15 +93,17 @@ function TagPage() {
       <Breadcrumbs
         items={[
           { label: "Home", to: "/" },
-          { label: "Articles", to: "/blog" },
-          { label: `#${tag.name}` },
+          { label: "Tag" },
+          { label: tag.name },
         ]}
       />
       <header className="mt-6 mb-10 border-b border-border pb-8">
         <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">Tag</p>
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">#{tag.name}</h1>
         <p className="mt-3 text-lg text-ink-soft">
-          {posts.length} article{posts.length === 1 ? "" : "s"} tagged with this topic.
+          {posts.length >= 3
+            ? `Articles tagged with ${tag.name}, including repair cost guides, warranty explainers, troubleshooting tips, and repair-vs-replace advice.`
+            : `${posts.length} article${posts.length === 1 ? "" : "s"} tagged with this topic.`}
         </p>
       </header>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
