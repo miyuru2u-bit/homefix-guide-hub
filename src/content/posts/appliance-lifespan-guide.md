@@ -169,6 +169,15 @@ Most major appliances last around 8 to 15 years, but there is no exact expiratio
 
 If an appliance is newer and the repair is reasonable, fixing it often makes sense. If it is older, unreliable, and facing a major repair, replacement may be the better long-term choice.
 
+## Related guides
+
+- [Average Appliance Repair Cost by Type](/blog/average-appliance-repair-cost-by-type)
+- [Why Appliance Repairs Cost So Much](/blog/why-appliance-repairs-cost-so-much)
+- [Appliance Repair vs Replacement: When to Fix or Replace](/blog/appliance-repair-vs-replacement)
+- [Most Reliable Appliance Brands](/blog/most-reliable-appliance-brands)
+- [Most Expensive Appliances to Repair](/blog/most-expensive-appliances-to-repair)
+- [Repair or Replace: Complete Appliance Guide](/blog/repair-or-replace-appliance-guide)
+
 ## Frequently asked questions
 
 **How long do major appliances usually last?**

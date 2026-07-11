@@ -139,6 +139,14 @@ Appliance repairs cost so much because they involve more than a part swap. You a
 
 A high repair bill is not always unfair, but it should be clear. Ask for an itemized estimate, confirm whether parts and labor are included, and compare the cost with replacement if the repair is major.
 
+## Related guides
+
+- [Average Appliance Repair Cost by Type](/blog/average-appliance-repair-cost-by-type)
+- [Most Expensive Appliances to Repair](/blog/most-expensive-appliances-to-repair)
+- [Appliance Lifespan Guide: How Long Major Appliances Last](/blog/appliance-lifespan-guide)
+- [Appliance Repair vs Replacement: When to Fix or Replace](/blog/appliance-repair-vs-replacement)
+- [Repair or Replace: Complete Appliance Guide](/blog/repair-or-replace-appliance-guide)
+
 ## Frequently asked questions
 
 **Why are appliance repairs so expensive?**

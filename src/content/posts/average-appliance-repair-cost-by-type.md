@@ -166,6 +166,14 @@ Average appliance repair cost depends heavily on appliance type. Refrigerators, 
 
 Before approving a repair, compare the estimate with the appliance's age, replacement cost, parts availability, and warranty coverage.
 
+## Related guides
+
+- [Why Appliance Repairs Cost So Much](/blog/why-appliance-repairs-cost-so-much)
+- [Most Expensive Appliances to Repair](/blog/most-expensive-appliances-to-repair)
+- [Appliance Lifespan Guide: How Long Major Appliances Last](/blog/appliance-lifespan-guide)
+- [Appliance Repair vs Replacement: When to Fix or Replace](/blog/appliance-repair-vs-replacement)
+- [Repair or Replace: Complete Appliance Guide](/blog/repair-or-replace-appliance-guide)
+
 ## Frequently asked questions
 
 **What is the average appliance repair cost?**
