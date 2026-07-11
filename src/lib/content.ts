@@ -77,29 +77,34 @@ export type Category = {
 
 export const CATEGORIES: Category[] = [
   {
-    slug: "repair-vs-replace",
-    name: "Repair vs Replace",
-    description: "When to fix it, when to walk away. Decision frameworks for every major appliance.",
-  },
-  {
     slug: "repair-cost-guides",
     name: "Repair Cost Guides",
-    description: "Real US pricing for parts and labor, updated for 2026.",
-  },
-  {
-    slug: "appliance-error-codes",
-    name: "Appliance Error Codes",
-    description: "Decode the codes your appliance is flashing — and what each one usually costs to fix.",
+    description:
+      "Compare real-world appliance repair cost ranges, common parts, labor factors, and repair-vs-replace decisions for major home appliances.",
   },
   {
     slug: "home-warranty-guides",
     name: "Home Warranty Guides",
-    description: "What's covered, what's excluded, and when a warranty actually pays off.",
+    description:
+      "Plain-English guides to home warranties, appliance warranties, coverage limits, claims, exclusions, and when protection plans may or may not be worth it.",
+  },
+  {
+    slug: "repair-vs-replace",
+    name: "Repair vs Replace",
+    description:
+      "Decision guides for homeowners comparing appliance repair costs, replacement timing, appliance lifespan, warranty coverage, and long-term value.",
+  },
+  {
+    slug: "appliance-error-codes",
+    name: "Appliance Error Codes",
+    description:
+      "Troubleshooting guides for common appliance error codes, what they usually mean, and when to call a qualified repair technician.",
   },
   {
     slug: "buyer-guides",
     name: "Buyer Guides & Comparisons",
-    description: "Honest, brand-agnostic comparisons for your next appliance purchase.",
+    description:
+      "Brand, warranty, provider, and appliance comparison guides to help homeowners make informed repair, replacement, and protection-plan decisions.",
   },
 ];
 
