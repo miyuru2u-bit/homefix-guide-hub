@@ -14,17 +14,24 @@ export const Route = createFileRoute("/tag/$tag")({
     if (!loaderData) return { meta: [{ title: "Tag not found" }] };
     const url = `https://whatrepaircosts.com/tag/${params.tag}`;
     const title = `${loaderData.tag.name} — Tagged articles`;
-    const desc = `${loaderData.posts.length} article${loaderData.posts.length === 1 ? "" : "s"} tagged "${loaderData.tag.name}" on Home Appliance Cost Guide.`;
+    const count = loaderData.posts.length;
+    const thin = count < 3;
+    const desc = thin
+      ? `${count} article${count === 1 ? "" : "s"} tagged "${loaderData.tag.name}" on Home Appliance Cost Guide.`
+      : `Articles tagged with ${loaderData.tag.name}, including repair cost guides, warranty explainers, troubleshooting tips, and repair-vs-replace advice.`;
+    const meta: Array<Record<string, string>> = [
+      { title: `${title} | Home Appliance Cost Guide` },
+      { name: "description", content: desc },
+      { property: "og:title", content: title },
+      { property: "og:description", content: desc },
+      { property: "og:url", content: url },
+      { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
+    ];
+    if (thin) meta.push({ name: "robots", content: "noindex, follow" });
     return {
-      meta: [
-        { title: `${title} | Home Appliance Cost Guide` },
-        { name: "description", content: desc },
-        { property: "og:title", content: title },
-        { property: "og:description", content: desc },
-        { property: "og:url", content: url },
-        { property: "og:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
-        { name: "twitter:image", content: "https://whatrepaircosts.com/images/logo-stacked.png" },
-      ],
+      meta,
       links: [{ rel: "canonical", href: url }],
       scripts: [
         {
@@ -44,8 +51,8 @@ export const Route = createFileRoute("/tag/$tag")({
             "@type": "BreadcrumbList",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://whatrepaircosts.com/" },
-              { "@type": "ListItem", position: 2, name: "Articles", item: "https://whatrepaircosts.com/blog" },
-              { "@type": "ListItem", position: 3, name: `#${loaderData.tag.name}`, item: url },
+              { "@type": "ListItem", position: 2, name: "Tag", item: "https://whatrepaircosts.com/blog" },
+              { "@type": "ListItem", position: 3, name: loaderData.tag.name, item: url },
             ],
           }),
         },
@@ -86,15 +93,17 @@ function TagPage() {
       <Breadcrumbs
         items={[
           { label: "Home", to: "/" },
-          { label: "Articles", to: "/blog" },
-          { label: `#${tag.name}` },
+          { label: "Tag" },
+          { label: tag.name },
         ]}
       />
       <header className="mt-6 mb-10 border-b border-border pb-8">
         <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">Tag</p>
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">#{tag.name}</h1>
         <p className="mt-3 text-lg text-ink-soft">
-          {posts.length} article{posts.length === 1 ? "" : "s"} tagged with this topic.
+          {posts.length >= 3
+            ? `Articles tagged with ${tag.name}, including repair cost guides, warranty explainers, troubleshooting tips, and repair-vs-replace advice.`
+            : `${posts.length} article${posts.length === 1 ? "" : "s"} tagged with this topic.`}
         </p>
       </header>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

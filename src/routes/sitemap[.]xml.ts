@@ -49,7 +49,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           path: `/blog/${p.slug}`,
           priority: "0.8",
           changefreq: "monthly" as const,
-          lastmod: p.date,
+          lastmod: /^\d{4}-\d{2}-\d{2}/.test(p.date) && !p.date.startsWith("1970-") ? p.date : undefined,
         }));
 
         const entries = [
