@@ -65,6 +65,9 @@ import hwWorthItAppliancesImg from "@/assets/post-are-home-warranties-worth-it-f
 import applianceRepairVsReplacementImg from "@/assets/post-appliance-repair-vs-replacement.jpg";
 import ahsCompleteVsPlatinumImg from "@/assets/post-ahs-complete-vs-platinum.jpg";
 import ahsShieldWaitingPeriodImg from "@/assets/post-ahs-shield-waiting-period.jpg";
+import applianceLifespanGuideImg from "@/assets/post-appliance-lifespan-guide.jpg";
+import avgApplianceRepairCostByTypeImg from "@/assets/post-average-appliance-repair-cost-by-type.jpg";
+import whyApplianceRepairsCostSoMuchImg from "@/assets/post-why-appliance-repairs-cost-so-much.jpg";
 
 export type Category = {
   slug: string;
@@ -232,6 +235,9 @@ const imageMap: Record<string, string> = {
   "appliance-repair-vs-replacement": applianceRepairVsReplacementImg,
   "ahs-complete-vs-platinum": ahsCompleteVsPlatinumImg,
   "ahs-shield-waiting-period": ahsShieldWaitingPeriodImg,
+  "appliance-lifespan-guide": applianceLifespanGuideImg,
+  "average-appliance-repair-cost-by-type": avgApplianceRepairCostByTypeImg,
+  "why-appliance-repairs-cost-so-much": whyApplianceRepairsCostSoMuchImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
