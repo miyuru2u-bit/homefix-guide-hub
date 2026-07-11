@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { Post } from "@/lib/content";
-import { getCategory } from "@/lib/content";
+import { getCategory, isValidDate } from "@/lib/content";
 
 export function PostCard({ post }: { post: Post }) {
   const cat = getCategory(post.category);
