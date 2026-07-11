@@ -301,19 +301,22 @@ function parsePost(raw: string): Post {
     .map((l: string) => stripMarkdown(l))
     .find((l) => l.length > 60 && !l.startsWith("#"));
   const excerpt = excerptLine ? excerptLine.slice(0, 180).trim() : "";
+  const metaFallback = (excerpt || data.quickAnswer || "").slice(0, 158).trim();
   return {
     slug: data.slug,
     title: data.title,
-    metaDescription: data.metaDescription,
+    metaDescription: (data.metaDescription && String(data.metaDescription).trim()) || metaFallback,
     category: data.category,
     tags: data.tags ?? [],
     date: data.date,
     author: data.author ?? "Editorial Team",
     image: imageMap[data.image] ?? "",
-    imageAlt: data.imageAlt ?? data.title,
+    imageAlt: (data.imageAlt && String(data.imageAlt).trim()) || data.title,
     quickAnswer: data.quickAnswer ?? "",
     costTable: data.costTable ?? [],
-    faq: data.faq ?? [],
+    faq: Array.isArray(data.faq)
+      ? data.faq.filter((f: FaqItem) => f && f.q && f.a && String(f.q).trim() && String(f.a).trim())
+      : [],
     html,
     excerpt,
     toc,
