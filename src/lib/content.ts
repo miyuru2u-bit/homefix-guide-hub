@@ -494,7 +494,18 @@ export function tagToSlug(tag: string): string {
   return tagSlug(tag);
 }
 
+export function isValidDate(iso: unknown): iso is string {
+  if (typeof iso !== "string") return false;
+  if (!/^\d{4}-\d{2}-\d{2}/.test(iso)) return false;
+  const t = Date.parse(iso);
+  if (!Number.isFinite(t)) return false;
+  // Reject Unix epoch fallback (1970-01-01) as a real article date.
+  if (iso.slice(0, 10) === "1970-01-01") return false;
+  return true;
+}
+
 export function formatDate(iso: string): string {
+  if (!isValidDate(iso)) return "";
   return new Date(iso).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
