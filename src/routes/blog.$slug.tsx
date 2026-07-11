@@ -182,8 +182,12 @@ function ArticlePage() {
             </h1>
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
               <span>By {post.author}</span>
-              <span aria-hidden>·</span>
-              <time dateTime={post.date}>{formatDate(post.date)}</time>
+              {isValidDate(post.date) && (
+                <>
+                  <span aria-hidden>·</span>
+                  <time dateTime={post.date}>Last updated: {formatDate(post.date)}</time>
+                </>
+              )}
             </div>
           </header>
 
