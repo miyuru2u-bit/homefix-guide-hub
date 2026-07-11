@@ -39,14 +39,16 @@ export function PostCard({ post }: { post: Post }) {
         <p className="line-clamp-2 text-sm leading-relaxed text-ink-soft">
           {post.metaDescription}
         </p>
-        <div className="mt-auto pt-2 text-xs text-muted-foreground">
-          {new Date(post.date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-            timeZone: "UTC",
-          })}
-        </div>
+        {isValidDate(post.date) && (
+          <div className="mt-auto pt-2 text-xs text-muted-foreground">
+            {new Date(post.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+              timeZone: "UTC",
+            })}
+          </div>
+        )}
       </div>
     </article>
   );
