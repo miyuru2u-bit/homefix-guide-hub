@@ -33,64 +33,91 @@ export const Route = createFileRoute("/blog/$slug")({
       : loaderData.image.startsWith("http")
         ? loaderData.image
         : `${origin}${loaderData.image}`;
+    const validDate = isValidDate(loaderData.date);
+    const articleSchema: Record<string, unknown> = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: loaderData.title,
+      description: loaderData.metaDescription,
+      image: absImage,
+      author: { "@type": "Organization", name: "Editorial Team" },
+      publisher: {
+        "@type": "Organization",
+        name: "Home Appliance Cost Guide",
+      },
+      mainEntityOfPage: url,
+    };
+    if (validDate) {
+      articleSchema.datePublished = loaderData.date;
+      articleSchema.dateModified = loaderData.date;
+    }
+    const scripts: Array<{ type: string; children: string }> = [
+      { type: "application/ld+json", children: JSON.stringify(articleSchema) },
+    ];
+    const validFaq = (loaderData.faq ?? []).filter(
+      (f) => f && f.q && f.a && String(f.q).trim() && String(f.a).trim(),
+    );
+    if (validFaq.length > 0) {
+      scripts.push({
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: validFaq.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      });
+    }
+    const category = getCategory(loaderData.category);
+    const breadcrumbItems: Array<Record<string, unknown>> = [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${origin}/` },
+    ];
+    if (category) {
+      breadcrumbItems.push({
+        "@type": "ListItem",
+        position: 2,
+        name: category.name,
+        item: `${origin}/category/${category.slug}`,
+      });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: loaderData.title, item: url });
+    } else {
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: "Articles", item: `${origin}/blog` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 3, name: loaderData.title, item: url });
+    }
+    scripts.push({
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: breadcrumbItems,
+      }),
+    });
+    const meta: Array<Record<string, string>> = [
+      { title: `${loaderData.title} | Home Appliance Cost Guide` },
+      { name: "description", content: loaderData.metaDescription },
+      { property: "og:title", content: loaderData.title },
+      { property: "og:description", content: loaderData.metaDescription },
+      { property: "og:type", content: "article" },
+      { property: "og:url", content: url },
+      { property: "og:image", content: absImage },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: loaderData.title },
+      { name: "twitter:description", content: loaderData.metaDescription },
+      { name: "twitter:image", content: absImage },
+      { property: "article:author", content: loaderData.author },
+      { property: "article:section", content: category?.name ?? loaderData.category },
+    ];
+    if (validDate) {
+      meta.push({ property: "article:published_time", content: loaderData.date });
+      meta.push({ property: "article:modified_time", content: loaderData.date });
+    }
     return {
-      meta: [
-        { title: `${loaderData.title} | Home Appliance Cost Guide` },
-        { name: "description", content: loaderData.metaDescription },
-        { property: "og:title", content: loaderData.title },
-        { property: "og:description", content: loaderData.metaDescription },
-        { property: "og:type", content: "article" },
-        { property: "og:url", content: url },
-        { property: "og:image", content: absImage },
-        { name: "twitter:image", content: absImage },
-        { property: "article:published_time", content: loaderData.date },
-        { property: "article:author", content: loaderData.author },
-        { property: "article:section", content: loaderData.category },
-      ],
+      meta,
       links: [{ rel: "canonical", href: url }],
-      scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: loaderData.title,
-            description: loaderData.metaDescription,
-            image: absImage,
-            datePublished: loaderData.date,
-            dateModified: loaderData.date,
-            author: { "@type": "Organization", name: loaderData.author },
-            publisher: {
-              "@type": "Organization",
-              name: "Home Appliance Cost Guide",
-            },
-          }),
-        },
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: loaderData.faq.map((f) => ({
-              "@type": "Question",
-              name: f.q,
-              acceptedAnswer: { "@type": "Answer", text: f.a },
-            })),
-          }),
-        },
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: `${origin}/` },
-              { "@type": "ListItem", position: 2, name: "Articles", item: `${origin}/blog` },
-              { "@type": "ListItem", position: 3, name: loaderData.title, item: url },
-            ],
-          }),
-        },
-      ],
+      scripts,
     };
   },
   component: ArticlePage,
