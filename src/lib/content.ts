@@ -235,6 +235,9 @@ const imageMap: Record<string, string> = {
   "appliance-repair-vs-replacement": applianceRepairVsReplacementImg,
   "ahs-complete-vs-platinum": ahsCompleteVsPlatinumImg,
   "ahs-shield-waiting-period": ahsShieldWaitingPeriodImg,
+  "appliance-lifespan-guide": applianceLifespanGuideImg,
+  "average-appliance-repair-cost-by-type": avgApplianceRepairCostByTypeImg,
+  "why-appliance-repairs-cost-so-much": whyApplianceRepairsCostSoMuchImg,
 };
 
 // Vite imports raw markdown at build time. Migration to a CMS later is just
