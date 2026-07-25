@@ -15,6 +15,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as McpRouteImport } from './routes/mcp'
+import { Route as HowWeEstimateRepairCostsRouteImport } from './routes/how-we-estimate-repair-costs'
 import { Route as ErrorCodesRouteImport } from './routes/error-codes'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -65,6 +66,12 @@ const McpRoute = McpRouteImport.update({
   path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HowWeEstimateRepairCostsRoute =
+  HowWeEstimateRepairCostsRouteImport.update({
+    id: '/how-we-estimate-repair-costs',
+    path: '/how-we-estimate-repair-costs',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ErrorCodesRoute = ErrorCodesRouteImport.update({
   id: '/error-codes',
   path: '/error-codes',
@@ -172,6 +179,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/error-codes': typeof ErrorCodesRouteWithChildren
+  '/how-we-estimate-repair-costs': typeof HowWeEstimateRepairCostsRoute
   '/mcp': typeof McpRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/rss.xml': typeof RssDotxmlRoute
@@ -197,6 +205,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/how-we-estimate-repair-costs': typeof HowWeEstimateRepairCostsRoute
   '/mcp': typeof McpRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/rss.xml': typeof RssDotxmlRoute
@@ -224,6 +233,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/error-codes': typeof ErrorCodesRouteWithChildren
+  '/how-we-estimate-repair-costs': typeof HowWeEstimateRepairCostsRoute
   '/mcp': typeof McpRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/rss.xml': typeof RssDotxmlRoute
@@ -253,6 +263,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/disclaimer'
     | '/error-codes'
+    | '/how-we-estimate-repair-costs'
     | '/mcp'
     | '/privacy-policy'
     | '/rss.xml'
@@ -278,6 +289,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/disclaimer'
+    | '/how-we-estimate-repair-costs'
     | '/mcp'
     | '/privacy-policy'
     | '/rss.xml'
@@ -304,6 +316,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/disclaimer'
     | '/error-codes'
+    | '/how-we-estimate-repair-costs'
     | '/mcp'
     | '/privacy-policy'
     | '/rss.xml'
@@ -332,6 +345,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
   ErrorCodesRoute: typeof ErrorCodesRouteWithChildren
+  HowWeEstimateRepairCostsRoute: typeof HowWeEstimateRepairCostsRoute
   McpRoute: typeof McpRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RssDotxmlRoute: typeof RssDotxmlRoute
@@ -388,6 +402,13 @@ declare module '@tanstack/react-router' {
       path: '/mcp'
       fullPath: '/mcp'
       preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-we-estimate-repair-costs': {
+      id: '/how-we-estimate-repair-costs'
+      path: '/how-we-estimate-repair-costs'
+      fullPath: '/how-we-estimate-repair-costs'
+      preLoaderRoute: typeof HowWeEstimateRepairCostsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/error-codes': {
@@ -573,6 +594,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
   ErrorCodesRoute: ErrorCodesRouteWithChildren,
+  HowWeEstimateRepairCostsRoute: HowWeEstimateRepairCostsRoute,
   McpRoute: McpRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RssDotxmlRoute: RssDotxmlRoute,
