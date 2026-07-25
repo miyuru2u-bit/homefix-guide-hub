@@ -150,6 +150,8 @@ export const Route = createFileRoute("/category/$category")({
 function CategoryPage() {
   const { cat, posts, page, totalPages, total } = Route.useLoaderData();
   const params = Route.useParams();
+  const intro = CATEGORY_INTROS[cat.slug];
+  const relatedCategories = CATEGORIES.filter((c) => c.slug !== cat.slug);
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <Breadcrumbs
@@ -162,7 +164,7 @@ function CategoryPage() {
       <header className="mt-6 mb-10 border-b border-border pb-8">
         <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">Category</p>
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">{cat.name}</h1>
-        <p className="mt-3 max-w-2xl text-lg text-ink-soft">{cat.description}</p>
+        <p className="mt-3 max-w-2xl text-lg text-ink-soft">{intro?.lede ?? cat.description}</p>
         {total > 0 && (
           <p className="mt-4 text-sm text-ink-soft">
             {total} article{total === 1 ? "" : "s"}
@@ -170,6 +172,13 @@ function CategoryPage() {
           </p>
         )}
       </header>
+      {intro && page === 1 && (
+        <section className="prose-article mx-auto mb-12 max-w-3xl">
+          {intro.body.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+        </section>
+      )}
       {posts.length === 0 ? (
         <p className="text-ink-soft">
           No articles in this category yet.{" "}
@@ -220,6 +229,24 @@ function CategoryPage() {
           )}
         </>
       )}
+      {relatedCategories.length > 0 && (
+        <section className="mt-16 border-t border-border pt-8">
+          <h2 className="mb-4 font-display text-xl font-semibold text-ink">Related categories</h2>
+          <div className="flex flex-wrap gap-2">
+            {relatedCategories.map((c) => (
+              <Link
+                key={c.slug}
+                to="/category/$category"
+                params={{ category: c.slug }}
+                className="rounded-full border border-border bg-muted px-4 py-1.5 text-sm font-medium text-ink-soft hover:bg-accent/10 hover:text-accent"
+              >
+                {c.name}
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }
+
