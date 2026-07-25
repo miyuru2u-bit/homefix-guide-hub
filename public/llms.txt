@@ -10,6 +10,8 @@ Home Appliance Cost Guide helps US homeowners make informed decisions when appli
 - [All Articles](/blog): Complete archive of repair pricing, error-code references, and warranty guides.
 - [About](/about): Who we are, how we research pricing, and our editorial independence policy.
 - [Contact](/contact): Questions, corrections, or topic suggestions for the editorial team.
+- [How We Estimate Repair Costs](/how-we-estimate-repair-costs): Methodology, sources, inclusions and exclusions, and review cadence.
+- [Editorial Policy](/editorial-policy): Topic selection, research process, corrections, and disclosure.
 - [Privacy Policy](/privacy-policy): Data collection, cookies, and third-party services used on the site.
 - [Terms of Use](/terms): Disclaimers, intellectual property, and liability limitations.
 - [Disclaimer](/disclaimer): Important disclaimers about repair pricing accuracy and professional advice.
@@ -29,8 +31,10 @@ Home Appliance Cost Guide helps US homeowners make informed decisions when appli
 - [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide): Compressor, ice maker, sealed system, and control board pricing for 2026.
 - [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide): Drum, pump, belt, and electronic control pricing with labor estimates.
 - [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost-guide): Pump, heating element, rack, spray arm, and control panel repair costs.
-- [Is a Home Warranty Worth It for Appliances?](/blog/is-a-home-warranty-worth-it-for-appliances): When warranties pay off, common exclusions, and how to evaluate a plan.
-- [Average Appliance Repair Cost in 2026](/blog/average-appliance-repair-cost): National average repair prices across major appliance types and what drives the bill.
+- [Dryer Repair Cost Guide](/blog/dryer-repair-cost-guide): Heating element, thermal fuse, belt, and motor pricing for electric and gas dryers.
+- [Oven & Stove Repair Cost Guide](/blog/oven-stove-repair-cost-guide): Bake element, igniter, control board, and burner replacement costs.
+- [Are Home Warranties Worth It for Appliances?](/blog/are-home-warranties-worth-it-for-appliances): When warranties pay off, common exclusions, and how to evaluate a plan.
+- [Average Appliance Repair Cost by Type](/blog/average-appliance-repair-cost-by-type): National average repair prices across major appliance types and what drives the bill.
 - [What Appliances Does a Home Warranty Cover?](/blog/what-appliances-does-a-home-warranty-cover): Standard covered appliances, common add-ons, and what's typically excluded.
 
 ## Optional
