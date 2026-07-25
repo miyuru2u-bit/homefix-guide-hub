@@ -177,7 +177,7 @@ Replacement may make sense when:
 
 Built-in refrigerators are different because replacement can be much more expensive. A repair that seems high for a standard refrigerator may still be reasonable for a built-in model.
 
-Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost)
+Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide)
 
 ## Dishwasher repair vs replacement
 
@@ -200,7 +200,7 @@ Replacement may make sense when:
 - Cleaning performance is poor
 - Repair cost approaches replacement cost
 
-Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost)
+Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost-guide)
 
 ## Washer repair vs replacement
 
@@ -225,7 +225,7 @@ Replacement may make sense when:
 
 Front-load washer bearing repairs can be expensive enough that replacement is often considered.
 
-Related guide: [Washer Repair Cost Guide](/blog/washer-repair-cost)
+Related guide: [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide)
 
 ## Dryer repair vs replacement
 
@@ -250,7 +250,7 @@ Replacement may make sense when:
 
 Basic electric dryers are often repair-friendly. Smart dryers, gas dryers, and heat pump dryers may require more careful comparison.
 
-Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost)
+Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost-guide)
 
 ## Oven and range repair vs replacement
 
@@ -273,7 +273,7 @@ Replacement may make sense when:
 - Multiple burners or oven functions are failing
 - Repair cost approaches replacement cost
 
-Related guide: [Oven Repair Cost Guide](/blog/oven-repair-cost)
+Related guide: [Oven & Stove Repair Cost Guide](/blog/oven-stove-repair-cost-guide)
 
 ## Built-in appliance decisions are different
 

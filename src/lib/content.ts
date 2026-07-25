@@ -235,6 +235,7 @@ const imageMap: Record<string, string> = {
   "are-extended-appliance-warranties-worth-it": extAppWarrantiesWorthItImg,
   "home-warranty-vs-appliance-warranty": hwVsApplianceWarrantyImg,
   "best-appliances-extended-warranty": bestAppExtWarrantyImg,
+  "best-appliances-to-cover-with-extended-warranty": bestAppExtWarrantyImg,
   "what-appliance-warranty-covers": whatApplianceWarrantyCoversImg,
   "appliance-warranty-claim-process": applianceWarrantyClaimImg,
   "do-home-warranties-cover-old-appliances": hwOldAppliancesImg,

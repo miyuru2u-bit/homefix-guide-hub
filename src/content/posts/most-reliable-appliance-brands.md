@@ -217,7 +217,7 @@ Features that can increase repair risk include:
 
 This does not mean you should avoid these features entirely, but understand that they can increase repair complexity.
 
-Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost)
+Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide)
 
 ## Dishwasher reliability
 
@@ -235,7 +235,7 @@ Look for:
 
 Premium dishwashers may be quieter and clean well, but control boards, pumps, and specialty parts can be more expensive.
 
-Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost)
+Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost-guide)
 
 ## Washer reliability
 
@@ -257,7 +257,7 @@ Front-load washers can perform well and save water, but they may require more at
 
 Simple top-load washers may be easier to repair, though they may use more water and offer fewer features.
 
-Related guide: [Washer Repair Cost Guide](/blog/washer-repair-cost)
+Related guide: [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide)
 
 ## Dryer reliability
 
@@ -275,7 +275,7 @@ Reliability factors include:
 
 Dryer maintenance matters. A clogged vent can cause overheating, long drying times, and component failures.
 
-Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost)
+Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost-guide)
 
 ## Oven and range reliability
 
@@ -295,7 +295,7 @@ Reliability factors include:
 
 Basic gas and electric ranges are often easier to repair than premium dual-fuel or induction models.
 
-Related guide: [Oven Repair Cost Guide](/blog/oven-repair-cost)
+Related guide: [Oven & Stove Repair Cost Guide](/blog/oven-stove-repair-cost-guide)
 
 ## Built-in appliance reliability
 

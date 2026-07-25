@@ -451,7 +451,7 @@ For refrigerator claims, document:
 
 If food loss coverage exists, ask what proof is required.
 
-Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost)
+Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide)
 
 ## Dishwasher claims
 
@@ -468,7 +468,7 @@ For dishwasher claims, document:
 
 Take photos of leaks before cleaning up, if safe.
 
-Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost)
+Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost-guide)
 
 ## Washer claims
 
@@ -484,7 +484,7 @@ For washer claims, document:
 - Load size
 - Detergent used
 
-Related guide: [Washer Repair Cost Guide](/blog/washer-repair-cost)
+Related guide: [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide)
 
 ## Dryer claims
 
@@ -499,7 +499,7 @@ For dryer claims, document:
 - Lint buildup
 - Gas or electric model
 
-Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost)
+Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost-guide)
 
 ## Oven and range claims
 
@@ -516,7 +516,7 @@ For oven or range claims, document:
 
 If you smell gas, leave the area and contact the appropriate emergency or utility service. Do not wait for a warranty claim.
 
-Related guide: [Oven Repair Cost Guide](/blog/oven-repair-cost)
+Related guide: [Oven & Stove Repair Cost Guide](/blog/oven-stove-repair-cost-guide)
 
 ## Should you file a claim for every problem?
 
