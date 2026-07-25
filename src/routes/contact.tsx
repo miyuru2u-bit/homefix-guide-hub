@@ -62,8 +62,23 @@ function ContactPage() {
       <header className="mt-8 mb-8">
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">Contact us</h1>
         <p className="mt-3 text-lg text-ink-soft">
-          Corrections, topic ideas, or just want to share a war story? We read everything.
+          Corrections, topic ideas, or a partnership question? We read every message and
+          typically reply within a few business days.
         </p>
+        <ul className="mt-5 space-y-2 text-sm text-ink-soft">
+          <li>• <strong>Corrections:</strong> found pricing, warranty, or technical details that need updating — please tell us.</li>
+          <li>• <strong>Article suggestions:</strong> a specific appliance, error code, or warranty question you'd like us to cover.</li>
+          <li>• <strong>Partnership inquiries:</strong> publishers, technicians, and warranty providers can reach the editorial team here.</li>
+        </ul>
+        <div className="mt-5 rounded-xl border border-destructive/30 bg-destructive/5 p-4 text-sm text-ink">
+          <p className="font-semibold text-destructive">Not an emergency service.</p>
+          <p className="mt-1 text-ink-soft">
+            We do not provide repair, dispatch, or on-call service. For urgent gas leaks,
+            active water leaks, electrical hazards, smoke, or any immediate safety issue,
+            stop and contact a qualified local professional or your utility's emergency
+            line. In a life-threatening emergency, call 911.
+          </p>
+        </div>
       </header>
 
       {sent ? (

@@ -13,7 +13,7 @@ export function SiteFooter() {
           backgroundSize: "24px 24px",
         }}
       />
-      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-5">
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-6">
         <div className="md:col-span-2">
           <Link to="/" className="inline-flex items-center gap-2.5 sm:gap-3" aria-label="Home Appliance Cost Guide — home">
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/20 bg-white/10">
@@ -60,6 +60,15 @@ export function SiteFooter() {
             <li><Link to="/blog" className="text-white/70 hover:text-white">All Articles</Link></li>
             <li><Link to="/about" className="text-white/70 hover:text-white">About</Link></li>
             <li><Link to="/contact" className="text-white/70 hover:text-white">Contact</Link></li>
+          </ul>
+        </div>
+        <div>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/50">
+            Resources
+          </p>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/how-we-estimate-repair-costs" className="text-white/70 hover:text-white">How We Estimate Costs</Link></li>
+            <li><Link to="/editorial-policy" className="text-white/70 hover:text-white">Editorial Policy</Link></li>
           </ul>
         </div>
         <div>
