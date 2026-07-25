@@ -70,7 +70,7 @@ Refrigerators run constantly, so small problems can become major if ignored. Dir
 
 **Signs a refrigerator may be near replacement:** repeated cooling problems, excessive frost buildup, compressor failure, frequent service calls, high energy use, unavailable parts, or a major sealed-system repair estimate.
 
-Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost)
+Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide)
 
 ## Freezer lifespan
 

@@ -264,7 +264,7 @@ Document refrigerator issues clearly:
 - Food spoilage
 - Date symptoms began
 
-Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost)
+Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide)
 
 ## Older dishwashers
 
@@ -274,7 +274,7 @@ A home warranty may cover a dishwasher that fails from normal wear and tear. But
 
 If a dishwasher is near replacement age, compare the warranty payout limit to the cost of a new dishwasher plus installation.
 
-Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost)
+Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost-guide)
 
 ## Older washers
 
@@ -284,7 +284,7 @@ Washer claims may be denied if failure is linked to overloading, wrong detergent
 
 If a washer has repeated major failures, replacement may make more sense than repair, but warranty replacement depends on the plan.
 
-Related guide: [Washer Repair Cost Guide](/blog/washer-repair-cost)
+Related guide: [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide)
 
 ## Older dryers
 
@@ -292,7 +292,7 @@ Dryers are often simpler than washers, but they still need proper maintenance.
 
 A home warranty may cover heating element, thermostat, motor, belt, or control failures. But problems caused by clogged dryer vents may be excluded because vent cleaning is homeowner maintenance.
 
-Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost)
+Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost-guide)
 
 ## Older ovens and ranges
 
@@ -300,7 +300,7 @@ Ovens and ranges can last a long time, but control boards, igniters, heating ele
 
 A home warranty may cover normal wear-and-tear failures. However, cosmetic issues, broken knobs, cracked glass, and damage from misuse may be excluded.
 
-Related guide: [Oven Repair Cost Guide](/blog/oven-repair-cost)
+Related guide: [Oven & Stove Repair Cost Guide](/blog/oven-stove-repair-cost-guide)
 
 ## When a home warranty may be worth it for old appliances
 

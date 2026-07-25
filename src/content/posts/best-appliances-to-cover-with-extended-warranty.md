@@ -94,7 +94,7 @@ Built-in and panel-ready models can be especially expensive to replace because s
 
 > 🧊 **Tip:** If you buy a refrigerator warranty, check whether sealed-system repairs, compressor repairs, ice maker repairs, and in-home labor are covered. These details can determine whether the plan is actually useful.
 
-Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost)
+Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide)
 
 ## 2. Built-in refrigerators
 
@@ -147,7 +147,7 @@ Extended coverage is more worth considering for:
 - Stacked laundry systems
 - Premium brand washers
 
-Related guide: [Washer Repair Cost Guide](/blog/washer-repair-cost)
+Related guide: [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide)
 
 ## 4. Stacked laundry units
 
@@ -198,7 +198,7 @@ Extended coverage is more useful for:
 - Dishwashers with leak detection
 - Dishwashers with advanced wash systems
 
-Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost)
+Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost-guide)
 
 ## 6. Wall ovens
 
@@ -227,7 +227,7 @@ Coverage is especially worth comparing for:
 - Combination microwave-wall oven units
 - Premium brand wall ovens
 
-Related guide: [Oven Repair Cost Guide](/blog/oven-repair-cost)
+Related guide: [Oven & Stove Repair Cost Guide](/blog/oven-stove-repair-cost-guide)
 
 ## 7. Induction cooktops
 
@@ -310,7 +310,7 @@ However, coverage may be worth considering for:
 - Large-capacity dryers
 - Heat pump dryers
 
-Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost)
+Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost-guide)
 
 ## Appliances that usually do not need extended warranties
 

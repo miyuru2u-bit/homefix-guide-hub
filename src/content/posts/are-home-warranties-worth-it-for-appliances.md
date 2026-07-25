@@ -272,7 +272,7 @@ Refrigerators are one of the better appliance categories for home warranty value
 
 A covered refrigerator cooling problem, compressor issue, fan failure, control board problem, or ice maker issue may make the plan more useful.
 
-Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost)
+Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide)
 
 ## Dishwashers
 
@@ -280,7 +280,7 @@ Dishwashers can be worthwhile if the issue involves a pump, motor, control board
 
 However, clogged filters, installation problems, and some leak issues may be excluded.
 
-Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost)
+Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost-guide)
 
 ## Washers
 
@@ -288,7 +288,7 @@ Washers can create meaningful repair bills, especially if the problem involves a
 
 Front-load and high-efficiency washers may be stronger candidates than basic older top-load models.
 
-Related guide: [Washer Repair Cost Guide](/blog/washer-repair-cost)
+Related guide: [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide)
 
 ## Dryers
 
@@ -296,7 +296,7 @@ Dryers are mixed. Some dryer repairs are affordable enough that the service fee 
 
 A home warranty may still help with motor, control, or gas dryer issues, but basic electric dryer repairs may not justify a claim.
 
-Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost)
+Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost-guide)
 
 ## Ovens and ranges
 
@@ -304,7 +304,7 @@ Ovens and ranges can be worth covering if the issue involves igniters, control b
 
 Wall ovens and premium ranges may offer stronger warranty value than basic freestanding ranges.
 
-Related guide: [Oven Repair Cost Guide](/blog/oven-repair-cost)
+Related guide: [Oven & Stove Repair Cost Guide](/blog/oven-stove-repair-cost-guide)
 
 ## Questions to ask before buying a home warranty for appliances
 

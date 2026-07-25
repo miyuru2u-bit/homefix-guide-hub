@@ -92,7 +92,7 @@ Refrigerators that often cost more to repair include:
 - Refrigerators with water dispensers
 - Premium brand refrigerators
 
-Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost)
+Related guide: [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide)
 
 ## 2. Built-in refrigerators
 
@@ -138,7 +138,7 @@ Some washer repairs are modest. A drain pump or door lock may be manageable. But
 
 Front-load washers may be more expensive to service because they use more complex door seals, sensors, controls, and drum support systems. Labor can also be higher if the appliance is stacked or installed in a tight laundry closet.
 
-Related guide: [Washer Repair Cost Guide](/blog/washer-repair-cost)
+Related guide: [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide)
 
 ## 4. Washer-dryer combos and stacked laundry
 
@@ -178,7 +178,7 @@ The parts themselves may be costly, and labor can increase if the oven must be r
 
 Double wall ovens and combination microwave-wall oven units can be especially expensive to repair or replace.
 
-Related guide: [Oven Repair Cost Guide](/blog/oven-repair-cost)
+Related guide: [Oven & Stove Repair Cost Guide](/blog/oven-stove-repair-cost-guide)
 
 ## 6. Induction cooktops
 
@@ -240,7 +240,7 @@ A dishwasher repair may become expensive if the issue involves a pump, motor, co
 
 Panel-ready dishwashers and premium quiet models may cost more to repair than entry-level models.
 
-Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost)
+Related guide: [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost-guide)
 
 ## 9. Built-in microwaves and microwave drawers
 
@@ -281,7 +281,7 @@ Basic electric dryer repairs are often relatively manageable. Gas dryers, smart 
 
 Dryer problems caused by clogged vents may not be covered by warranties because vent maintenance is usually the homeowner’s responsibility.
 
-Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost)
+Related guide: [Dryer Repair Cost Guide](/blog/dryer-repair-cost-guide)
 
 ## Repairs that are often expensive
 

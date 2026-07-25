@@ -121,11 +121,11 @@ Repairs involving control boards, motors, pumps, compressors, sealed systems, or
 
 Related guides:
 
-- [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost)
-- [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost)
-- [Washer Repair Cost Guide](/blog/washer-repair-cost)
-- [Dryer Repair Cost Guide](/blog/dryer-repair-cost)
-- [Oven Repair Cost Guide](/blog/oven-repair-cost)
+- [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide)
+- [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost-guide)
+- [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide)
+- [Dryer Repair Cost Guide](/blog/dryer-repair-cost-guide)
+- [Oven & Stove Repair Cost Guide](/blog/oven-stove-repair-cost-guide)
 
 ## How to compare warranty vs repair cost
 
