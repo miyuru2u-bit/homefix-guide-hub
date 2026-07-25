@@ -17,6 +17,7 @@ import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as HowWeEstimateRepairCostsRouteImport } from './routes/how-we-estimate-repair-costs'
 import { Route as ErrorCodesRouteImport } from './routes/error-codes'
+import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -75,6 +76,11 @@ const HowWeEstimateRepairCostsRoute =
 const ErrorCodesRoute = ErrorCodesRouteImport.update({
   id: '/error-codes',
   path: '/error-codes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EditorialPolicyRoute = EditorialPolicyRouteImport.update({
+  id: '/editorial-policy',
+  path: '/editorial-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DisclaimerRoute = DisclaimerRouteImport.update({
@@ -178,6 +184,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/editorial-policy': typeof EditorialPolicyRoute
   '/error-codes': typeof ErrorCodesRouteWithChildren
   '/how-we-estimate-repair-costs': typeof HowWeEstimateRepairCostsRoute
   '/mcp': typeof McpRoute
@@ -205,6 +212,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/editorial-policy': typeof EditorialPolicyRoute
   '/how-we-estimate-repair-costs': typeof HowWeEstimateRepairCostsRoute
   '/mcp': typeof McpRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -232,6 +240,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/editorial-policy': typeof EditorialPolicyRoute
   '/error-codes': typeof ErrorCodesRouteWithChildren
   '/how-we-estimate-repair-costs': typeof HowWeEstimateRepairCostsRoute
   '/mcp': typeof McpRoute
@@ -262,6 +271,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/disclaimer'
+    | '/editorial-policy'
     | '/error-codes'
     | '/how-we-estimate-repair-costs'
     | '/mcp'
@@ -289,6 +299,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/disclaimer'
+    | '/editorial-policy'
     | '/how-we-estimate-repair-costs'
     | '/mcp'
     | '/privacy-policy'
@@ -315,6 +326,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/disclaimer'
+    | '/editorial-policy'
     | '/error-codes'
     | '/how-we-estimate-repair-costs'
     | '/mcp'
@@ -344,6 +356,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
+  EditorialPolicyRoute: typeof EditorialPolicyRoute
   ErrorCodesRoute: typeof ErrorCodesRouteWithChildren
   HowWeEstimateRepairCostsRoute: typeof HowWeEstimateRepairCostsRoute
   McpRoute: typeof McpRoute
@@ -416,6 +429,13 @@ declare module '@tanstack/react-router' {
       path: '/error-codes'
       fullPath: '/error-codes'
       preLoaderRoute: typeof ErrorCodesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/editorial-policy': {
+      id: '/editorial-policy'
+      path: '/editorial-policy'
+      fullPath: '/editorial-policy'
+      preLoaderRoute: typeof EditorialPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/disclaimer': {
@@ -593,6 +613,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
+  EditorialPolicyRoute: EditorialPolicyRoute,
   ErrorCodesRoute: ErrorCodesRouteWithChildren,
   HowWeEstimateRepairCostsRoute: HowWeEstimateRepairCostsRoute,
   McpRoute: McpRoute,
