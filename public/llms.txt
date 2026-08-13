@@ -26,7 +26,7 @@ Home Appliance Cost Guide helps US homeowners make informed decisions when appli
 
 ## Articles
 
-- [Repair or Replace: How to Decide for Any Appliance](/blog/repair-or-replace-appliance-guide): The 50% rule, lifespan benchmarks, and when replacement is the smarter choice.
+- [Appliance Repair vs Replacement: When to Fix or Replace](/blog/appliance-repair-vs-replacement): The 50% rule, lifespan benchmarks, and when replacement is the smarter choice.
 - [Home Warranty vs Homeowners Insurance](/blog/home-warranty-vs-homeowners-insurance): What each covers, how claims work, and why they are not interchangeable.
 - [Refrigerator Repair Cost Guide](/blog/refrigerator-repair-cost-guide): Compressor, ice maker, sealed system, and control board pricing for 2026.
 - [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide): Drum, pump, belt, and electronic control pricing with labor estimates.

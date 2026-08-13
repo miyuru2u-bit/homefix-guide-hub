@@ -60,6 +60,7 @@ export function SiteFooter() {
             <li><Link to="/blog" className="text-white/70 hover:text-white">All Articles</Link></li>
             <li><Link to="/about" className="text-white/70 hover:text-white">About</Link></li>
             <li><Link to="/contact" className="text-white/70 hover:text-white">Contact</Link></li>
+            <li><Link to="/tools" className="text-white/70 hover:text-white">Tools</Link></li>
           </ul>
         </div>
         <div>
@@ -69,6 +70,7 @@ export function SiteFooter() {
           <ul className="space-y-2 text-sm">
             <li><Link to="/how-we-estimate-repair-costs" className="text-white/70 hover:text-white">How We Estimate Costs</Link></li>
             <li><Link to="/editorial-policy" className="text-white/70 hover:text-white">Editorial Policy</Link></li>
+            <li><Link to="/error-codes" className="text-white/70 hover:text-white">Error Code Lookup</Link></li>
           </ul>
         </div>
         <div>
@@ -81,6 +83,7 @@ export function SiteFooter() {
             <li><Link to="/disclaimer" className="text-white/70 hover:text-white">Disclaimer</Link></li>
           </ul>
         </div>
+
       </div>
       <div className="relative border-t border-white/10">
         <p className="mx-auto max-w-6xl px-4 py-5 text-xs text-white/50 sm:px-6">

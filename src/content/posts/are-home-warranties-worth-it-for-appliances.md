@@ -399,6 +399,29 @@ A home warranty may not be worth it if:
 - You want full control over repairs
 - The plan has broad exclusions
 
+## The real cost math
+
+To decide whether a warranty is worth it, compare its yearly cost against what you would realistically spend on repairs without one.
+
+- **Warranty cost per year:** premium plus expected service fees, commonly $400–$750
+- **Average appliance repair without warranty:** $150–$650 per repair
+- **Major replacement (for example a fridge compressor):** $500–$1,200+
+
+If you expect at least one significant repair or replacement per year, a warranty often breaks even or comes out ahead. If your appliances are reliable and rarely fail, you usually save money by self-insuring.
+
+### A worked example
+
+Pay $500 a year for a warranty with a $100 service fee and, over three years, that is $1,500 in premiums. If your only breakdowns are a $220 dishwasher pump and a $180 dryer heating element, you would have paid roughly $400 out of pocket without a warranty — versus $1,700 with one. Self-insuring saved about $1,300.
+
+Flip it: if an aging refrigerator compressor fails ($1,000+) and a washer transmission goes ($600) in the same period, the warranty comes out clearly ahead. The deciding factor is how likely your appliances are to need major repairs, which mostly comes down to their age and history.
+
+## Alternatives to a traditional home warranty
+
+- **Self-insuring:** open a dedicated savings account and deposit what you would otherwise pay in premiums. Anything you do not spend, you keep.
+- **Manufacturer extended warranties:** useful for a single new, expensive appliance, though often overpriced.
+- **Credit card purchase protection:** some cards extend the manufacturer warranty automatically.
+- **A trusted local repair technician:** a reliable independent pro can be cheaper and faster than a warranty network.
+
 ## Final recommendation
 
 Home warranties can be worth it for appliances, but they are not automatically a good deal.

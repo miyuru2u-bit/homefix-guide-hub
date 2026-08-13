@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { ShieldAlert, Calculator, Scale, SearchCode, ArrowRight } from "lucide-react";
 import {
   getPost,
@@ -7,6 +7,7 @@ import {
   formatDate,
   isValidDate,
 } from "@/lib/content";
+import { POST_REDIRECTS } from "@/lib/redirects";
 import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { CostTable } from "@/components/blog/CostTable";
@@ -19,10 +20,20 @@ import { tagToSlug } from "@/lib/content";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
+    const target = POST_REDIRECTS[params.slug];
+    if (target) {
+      throw redirect({
+        to: "/blog/$slug",
+        params: { slug: target },
+        statusCode: 301,
+
+      });
+    }
     const post = getPost(params.slug);
     if (!post) throw notFound();
     return post;
   },
+
   head: ({ loaderData, params }) => {
     if (!loaderData) return { meta: [{ title: "Article not found" }] };
     const origin = "https://whatrepaircosts.com";
