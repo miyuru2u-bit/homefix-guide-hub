@@ -80,10 +80,11 @@ function BlogIndex() {
       <header className="mt-6 mb-10 border-b border-border pb-8">
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">All articles</h1>
         <p className="mt-3 max-w-2xl text-lg text-ink-soft">
-          {query ? `${posts.length} result${posts.length === 1 ? "" : "s"} for "${q}" — ` : null}
-          {posts.length} guide{posts.length === 1 ? "" : "s"} on appliance repair costs,
-          warranty coverage, and replacement decisions.
+          {query
+            ? `${posts.length} result${posts.length === 1 ? "" : "s"} for “${q}”.`
+            : `${posts.length} guide${posts.length === 1 ? "" : "s"} on appliance repair costs, warranty coverage, and replacement decisions.`}
         </p>
+
       </header>
       {posts.length === 0 ? (
         <p className="text-ink-soft">
