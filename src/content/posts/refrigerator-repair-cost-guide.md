@@ -113,6 +113,34 @@ Many home warranty plans cover the primary refrigerator, meaning you'd typically
 5. **Compare to replacement cost** using the 50% rule before authorizing a major repair.
 6. **Maintain it:** clean coils twice a year, check seals, and avoid overpacking to prevent failures.
 
+## Safe DIY checks before you call a technician
+
+A few checks can save you a service-call fee entirely:
+
+1. **Pull the fridge out and vacuum the condenser coils.** Dust-clogged coils cause a surprising number of "cooling problems."
+2. **Check the door gasket.** Close the door on a dollar bill — if it slides out easily, the seal is bad and the compressor is working overtime.
+3. **Listen.** A silent fridge usually means a failed start relay or compressor. Loud chirping points to the evaporator fan.
+4. **Verify the temperature setting.** Dials get knocked all the time.
+
+> **Safety note:** Never attempt repairs involving the sealed refrigerant system, the compressor, or internal wiring. Refrigerant work is federally regulated in the US (EPA Section 608), and internal components can hold a charge even when the unit is unplugged.
+
+## When to call a pro
+
+Call a licensed appliance technician if you see any of the following:
+
+- Cooling has fully stopped for more than 4 hours
+- A clicking sound every 2–5 minutes (likely a failing start relay)
+- Water pooling under or behind the unit that isn't a clogged drain line
+- The compressor is hot to the touch but the fridge isn't cooling
+
+## Common causes of refrigerator failure
+
+- **Evaporator fan motor** — the most common cause of a fridge that runs but doesn't cool.
+- **Defrost system failure** — ice buildup on the freezer's back wall points to a bad defrost heater, timer, or thermostat.
+- **Clogged condenser coils** — overdue maintenance that causes cooling loss and short-cycling.
+- **Main control board** — usually diagnosed after cheaper options are ruled out.
+- **Compressor or sealed system** — rare under 8 years old, expensive when it happens.
+
 ## The bottom line
 
 Most refrigerator repairs land between $200 and $600, with compressor and sealed-system work pushing past $1,000. Match your quote to the part-by-part ranges above, try the safe DIY checks first, and apply the 50% rule against your fridge's age before committing. For minor fixes on a newer unit, repair almost always wins; for major failures on a decade-old fridge, a new energy-efficient model is usually the smarter long-term spend.

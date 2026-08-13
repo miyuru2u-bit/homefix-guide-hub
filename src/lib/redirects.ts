@@ -12,4 +12,8 @@ export const POST_REDIRECTS: Record<string, string> = {
   "is-a-home-warranty-worth-it-for-appliances":
     "are-home-warranties-worth-it-for-appliances",
   "repair-or-replace-appliance-guide": "appliance-repair-vs-replacement",
+  "refrigerator-repair-cost": "refrigerator-repair-cost-guide",
+  "washing-machine-repair-vs-replace":
+    "should-you-repair-or-replace-a-washing-machine",
 };
+
