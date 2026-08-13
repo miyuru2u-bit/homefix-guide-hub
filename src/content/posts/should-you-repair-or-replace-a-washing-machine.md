@@ -91,6 +91,33 @@ Newer high-efficiency washers use significantly less water and electricity than 
 
 Yes. If your washer is covered (laundry appliances are frequently a home-warranty add-on), a qualifying breakdown — motor, transmission, pump, control board — means you pay only your service call fee, up to the plan's cap, instead of the full repair. That can make fixing an older machine worthwhile. Confirm laundry is on your covered list, and remember that maintenance issues like a clogged filter won't qualify.
 
+## Safe DIY checks before you call
+
+1. **Clean the drain pump filter.** On front-loaders there's an access panel at the bottom front; a clogged filter is the #1 cause of "my washer won't drain."
+2. **Check the hoses.** Kinked or split inlet hoses cause leaks blamed on the machine.
+3. **Reset the cycle.** Unplug for 60 seconds — modern control boards sometimes lock up and a power cycle clears the error.
+4. **Run an empty hot cycle with washer cleaner.** Odors and slow cycles are often biofilm, not a mechanical fault.
+
+> **Safety note:** Disconnect both power and the water supply before opening any panel. Front-load drums hold residual water even when "empty," and 120V components inside the cabinet are live when plugged in.
+
+## When to call a pro
+
+- Loud banging or grinding during the spin cycle (likely bearings)
+- Water under the machine that isn't from the hose connections
+- An error code that recurs after a power cycle
+- The drum doesn't turn even though the motor sounds like it's running
+
+## Age-based repair thresholds
+
+- **Under 6 years old:** repair almost any failure under $500.
+- **6–8 years old:** repair if the quote is under $400, or under 40% of a replacement.
+- **9+ years old:** only repair sub-$250 issues.
+- **Bearings, transmission, or motor failure past warranty:** replace — the next major failure is usually within 18 months.
+
+## Warranty coverage notes
+
+Home warranty plans typically cover washer mechanical and electrical failures for a $75–$125 service fee. Common exclusions: hoses (treated as consumables), damage from overloading or unbalanced loads, inlet-valve failures caused by sediment, and cosmetic damage. Manufacturer warranties often cover the motor and transmission for 5–10 years separately from the 1-year full-unit warranty — check before paying out of pocket.
+
 ## Frequently asked questions
 
 **Is it worth repairing a washing machine that won't spin?**
