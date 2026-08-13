@@ -259,7 +259,7 @@ Match the framework above to your home, get 2–3 quotes in your zip code, and y
 
 ### Related articles
 
-- [Is a Home Warranty Worth It for Appliances?](/blog/is-a-home-warranty-worth-it-for-appliances)
+- [Are Home Warranties Worth It for Appliances?](/blog/are-home-warranties-worth-it-for-appliances)
 - [What Appliances Does a Home Warranty Cover?](/blog/what-appliances-does-a-home-warranty-cover)
 - [Home Warranty Waiting Period Explained](/blog/home-warranty-waiting-period-explained)
 - [Extended Warranty vs Home Warranty](/blog/extended-warranty-vs-home-warranty)

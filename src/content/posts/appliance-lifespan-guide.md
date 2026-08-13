@@ -176,7 +176,7 @@ If an appliance is newer and the repair is reasonable, fixing it often makes sen
 - [Appliance Repair vs Replacement: When to Fix or Replace](/blog/appliance-repair-vs-replacement)
 - [Most Reliable Appliance Brands](/blog/most-reliable-appliance-brands)
 - [Most Expensive Appliances to Repair](/blog/most-expensive-appliances-to-repair)
-- [Repair or Replace: Complete Appliance Guide](/blog/repair-or-replace-appliance-guide)
+- [Appliance Repair vs Replacement: When to Fix or Replace](/blog/appliance-repair-vs-replacement)
 
 ## Frequently asked questions
 

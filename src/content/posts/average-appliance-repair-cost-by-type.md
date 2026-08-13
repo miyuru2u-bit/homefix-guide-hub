@@ -46,6 +46,40 @@ An appliance repair bill may include several charges:
 
 Some companies apply the diagnostic fee toward the repair if you approve the work. Others charge it separately. Always ask whether the estimate includes parts, labor, return visits, and fees.
 
+## Average repair cost by appliance (2026 ranges)
+
+These are typical all-in US repair ranges (parts plus labor) for the most common household appliances. Use them to sanity-check a quote before you approve any work.
+
+| Appliance | Typical repair range | Most common fixes |
+| --- | --- | --- |
+| Refrigerator | $200 – $1,000 | Thermostat, fan, defrost, compressor |
+| Washing machine | $150 – $650 | Pump, belt, valve, bearings |
+| Dryer | $100 – $450 | Heating element, belt, thermostat |
+| Dishwasher | $150 – $600 | Pump, valve, control board |
+| Oven / range | $150 – $600 | Igniter, heating element, board |
+| Microwave | $70 – $400 | Door switch, magnetron, fuse |
+| Garbage disposal | $80 – $250 | Jam clearing, motor, reset |
+| Freezer | $120 – $600 | Thermostat, fan, seal, compressor |
+
+### What you are actually paying for
+
+- **Service / diagnostic fee:** $75–$150 just for the technician to come out and diagnose the problem. Most reputable companies credit this toward the repair if you go ahead.
+- **Parts:** anywhere from $10 for a fuse to $400+ for a control board or compressor. OEM parts cost more than generic equivalents.
+- **Labor:** $50–$150 per hour depending on region and appliance complexity. Sealed-system and electronic repairs take longer.
+
+A typical mid-range repair — say a washer drain pump — might be $90 in parts, one hour of labor, plus a partially credited service fee, landing around $200–$300 total.
+
+### Cheap fixes vs expensive fixes
+
+| Usually cheap ($100–$250) | Usually expensive ($400–$1,200) |
+| --- | --- |
+| Thermostats, igniters, fuses | Compressors (fridge/freezer) |
+| Belts, hoses, door seals | Transmissions / motors (washer) |
+| Drain pumps, inlet valves | Control boards / electronics |
+| Door switches, gaskets | Sealed refrigeration systems |
+
+> 💡 **Apply the 50% rule:** if a repair costs more than half the price of a comparable new appliance — and the unit is already old — replacement is usually the smarter move.
+
 ## Why repair costs vary so much
 
 Two homeowners can have the same appliance problem and pay different amounts because repair cost depends on: appliance brand, appliance age, model complexity, part availability, local labor rates, technician experience, built-in vs freestanding installation, warranty coverage, emergency timing, whether multiple parts failed, and whether the first diagnosis is correct.
@@ -172,7 +206,6 @@ Before approving a repair, compare the estimate with the appliance's age, replac
 - [Most Expensive Appliances to Repair](/blog/most-expensive-appliances-to-repair)
 - [Appliance Lifespan Guide: How Long Major Appliances Last](/blog/appliance-lifespan-guide)
 - [Appliance Repair vs Replacement: When to Fix or Replace](/blog/appliance-repair-vs-replacement)
-- [Repair or Replace: Complete Appliance Guide](/blog/repair-or-replace-appliance-guide)
 
 ## Frequently asked questions
 

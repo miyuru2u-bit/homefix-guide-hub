@@ -35,11 +35,15 @@ export const Route = createFileRoute("/sitemap.xml")({
           changefreq: "weekly" as const,
         }));
 
-        const tagEntries = tags.map((t) => ({
-          path: `/tag/${t.slug}`,
-          priority: "0.5",
-          changefreq: "weekly" as const,
-        }));
+        // Thin tag pages (<3 posts) are noindexed, so keep them out of the sitemap.
+        const tagEntries = tags
+          .filter((t) => t.count >= 3)
+          .map((t) => ({
+            path: `/tag/${t.slug}`,
+            priority: "0.5",
+            changefreq: "weekly" as const,
+          }));
+
 
         const errorCodeEntries = ERROR_CODES.map((e) => ({
           path: `/error-codes/${e.brandSlug}/${e.codeSlug}`,

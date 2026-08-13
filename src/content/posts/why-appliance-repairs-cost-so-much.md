@@ -145,7 +145,7 @@ A high repair bill is not always unfair, but it should be clear. Ask for an item
 - [Most Expensive Appliances to Repair](/blog/most-expensive-appliances-to-repair)
 - [Appliance Lifespan Guide: How Long Major Appliances Last](/blog/appliance-lifespan-guide)
 - [Appliance Repair vs Replacement: When to Fix or Replace](/blog/appliance-repair-vs-replacement)
-- [Repair or Replace: Complete Appliance Guide](/blog/repair-or-replace-appliance-guide)
+- [Appliance Repair vs Replacement: When to Fix or Replace](/blog/appliance-repair-vs-replacement)
 
 ## Frequently asked questions
 

@@ -174,7 +174,7 @@ The simplest strategy: buy proactively while your systems and appliances are hea
 ### Related articles
 
 - [Best Home Warranty for Appliances](/blog/best-home-warranty-for-appliances)
-- [Is a Home Warranty Worth It for Appliances?](/blog/is-a-home-warranty-worth-it-for-appliances)
+- [Are Home Warranties Worth It for Appliances?](/blog/are-home-warranties-worth-it-for-appliances)
 - [What Appliances Does a Home Warranty Cover?](/blog/what-appliances-does-a-home-warranty-cover)
 - [Why Home Warranty Claims Get Denied](/blog/why-home-warranty-claims-get-denied)
 - [Home Warranty at Closing — How It Works](/blog/home-warranty-at-closing)

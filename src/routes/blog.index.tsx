@@ -4,6 +4,9 @@ import { PostCard } from "@/components/blog/PostCard";
 import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 
 export const Route = createFileRoute("/blog/")({
+  validateSearch: (search: Record<string, unknown>): { q?: string } => ({
+    q: typeof search.q === "string" && search.q.trim() ? search.q.trim() : undefined,
+  }),
   loader: () => getAllPosts(),
   head: ({ loaderData }) => ({
     meta: [
@@ -60,7 +63,16 @@ export const Route = createFileRoute("/blog/")({
 });
 
 function BlogIndex() {
-  const posts = Route.useLoaderData() as ReturnType<typeof getAllPosts>;
+  const allPosts = Route.useLoaderData() as ReturnType<typeof getAllPosts>;
+  const { q } = Route.useSearch();
+  const query = (q ?? "").toLowerCase();
+  const posts = query
+    ? allPosts.filter(
+        (p) =>
+          p.title.toLowerCase().includes(query) ||
+          p.tags.some((t) => t.toLowerCase().includes(query)),
+      )
+    : allPosts;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
@@ -68,15 +80,23 @@ function BlogIndex() {
       <header className="mt-6 mb-10 border-b border-border pb-8">
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">All articles</h1>
         <p className="mt-3 max-w-2xl text-lg text-ink-soft">
-          {posts.length} guide{posts.length === 1 ? "" : "s"} on appliance repair costs,
-          warranty coverage, and replacement decisions.
+          {query
+            ? `${posts.length} result${posts.length === 1 ? "" : "s"} for “${q}”.`
+            : `${posts.length} guide${posts.length === 1 ? "" : "s"} on appliance repair costs, warranty coverage, and replacement decisions.`}
         </p>
+
       </header>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {posts.map((p) => (
-          <PostCard key={p.slug} post={p} />
-        ))}
-      </div>
+      {posts.length === 0 ? (
+        <p className="text-ink-soft">
+          No articles matched that search. Try a broader term such as “refrigerator” or “warranty”.
+        </p>
+      ) : (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {posts.map((p) => (
+            <PostCard key={p.slug} post={p} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

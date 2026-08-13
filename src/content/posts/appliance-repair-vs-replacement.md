@@ -430,6 +430,26 @@ Use this checklist:
 11. How urgent is the repair?
 12. Would you be happy keeping the appliance?
 
+## Average appliance lifespans
+
+Age is the other half of the equation. An expensive repair on a near-new appliance may still be worth it; the same repair on a unit near the end of its life rarely is.
+
+| Appliance | Average lifespan | Lean toward replacing if older than |
+| --- | --- | --- |
+| Refrigerator | 10–13 years | ~10 years |
+| Washing machine | 10–12 years | ~9 years |
+| Dryer | 10–13 years | ~10 years |
+| Dishwasher | 9–12 years | ~8 years |
+| Oven / range | 13–15 years | ~12 years |
+| Microwave | 7–10 years | ~7 years |
+| Garbage disposal | 8–12 years | ~9 years |
+
+Once an appliance passes about 75% of its expected lifespan, the odds of additional failures climb and replacement starts to look better even for moderate repairs.
+
+## How to find your appliance's age
+
+If you do not know how old an appliance is, check the serial number on the data plate (often inside the door, on the back, or near the base). Most manufacturers encode the manufacture date in the serial number, and free serial-number decoders can translate it. Knowing the true age sharpens every part of this decision.
+
 ## Final recommendation
 
 Repair is usually the right choice when the appliance is newer, the problem is isolated, the repair cost is reasonable, and parts are available. Replacement is usually smarter when the appliance is old, unreliable, inefficient, or facing a repair that approaches the cost of a new model.
