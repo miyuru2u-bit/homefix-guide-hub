@@ -26,6 +26,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ToolsIndexRouteImport } from './routes/tools.index'
 import { Route as ErrorCodesIndexRouteImport } from './routes/error-codes.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as AuthorsIndexRouteImport } from './routes/authors.index'
 import { Route as ToolsRepairOrReplaceRouteImport } from './routes/tools.repair-or-replace'
 import { Route as ToolsRepairCostCalculatorRouteImport } from './routes/tools.repair-cost-calculator'
 import { Route as TagTagRouteImport } from './routes/tag.$tag'
@@ -123,6 +124,11 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/',
   getParentRoute: () => BlogRoute,
 } as any)
+const AuthorsIndexRoute = AuthorsIndexRouteImport.update({
+  id: '/authors/',
+  path: '/authors/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsRepairOrReplaceRoute = ToolsRepairOrReplaceRouteImport.update({
   id: '/repair-or-replace',
   path: '/repair-or-replace',
@@ -201,6 +207,7 @@ export interface FileRoutesByFullPath {
   '/tag/$tag': typeof TagTagRoute
   '/tools/repair-cost-calculator': typeof ToolsRepairCostCalculatorRoute
   '/tools/repair-or-replace': typeof ToolsRepairOrReplaceRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/error-codes/': typeof ErrorCodesIndexRoute
   '/tools/': typeof ToolsIndexRoute
@@ -227,6 +234,7 @@ export interface FileRoutesByTo {
   '/tag/$tag': typeof TagTagRoute
   '/tools/repair-cost-calculator': typeof ToolsRepairCostCalculatorRoute
   '/tools/repair-or-replace': typeof ToolsRepairOrReplaceRoute
+  '/authors': typeof AuthorsIndexRoute
   '/blog': typeof BlogIndexRoute
   '/error-codes': typeof ErrorCodesIndexRoute
   '/tools': typeof ToolsIndexRoute
@@ -257,6 +265,7 @@ export interface FileRoutesById {
   '/tag/$tag': typeof TagTagRoute
   '/tools/repair-cost-calculator': typeof ToolsRepairCostCalculatorRoute
   '/tools/repair-or-replace': typeof ToolsRepairOrReplaceRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/error-codes/': typeof ErrorCodesIndexRoute
   '/tools/': typeof ToolsIndexRoute
@@ -288,6 +297,7 @@ export interface FileRouteTypes {
     | '/tag/$tag'
     | '/tools/repair-cost-calculator'
     | '/tools/repair-or-replace'
+    | '/authors/'
     | '/blog/'
     | '/error-codes/'
     | '/tools/'
@@ -314,6 +324,7 @@ export interface FileRouteTypes {
     | '/tag/$tag'
     | '/tools/repair-cost-calculator'
     | '/tools/repair-or-replace'
+    | '/authors'
     | '/blog'
     | '/error-codes'
     | '/tools'
@@ -343,6 +354,7 @@ export interface FileRouteTypes {
     | '/tag/$tag'
     | '/tools/repair-cost-calculator'
     | '/tools/repair-or-replace'
+    | '/authors/'
     | '/blog/'
     | '/error-codes/'
     | '/tools/'
@@ -370,6 +382,7 @@ export interface RootRouteChildren {
   ApiContactRoute: typeof ApiContactRoute
   CategoryCategoryRoute: typeof CategoryCategoryRoute
   TagTagRoute: typeof TagTagRoute
+  AuthorsIndexRoute: typeof AuthorsIndexRoute
   Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 
@@ -493,6 +506,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/blog/'
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
+    }
+    '/authors/': {
+      id: '/authors/'
+      path: '/authors'
+      fullPath: '/authors/'
+      preLoaderRoute: typeof AuthorsIndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/tools/repair-or-replace': {
       id: '/tools/repair-or-replace'
@@ -628,6 +648,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiContactRoute: ApiContactRoute,
   CategoryCategoryRoute: CategoryCategoryRoute,
   TagTagRoute: TagTagRoute,
+  AuthorsIndexRoute: AuthorsIndexRoute,
   Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
 }
 export const routeTree = rootRouteImport
