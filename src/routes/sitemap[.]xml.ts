@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import { CATEGORIES, getAllPosts, getAllTags } from "@/lib/content";
+import { CATEGORIES, getAllPosts, getAllTags, isValidDate } from "@/lib/content";
 import { ERROR_CODES } from "@/lib/error-codes-data";
 
 const BASE_URL = "https://whatrepaircosts.com";
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const posts = getAllPosts();
         const tags = getAllTags();
-        const latestPostDate = posts[0]?.date;
+        const latestPostDate = isValidDate(posts[0]?.date) ? posts[0]!.date : undefined;
         const staticPaths = [
           { path: "/", priority: "1.0", changefreq: "weekly" as const, lastmod: latestPostDate },
           { path: "/blog", priority: "0.9", changefreq: "daily" as const, lastmod: latestPostDate },
@@ -55,7 +55,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           path: `/blog/${p.slug}`,
           priority: "0.8",
           changefreq: "monthly" as const,
-          lastmod: /^\d{4}-\d{2}-\d{2}/.test(p.date) && !p.date.startsWith("1970-") ? p.date : undefined,
+          lastmod: isValidDate(p.date) ? p.date : undefined,
         }));
 
         const entries = [
