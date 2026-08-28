@@ -581,3 +581,7 @@ export function formatDate(iso: string): string {
     timeZone: "UTC",
   });
 }
+
+export function getPostsByAuthor(slug: string): Post[] {
+  return allPosts.filter((p) => p.authorSlug === slug);
+}
