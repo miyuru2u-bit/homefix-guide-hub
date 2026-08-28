@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import { CATEGORIES, getAllPosts, getAllTags } from "@/lib/content";
+import { CATEGORIES, getAllPosts, getAllTags, isValidDate } from "@/lib/content";
 import { ERROR_CODES } from "@/lib/error-codes-data";
 
 const BASE_URL = "https://whatrepaircosts.com";
