@@ -4,11 +4,11 @@ import {
   getPost,
   getCategory,
   getRelatedPosts,
-  formatDate,
   isValidDate,
 } from "@/lib/content";
 import { POST_REDIRECTS } from "@/lib/redirects";
 import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
+import { ArticleByline } from "@/components/blog/ArticleByline";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { CostTable } from "@/components/blog/CostTable";
 import { FAQ } from "@/components/blog/FAQ";
@@ -51,7 +51,9 @@ export const Route = createFileRoute("/blog/$slug")({
       headline: loaderData.title,
       description: loaderData.metaDescription,
       image: absImage,
-      author: { "@type": "Organization", name: "Editorial Team" },
+      author: loaderData.authorIsPerson
+        ? { "@type": "Person", name: loaderData.author, url: `${origin}/authors/${loaderData.authorSlug}` }
+        : { "@type": "Organization", name: loaderData.author },
       publisher: {
         "@type": "Organization",
         name: "Home Appliance Cost Guide",
@@ -60,7 +62,19 @@ export const Route = createFileRoute("/blog/$slug")({
     };
     if (validDate) {
       articleSchema.datePublished = loaderData.date;
-      articleSchema.dateModified = loaderData.date;
+      articleSchema.dateModified =
+        loaderData.updated && isValidDate(loaderData.updated) ? loaderData.updated : loaderData.date;
+    }
+    if (loaderData.reviewer && loaderData.reviewer.isPerson && loaderData.reviewer.qualification) {
+      articleSchema.reviewedBy = {
+        "@type": "Person",
+        name: loaderData.reviewer.name,
+        jobTitle: loaderData.reviewer.role,
+        ...(loaderData.reviewer.profileUrl ? { url: loaderData.reviewer.profileUrl } : {}),
+      };
+    }
+    if (loaderData.sources.length > 0) {
+      articleSchema.citation = loaderData.sources.map((s) => s.url ?? s.title);
     }
     const scripts: Array<{ type: string; children: string }> = [
       { type: "application/ld+json", children: JSON.stringify(articleSchema) },
@@ -123,7 +137,11 @@ export const Route = createFileRoute("/blog/$slug")({
     ];
     if (validDate) {
       meta.push({ property: "article:published_time", content: loaderData.date });
-      meta.push({ property: "article:modified_time", content: loaderData.date });
+      meta.push({
+        property: "article:modified_time",
+        content:
+          loaderData.updated && isValidDate(loaderData.updated) ? loaderData.updated : loaderData.date,
+      });
     }
     return {
       meta,
@@ -191,15 +209,7 @@ function ArticlePage() {
             <h1 className="font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl md:text-5xl">
               {post.title}
             </h1>
-            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
-              <span>By {post.author}</span>
-              {isValidDate(post.date) && (
-                <>
-                  <span aria-hidden>·</span>
-                  <time dateTime={post.date}>Last updated: {formatDate(post.date)}</time>
-                </>
-              )}
-            </div>
+            <ArticleByline post={post} />
           </header>
 
           {/* Hero image */}
