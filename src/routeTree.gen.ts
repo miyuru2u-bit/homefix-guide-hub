@@ -32,6 +32,7 @@ import { Route as ToolsRepairCostCalculatorRouteImport } from './routes/tools.re
 import { Route as TagTagRouteImport } from './routes/tag.$tag'
 import { Route as CategoryCategoryRouteImport } from './routes/category.$category'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as AuthorsSlugRouteImport } from './routes/authors.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
@@ -155,6 +156,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => BlogRoute,
 } as any)
+const AuthorsSlugRoute = AuthorsSlugRouteImport.update({
+  id: '/authors/$slug',
+  path: '/authors/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiContactRoute = ApiContactRouteImport.update({
   id: '/api/contact',
   path: '/api/contact',
@@ -202,6 +208,7 @@ export interface FileRoutesByFullPath {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/api/contact': typeof ApiContactRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
   '/tag/$tag': typeof TagTagRoute
@@ -229,6 +236,7 @@ export interface FileRoutesByTo {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/api/contact': typeof ApiContactRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
   '/tag/$tag': typeof TagTagRoute
@@ -260,6 +268,7 @@ export interface FileRoutesById {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/api/contact': typeof ApiContactRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
   '/tag/$tag': typeof TagTagRoute
@@ -292,6 +301,7 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/api/contact'
+    | '/authors/$slug'
     | '/blog/$slug'
     | '/category/$category'
     | '/tag/$tag'
@@ -319,6 +329,7 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/api/contact'
+    | '/authors/$slug'
     | '/blog/$slug'
     | '/category/$category'
     | '/tag/$tag'
@@ -349,6 +360,7 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/api/contact'
+    | '/authors/$slug'
     | '/blog/$slug'
     | '/category/$category'
     | '/tag/$tag'
@@ -380,6 +392,7 @@ export interface RootRouteChildren {
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   ApiContactRoute: typeof ApiContactRoute
+  AuthorsSlugRoute: typeof AuthorsSlugRoute
   CategoryCategoryRoute: typeof CategoryCategoryRoute
   TagTagRoute: typeof TagTagRoute
   AuthorsIndexRoute: typeof AuthorsIndexRoute
@@ -549,6 +562,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/authors/$slug': {
+      id: '/authors/$slug'
+      path: '/authors/$slug'
+      fullPath: '/authors/$slug'
+      preLoaderRoute: typeof AuthorsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/contact': {
       id: '/api/contact'
       path: '/api/contact'
@@ -646,6 +666,7 @@ const rootRouteChildren: RootRouteChildren = {
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
   ApiContactRoute: ApiContactRoute,
+  AuthorsSlugRoute: AuthorsSlugRoute,
   CategoryCategoryRoute: CategoryCategoryRoute,
   TagTagRoute: TagTagRoute,
   AuthorsIndexRoute: AuthorsIndexRoute,
