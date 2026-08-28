@@ -115,14 +115,34 @@ export type CostRow = { item: string; low: string; high: string };
 export type FaqItem = { q: string; a: string };
 export type TocItem = { id: string; text: string; level: number };
 
+export type PostSource = { title: string; url?: string; publisher?: string };
+export type PostReviewer = {
+  name: string;
+  role: string;
+  qualification: string | null;
+  reviewDate: string;
+  profileUrl: string | null;
+  isPerson: boolean;
+};
+
 export type Post = {
   slug: string;
   title: string;
   metaDescription: string;
   category: string;
   tags: string[];
+  /** Published date (ISO). */
   date: string;
+  /** Last materially updated date (ISO), when supplied. */
+  updated: string | null;
+  /** Short explanation of what changed in the last material update. */
+  revisionSummary: string;
   author: string;
+  authorSlug: string;
+  reviewer: PostReviewer | null;
+  /** "reviewed" | "editor-checked" | "unverified" */
+  factCheckStatus: string;
+  sources: PostSource[];
   image: string;
   imageAlt: string;
   quickAnswer: string;
@@ -132,6 +152,7 @@ export type Post = {
   excerpt: string;
   toc: TocItem[];
 };
+
 
 function decodeHtmlEntities(text: string): string {
   return text
