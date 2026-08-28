@@ -1,5 +1,6 @@
 import yaml from "js-yaml";
 import { marked } from "marked";
+import { getAuthor, authorNameToSlug, DEFAULT_AUTHOR_NAME } from "@/lib/authors";
 
 import fridgeImg from "@/assets/post-fridge.webp";
 import washerImg from "@/assets/post-washer.webp";
@@ -358,7 +359,7 @@ function parsePost(raw: string): Post {
               ? { title: String(s.title), url: s.url ? String(s.url) : undefined, publisher: s.publisher ? String(s.publisher) : undefined }
               : null,
         )
-        .filter(Boolean)
+        .filter((s: PostSource | null): s is PostSource => s !== null)
     : [];
   return {
     slug: data.slug,
