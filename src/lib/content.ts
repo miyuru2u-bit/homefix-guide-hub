@@ -140,6 +140,7 @@ export type Post = {
   revisionSummary: string;
   author: string;
   authorSlug: string;
+  authorIsPerson: boolean;
   reviewer: PostReviewer | null;
   /** "reviewed" | "editor-checked" | "unverified" */
   factCheckStatus: string;
@@ -372,6 +373,7 @@ function parsePost(raw: string): Post {
     revisionSummary: (data.revisionSummary && String(data.revisionSummary).trim()) || "",
     author: authorRecord?.name ?? authorName,
     authorSlug: authorRecord?.slug ?? authorNameToSlug(authorName),
+    authorIsPerson: authorRecord?.isPerson ?? false,
     reviewer,
     factCheckStatus:
       (data.factCheckStatus && String(data.factCheckStatus).trim()) ||
