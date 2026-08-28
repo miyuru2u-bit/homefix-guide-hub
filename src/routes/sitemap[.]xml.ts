@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import { CATEGORIES, getAllPosts, getAllTags, isValidDate } from "@/lib/content";
+import { CATEGORIES, getAllPosts, getAllTags, isValidDate, getPostsByAuthor } from "@/lib/content";
+import { getAllAuthors, isAuthorProfileComplete } from "@/lib/authors";
 import { ERROR_CODES } from "@/lib/error-codes-data";
 
 const BASE_URL = "https://whatrepaircosts.com";
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/error-codes", priority: "0.85", changefreq: "weekly" as const },
           { path: "/rss.xml", priority: "0.3", changefreq: "weekly" as const },
           { path: "/about", priority: "0.5", changefreq: "monthly" as const },
+          { path: "/authors", priority: "0.4", changefreq: "monthly" as const },
           { path: "/contact", priority: "0.4", changefreq: "yearly" as const },
           { path: "/how-we-estimate-repair-costs", priority: "0.5", changefreq: "yearly" as const },
           { path: "/editorial-policy", priority: "0.5", changefreq: "yearly" as const },
@@ -58,11 +60,21 @@ export const Route = createFileRoute("/sitemap.xml")({
           lastmod: isValidDate(p.date) ? p.date : undefined,
         }));
 
+        // Only complete (indexable) author profiles belong in the sitemap.
+        const authorEntries = getAllAuthors()
+          .filter((a) => isAuthorProfileComplete(a, getPostsByAuthor(a.slug).length))
+          .map((a) => ({
+            path: `/authors/${a.slug}`,
+            priority: "0.4",
+            changefreq: "monthly" as const,
+          }));
+
         const entries = [
           ...staticPaths,
           ...categoryEntries,
           ...tagEntries,
           ...errorCodeEntries,
+          ...authorEntries,
           ...postEntries,
         ];
 

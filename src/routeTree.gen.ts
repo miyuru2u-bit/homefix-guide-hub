@@ -26,11 +26,13 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ToolsIndexRouteImport } from './routes/tools.index'
 import { Route as ErrorCodesIndexRouteImport } from './routes/error-codes.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as AuthorsIndexRouteImport } from './routes/authors.index'
 import { Route as ToolsRepairOrReplaceRouteImport } from './routes/tools.repair-or-replace'
 import { Route as ToolsRepairCostCalculatorRouteImport } from './routes/tools.repair-cost-calculator'
 import { Route as TagTagRouteImport } from './routes/tag.$tag'
 import { Route as CategoryCategoryRouteImport } from './routes/category.$category'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as AuthorsSlugRouteImport } from './routes/authors.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
@@ -123,6 +125,11 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/',
   getParentRoute: () => BlogRoute,
 } as any)
+const AuthorsIndexRoute = AuthorsIndexRouteImport.update({
+  id: '/authors/',
+  path: '/authors/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsRepairOrReplaceRoute = ToolsRepairOrReplaceRouteImport.update({
   id: '/repair-or-replace',
   path: '/repair-or-replace',
@@ -148,6 +155,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => BlogRoute,
+} as any)
+const AuthorsSlugRoute = AuthorsSlugRouteImport.update({
+  id: '/authors/$slug',
+  path: '/authors/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ApiContactRoute = ApiContactRouteImport.update({
   id: '/api/contact',
@@ -196,11 +208,13 @@ export interface FileRoutesByFullPath {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/api/contact': typeof ApiContactRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
   '/tag/$tag': typeof TagTagRoute
   '/tools/repair-cost-calculator': typeof ToolsRepairCostCalculatorRoute
   '/tools/repair-or-replace': typeof ToolsRepairOrReplaceRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/error-codes/': typeof ErrorCodesIndexRoute
   '/tools/': typeof ToolsIndexRoute
@@ -222,11 +236,13 @@ export interface FileRoutesByTo {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/api/contact': typeof ApiContactRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
   '/tag/$tag': typeof TagTagRoute
   '/tools/repair-cost-calculator': typeof ToolsRepairCostCalculatorRoute
   '/tools/repair-or-replace': typeof ToolsRepairOrReplaceRoute
+  '/authors': typeof AuthorsIndexRoute
   '/blog': typeof BlogIndexRoute
   '/error-codes': typeof ErrorCodesIndexRoute
   '/tools': typeof ToolsIndexRoute
@@ -252,11 +268,13 @@ export interface FileRoutesById {
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/api/contact': typeof ApiContactRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/category/$category': typeof CategoryCategoryRoute
   '/tag/$tag': typeof TagTagRoute
   '/tools/repair-cost-calculator': typeof ToolsRepairCostCalculatorRoute
   '/tools/repair-or-replace': typeof ToolsRepairOrReplaceRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/error-codes/': typeof ErrorCodesIndexRoute
   '/tools/': typeof ToolsIndexRoute
@@ -283,11 +301,13 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/api/contact'
+    | '/authors/$slug'
     | '/blog/$slug'
     | '/category/$category'
     | '/tag/$tag'
     | '/tools/repair-cost-calculator'
     | '/tools/repair-or-replace'
+    | '/authors/'
     | '/blog/'
     | '/error-codes/'
     | '/tools/'
@@ -309,11 +329,13 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/api/contact'
+    | '/authors/$slug'
     | '/blog/$slug'
     | '/category/$category'
     | '/tag/$tag'
     | '/tools/repair-cost-calculator'
     | '/tools/repair-or-replace'
+    | '/authors'
     | '/blog'
     | '/error-codes'
     | '/tools'
@@ -338,11 +360,13 @@ export interface FileRouteTypes {
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/api/contact'
+    | '/authors/$slug'
     | '/blog/$slug'
     | '/category/$category'
     | '/tag/$tag'
     | '/tools/repair-cost-calculator'
     | '/tools/repair-or-replace'
+    | '/authors/'
     | '/blog/'
     | '/error-codes/'
     | '/tools/'
@@ -368,8 +392,10 @@ export interface RootRouteChildren {
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   ApiContactRoute: typeof ApiContactRoute
+  AuthorsSlugRoute: typeof AuthorsSlugRoute
   CategoryCategoryRoute: typeof CategoryCategoryRoute
   TagTagRoute: typeof TagTagRoute
+  AuthorsIndexRoute: typeof AuthorsIndexRoute
   Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 
@@ -494,6 +520,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/authors/': {
+      id: '/authors/'
+      path: '/authors'
+      fullPath: '/authors/'
+      preLoaderRoute: typeof AuthorsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/repair-or-replace': {
       id: '/tools/repair-or-replace'
       path: '/repair-or-replace'
@@ -528,6 +561,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
+    }
+    '/authors/$slug': {
+      id: '/authors/$slug'
+      path: '/authors/$slug'
+      fullPath: '/authors/$slug'
+      preLoaderRoute: typeof AuthorsSlugRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/api/contact': {
       id: '/api/contact'
@@ -626,8 +666,10 @@ const rootRouteChildren: RootRouteChildren = {
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
   ApiContactRoute: ApiContactRoute,
+  AuthorsSlugRoute: AuthorsSlugRoute,
   CategoryCategoryRoute: CategoryCategoryRoute,
   TagTagRoute: TagTagRoute,
+  AuthorsIndexRoute: AuthorsIndexRoute,
   Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
 }
 export const routeTree = rootRouteImport

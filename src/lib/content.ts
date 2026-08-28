@@ -1,5 +1,6 @@
 import yaml from "js-yaml";
 import { marked } from "marked";
+import { getAuthor, authorNameToSlug, DEFAULT_AUTHOR_NAME } from "@/lib/authors";
 
 import fridgeImg from "@/assets/post-fridge.webp";
 import washerImg from "@/assets/post-washer.webp";
@@ -115,14 +116,35 @@ export type CostRow = { item: string; low: string; high: string };
 export type FaqItem = { q: string; a: string };
 export type TocItem = { id: string; text: string; level: number };
 
+export type PostSource = { title: string; url?: string; publisher?: string };
+export type PostReviewer = {
+  name: string;
+  role: string;
+  qualification: string | null;
+  reviewDate: string;
+  profileUrl: string | null;
+  isPerson: boolean;
+};
+
 export type Post = {
   slug: string;
   title: string;
   metaDescription: string;
   category: string;
   tags: string[];
+  /** Published date (ISO). */
   date: string;
+  /** Last materially updated date (ISO), when supplied. */
+  updated: string | null;
+  /** Short explanation of what changed in the last material update. */
+  revisionSummary: string;
   author: string;
+  authorSlug: string;
+  authorIsPerson: boolean;
+  reviewer: PostReviewer | null;
+  /** "reviewed" | "editor-checked" | "unverified" */
+  factCheckStatus: string;
+  sources: PostSource[];
   image: string;
   imageAlt: string;
   quickAnswer: string;
@@ -132,6 +154,7 @@ export type Post = {
   excerpt: string;
   toc: TocItem[];
 };
+
 
 function decodeHtmlEntities(text: string): string {
   return text
@@ -309,6 +332,36 @@ function parsePost(raw: string): Post {
     .find((l) => l.length > 60 && !l.startsWith("#"));
   const excerpt = excerptLine ? excerptLine.slice(0, 180).trim() : "";
   const metaFallback = (excerpt || data.quickAnswer || "").slice(0, 158).trim();
+  const authorName = (data.author && String(data.author).trim()) || DEFAULT_AUTHOR_NAME;
+  const authorRecord = getAuthor(data.authorSlug ?? authorName);
+  const rawUpdated = data.updated ?? data.lastUpdated ?? null;
+  const updated =
+    typeof rawUpdated === "string" && isValidDate(rawUpdated) && rawUpdated.slice(0, 10) >= data.date.slice(0, 10)
+      ? rawUpdated.slice(0, 10)
+      : null;
+  const r = data.reviewer;
+  const reviewer: PostReviewer | null =
+    r && typeof r === "object" && r.name && String(r.name).trim()
+      ? {
+          name: String(r.name).trim(),
+          role: (r.role && String(r.role).trim()) || "Reviewer",
+          qualification: r.qualification ? String(r.qualification).trim() : null,
+          reviewDate: isValidDate(r.reviewDate) ? String(r.reviewDate).slice(0, 10) : "",
+          profileUrl: r.profileUrl ? String(r.profileUrl).trim() : null,
+          isPerson: r.isPerson !== false,
+        }
+      : null;
+  const sources: PostSource[] = Array.isArray(data.sources)
+    ? data.sources
+        .map((s: any) =>
+          typeof s === "string"
+            ? { title: s }
+            : s && s.title
+              ? { title: String(s.title), url: s.url ? String(s.url) : undefined, publisher: s.publisher ? String(s.publisher) : undefined }
+              : null,
+        )
+        .filter((s: PostSource | null): s is PostSource => s !== null)
+    : [];
   return {
     slug: data.slug,
     title: data.title,
@@ -316,8 +369,18 @@ function parsePost(raw: string): Post {
     category: data.category,
     tags: data.tags ?? [],
     date: data.date,
-    author: data.author ?? "Editorial Team",
+    updated,
+    revisionSummary: (data.revisionSummary && String(data.revisionSummary).trim()) || "",
+    author: authorRecord?.name ?? authorName,
+    authorSlug: authorRecord?.slug ?? authorNameToSlug(authorName),
+    authorIsPerson: authorRecord?.isPerson ?? false,
+    reviewer,
+    factCheckStatus:
+      (data.factCheckStatus && String(data.factCheckStatus).trim()) ||
+      (reviewer ? "reviewed" : "editor-checked"),
+    sources,
     image: imageMap[data.image] ?? "",
+
     imageAlt: (data.imageAlt && String(data.imageAlt).trim()) || data.title,
     quickAnswer: data.quickAnswer ?? "",
     costTable: data.costTable ?? [],
@@ -519,4 +582,8 @@ export function formatDate(iso: string): string {
     day: "numeric",
     timeZone: "UTC",
   });
+}
+
+export function getPostsByAuthor(slug: string): Post[] {
+  return allPosts.filter((p) => p.authorSlug === slug);
 }
