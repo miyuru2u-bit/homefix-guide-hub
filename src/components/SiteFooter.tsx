@@ -69,6 +69,7 @@ export function SiteFooter() {
           </p>
           <ul className="space-y-2 text-sm">
             <li><Link to="/how-we-estimate-repair-costs" className="text-white/70 hover:text-white">How We Estimate Costs</Link></li>
+            <li><Link to="/authors" className="text-white/70 hover:text-white">Authors &amp; Reviewers</Link></li>
             <li><Link to="/editorial-policy" className="text-white/70 hover:text-white">Editorial Policy</Link></li>
             <li><Link to="/error-codes" className="text-white/70 hover:text-white">Error Code Lookup</Link></li>
           </ul>
