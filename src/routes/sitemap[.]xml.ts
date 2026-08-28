@@ -11,7 +11,7 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const posts = getAllPosts();
         const tags = getAllTags();
-        const latestPostDate = posts[0]?.date;
+        const latestPostDate = isValidDate(posts[0]?.date) ? posts[0]!.date : undefined;
         const staticPaths = [
           { path: "/", priority: "1.0", changefreq: "weekly" as const, lastmod: latestPostDate },
           { path: "/blog", priority: "0.9", changefreq: "daily" as const, lastmod: latestPostDate },
