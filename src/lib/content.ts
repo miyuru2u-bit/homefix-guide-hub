@@ -115,7 +115,6 @@ export const CATEGORIES: Category[] = [
 export type CostRow = { item: string; low: string; high: string };
 export type FaqItem = { q: string; a: string };
 export type TocItem = { id: string; text: string; level: number };
-
 export type PostSource = { title: string; url?: string; publisher?: string };
 export type PostReviewer = {
   name: string;
@@ -132,17 +131,13 @@ export type Post = {
   metaDescription: string;
   category: string;
   tags: string[];
-  /** Published date (ISO). */
   date: string;
-  /** Last materially updated date (ISO), when supplied. */
   updated: string | null;
-  /** Short explanation of what changed in the last material update. */
   revisionSummary: string;
   author: string;
   authorSlug: string;
   authorIsPerson: boolean;
   reviewer: PostReviewer | null;
-  /** "reviewed" | "editor-checked" | "unverified" */
   factCheckStatus: string;
   sources: PostSource[];
   image: string;
@@ -154,7 +149,6 @@ export type Post = {
   excerpt: string;
   toc: TocItem[];
 };
-
 
 function decodeHtmlEntities(text: string): string {
   return text
@@ -275,8 +269,6 @@ const imageMap: Record<string, string> = {
   "appliance-problems-not-worth-repairing": applianceProblemsNotWorthRepairingImg,
 };
 
-// Vite imports raw markdown at build time. Migration to a CMS later is just
-// swapping this glob for a fetch.
 const files = import.meta.glob("../content/posts/*.md", {
   eager: true,
   query: "?raw",
@@ -357,7 +349,11 @@ function parsePost(raw: string): Post {
           typeof s === "string"
             ? { title: s }
             : s && s.title
-              ? { title: String(s.title), url: s.url ? String(s.url) : undefined, publisher: s.publisher ? String(s.publisher) : undefined }
+              ? {
+                  title: String(s.title),
+                  url: s.url ? String(s.url) : undefined,
+                  publisher: s.publisher ? String(s.publisher) : undefined,
+                }
               : null,
         )
         .filter((s: PostSource | null): s is PostSource => s !== null)
@@ -380,7 +376,6 @@ function parsePost(raw: string): Post {
       (reviewer ? "reviewed" : "editor-checked"),
     sources,
     image: imageMap[data.image] ?? "",
-
     imageAlt: (data.imageAlt && String(data.imageAlt).trim()) || data.title,
     quickAnswer: data.quickAnswer ?? "",
     costTable: data.costTable ?? [],
@@ -391,10 +386,6 @@ function parsePost(raw: string): Post {
     excerpt,
     toc,
   };
-}
-
-function escapeRegExp(s: string): string {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function normalizeTitle(s: string): string {
@@ -408,77 +399,36 @@ function normalizeTitle(s: string): string {
     .trim();
 }
 
-function linkifyRelatedPosts(posts: Post[]): void {
-  // Build lookup of title (and a shortened "before colon" variant) -> slug
+function linkifyRelatedLists(posts: Post[]): void {
   const titleToSlug = new Map<string, string>();
-  for (const p of posts) {
-    titleToSlug.set(normalizeTitle(p.title), p.slug);
-    const short = p.title.split(":")[0];
-    if (short && short !== p.title) {
-      const key = normalizeTitle(short);
-      if (!titleToSlug.has(key)) titleToSlug.set(key, p.slug);
+  for (const post of posts) {
+    titleToSlug.set(normalizeTitle(post.title), post.slug);
+    const shortTitle = post.title.split(":")[0];
+    if (shortTitle && shortTitle !== post.title) {
+      const key = normalizeTitle(shortTitle);
+      if (!titleToSlug.has(key)) titleToSlug.set(key, post.slug);
     }
   }
 
   for (const post of posts) {
-    let html = post.html;
-
-    // 1) Linkify <li> items inside the "Related articles" section.
-    html = html.replace(
+    post.html = post.html.replace(
       /(<h2[^>]*>\s*Related articles\s*<\/h2>)([\s\S]*?)(?=<h2|$)/i,
-      (_m, heading: string, body: string) => {
-        const newBody = body.replace(
+      (_match, heading: string, body: string) => {
+        const linkedBody = body.replace(
           /<li>([\s\S]*?)<\/li>/g,
-          (liMatch: string, inner: string) => {
-            // Skip if already a link
-            if (/<a\s/i.test(inner)) return liMatch;
+          (listItem: string, inner: string) => {
+            if (/<a\s/i.test(inner)) return listItem;
             const plain = inner.replace(/<[^>]+>/g, "").trim();
-            const key = normalizeTitle(plain);
             const slug =
-              titleToSlug.get(key) ??
+              titleToSlug.get(normalizeTitle(plain)) ??
               titleToSlug.get(normalizeTitle(plain.split(":")[0]));
-            if (!slug || slug === post.slug) return liMatch;
+            if (!slug || slug === post.slug) return listItem;
             return `<li><a href="/blog/${slug}">${inner.trim()}</a></li>`;
           },
         );
-        return heading + newBody;
+        return heading + linkedBody;
       },
     );
-
-    // 2) Linkify the first plain-text mention of any other post title in body paragraphs.
-    for (const other of posts) {
-      if (other.slug === post.slug) continue;
-      const candidates = [other.title, other.title.split(":")[0]].filter(
-        (t, i, arr) => t && (i === 0 || t !== arr[0]),
-      );
-      for (const candidate of candidates) {
-        if (candidate.length < 12) continue;
-        const pattern = new RegExp(
-          `(?<![\\w>])(${escapeRegExp(candidate)})(?![\\w<])`,
-          "i",
-        );
-        let replaced = false;
-        html = html.replace(
-          /<p>([\s\S]*?)<\/p>/g,
-          (pMatch: string, inner: string) => {
-            if (replaced) return pMatch;
-            if (/<a\s/i.test(inner)) return pMatch;
-            if (!pattern.test(inner)) return pMatch;
-            const newInner = inner.replace(
-              pattern,
-              `<a href="/blog/${other.slug}">$1</a>`,
-            );
-            if (newInner === inner) return pMatch;
-            replaced = true;
-            
-            return `<p>${newInner}</p>`;
-          },
-        );
-        if (replaced) break;
-      }
-    }
-
-    post.html = html;
   }
 }
 
@@ -486,7 +436,7 @@ const allPosts: Post[] = Object.values(files)
   .map(parsePost)
   .sort((a, b) => (b.date > a.date ? 1 : b.date < a.date ? -1 : 0));
 
-linkifyRelatedPosts(allPosts);
+linkifyRelatedLists(allPosts);
 
 export function getAllPosts(): Post[] {
   return allPosts;
@@ -547,13 +497,13 @@ const tagIndex = (() => {
 
 export function getAllTags(): TagSummary[] {
   return [...tagIndex.entries()]
-    .map(([slug, v]) => ({ slug, name: v.name, count: v.count }))
+    .map(([slug, value]) => ({ slug, name: value.name, count: value.count }))
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 }
 
 export function getTag(slug: string): TagSummary | undefined {
-  const v = tagIndex.get(slug);
-  return v ? { slug, name: v.name, count: v.count } : undefined;
+  const value = tagIndex.get(slug);
+  return value ? { slug, name: value.name, count: value.count } : undefined;
 }
 
 export function getPostsByTag(slug: string): Post[] {
@@ -567,9 +517,8 @@ export function tagToSlug(tag: string): string {
 export function isValidDate(iso: unknown): iso is string {
   if (typeof iso !== "string") return false;
   if (!/^\d{4}-\d{2}-\d{2}/.test(iso)) return false;
-  const t = Date.parse(iso);
-  if (!Number.isFinite(t)) return false;
-  // Reject Unix epoch fallback (1970-01-01) as a real article date.
+  const timestamp = Date.parse(iso);
+  if (!Number.isFinite(timestamp)) return false;
   if (iso.slice(0, 10) === "1970-01-01") return false;
   return true;
 }
