@@ -18,8 +18,6 @@ async function getServerEntry(): Promise<ServerEntry> {
   return serverEntryPromise;
 }
 
-// h3 swallows in-handler throws into a normal 500 Response with body
-// {"unhandled":true,"message":"HTTPError"} — try/catch alone never fires for those.
 async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
   if (response.status < 500) return response;
   const contentType = response.headers.get("content-type") ?? "";
@@ -37,17 +35,46 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
   });
 }
 
+function addDeliveryHeaders(request: Request, response: Response, durationMs: number): Response {
+  const headers = new Headers(response.headers);
+  headers.append("Server-Timing", `app;dur=${durationMs}`);
+
+  const contentType = headers.get("content-type") ?? "";
+  const cacheable =
+    request.method === "GET" &&
+    response.status >= 200 &&
+    response.status < 400 &&
+    contentType.includes("text/html") &&
+    !headers.has("set-cookie");
+
+  if (cacheable && !headers.has("cache-control")) {
+    headers.set("Cache-Control", "public, max-age=0, s-maxage=300, stale-while-revalidate=86400");
+  }
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const started = Date.now();
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      const normalized = await normalizeCatastrophicSsrResponse(response);
+      return addDeliveryHeaders(request, normalized, Date.now() - started);
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
         status: 500,
-        headers: { "content-type": "text/html; charset=utf-8" },
+        headers: {
+          "content-type": "text/html; charset=utf-8",
+          "Server-Timing": `app;dur=${Date.now() - started}`,
+          "Cache-Control": "no-store",
+        },
       });
     }
   },
