@@ -236,7 +236,7 @@ Model-specific evidence is more reliable than a universal code chart or fixed re
 
 - [Dishwasher Repair Cost Guide](/blog/dishwasher-repair-cost-guide)
 - [Does a Home Warranty Cover a Dishwasher?](/blog/does-home-warranty-cover-dishwasher)
-- [Repair or Replace an Appliance?](/blog/repair-or-replace-appliance)
+- [Repair or Replace an Appliance?](/blog/appliance-repair-vs-replacement)
 - [Appliance Warranty Claims](/blog/appliance-warranty-claims-what-to-expect)
 
 > **Disclosure:** This article is informational and not a substitute for manufacturer instructions or qualified service. The site may earn a commission from eligible links. Commercial relationships do not determine the guidance.
