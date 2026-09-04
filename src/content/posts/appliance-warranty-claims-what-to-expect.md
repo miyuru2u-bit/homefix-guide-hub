@@ -552,8 +552,6 @@ A warranty can be helpful, but only when the claim fits the contract. The more o
 
 > ⚠️ **Disclaimer:** This article is for general informational purposes only. Warranty claim procedures, coverage, exclusions, service fees, appeal rights, and repair options vary by provider, contract, appliance type, and location. Always follow the terms of your specific warranty plan.
 
-## FAQ
-
 ## How do appliance warranty claims work?
 
 Most appliance warranty claims start by contacting the warranty provider, confirming coverage, scheduling service, receiving a diagnosis, and waiting for claim approval before repair or replacement.

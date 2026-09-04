@@ -571,8 +571,6 @@ Before buying, compare the warranty cost against likely repair costs and decide 
 
 > ⚠️ **Disclaimer:** This article is for general informational purposes only. Appliance warranty terms, repair coverage, exclusions, and claim rules vary by provider, brand, appliance type, and location. Always read the full warranty contract before purchasing coverage or filing a claim.
 
-## FAQ
-
 ## What does an appliance warranty usually cover?
 
 An appliance warranty usually covers mechanical or electrical failures caused by normal use. Depending on the plan, it may cover parts, labor, in-home service, diagnosis, and replacement if repair is not practical.

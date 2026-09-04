@@ -434,8 +434,6 @@ Before approving an expensive repair, compare the estimate with appliance age, r
 
 > ⚠️ **Disclaimer:** This article is for general informational purposes only. Appliance repair costs vary by brand, model, location, technician, part availability, and warranty coverage. Always get a qualified diagnosis and compare repair and replacement options before making a decision.
 
-## FAQ
-
 ## What appliance is usually the most expensive to repair?
 
 Refrigerators, especially built-in, French door, and premium models, are often among the most expensive appliances to repair because compressor, sealed-system, ice maker, and control board repairs can be costly.

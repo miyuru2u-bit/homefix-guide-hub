@@ -94,23 +94,6 @@ Thirty days is the industry standard. There is no meaningful competitive edge to
 
 > 💡 **Tip:** If you're buying AHS outside a real-estate transaction and your systems are aging, budget for one repair out-of-pocket during the waiting period. That's the realistic cost of onboarding, and it usually still beats going uninsured.
 
-## Frequently asked questions
-
-**How long is the AHS waiting period?**
-The standard AHS Shield waiting period is 30 days from the contract's effective date. During this window no covered service claims can be filed, regardless of plan tier (Silver, Complete, or Platinum).
-
-**Can the AHS waiting period be waived?**
-Yes. The 30-day wait is automatically waived when the plan is purchased as part of a real-estate transaction (coverage begins at closing) and for existing customers who renew or upgrade without letting coverage lapse.
-
-**What happens if I file a claim during the waiting period?**
-The claim will be denied. AHS treats any breakdown reported inside the 30-day window as either a pre-existing condition or one not yet covered, and the trade-call fee is not refunded if a technician was already dispatched.
-
-**Does the waiting period apply to every plan?**
-Yes — Shield Silver, Shield Complete, and Shield Platinum all share the same 30-day waiting period. Add-on coverage (pool/spa, well pump, guest unit) may carry its own separate wait; check the contract.
-
-**How does the AHS waiting period compare to other home warranties?**
-Thirty days is the industry standard. Choice, Select, and First American all use a 30-day wait. Liberty Home Guard is shorter (about 30 days but often faster to activate), and some real-estate plans start immediately at closing.
-
 ## Related articles
 
 - [American Home Shield Review 2026: Plans, Cost & Complaints](/blog/american-home-shield-review)

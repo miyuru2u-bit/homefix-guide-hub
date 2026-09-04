@@ -397,24 +397,3 @@ If one covered repair could cost far more than the service fee, file the claim. 
 
 > ⚠️ **Disclaimer:** This article is for general informational purposes only. Appliance repair costs, warranty coverage, claim approvals, service fees, and replacement decisions vary by provider, appliance type, brand, model, and location. Always review your warranty contract and consult a qualified repair professional when needed.
 
-## FAQ
-
-### Is it better to use an appliance warranty or pay out of pocket?
-
-It is usually better to use a warranty when the repair is covered and the likely repair cost is much higher than the service fee or deductible. Paying out of pocket may be better for small repairs, non-covered issues, or when you want to choose your own technician.
-
-### When is an appliance repair not worth it?
-
-An appliance repair may not be worth it if the repair cost is close to the replacement cost, the appliance is near the end of its useful life, parts are hard to find, or repeated repairs are likely.
-
-### How do I compare warranty cost to repair cost?
-
-Add the warranty price plus any service fee, then compare that total to realistic repair costs and the chance you will actually use the coverage.
-
-### Should I file a warranty claim for a small appliance repair?
-
-Maybe not. If the service fee is close to the likely repair cost, filing a claim may not save much and could take longer than paying a local technician directly.
-
-### Does an appliance warranty save money?
-
-An appliance warranty can save money if you have a covered repair that costs more than the plan and service fees. It may not save money if no covered repair occurs or if the repair is inexpensive.

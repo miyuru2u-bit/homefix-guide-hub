@@ -392,24 +392,3 @@ The key is to read the pre-existing condition rules, maintenance exclusions, ser
 
 > ⚠️ **Disclaimer:** This article is for general informational purposes only. Home warranty coverage, exclusions, repair limits, replacement terms, and claim decisions vary by provider, contract, appliance condition, and location. Always read the full warranty agreement before purchasing coverage or filing a claim.
 
-## FAQ
-
-### Do home warranties cover old appliances?
-
-Many home warranties can cover older appliances if they are working when coverage begins and fail later from normal wear and tear. However, pre-existing problems, poor maintenance, exclusions, and coverage limits may apply.
-
-### Can a home warranty deny coverage because an appliance is old?
-
-A provider may not deny a claim only because an appliance is old if the contract covers normal wear and tear, but age can affect repair decisions, replacement value, parts availability, and claim limits.
-
-### Do home warranties cover pre-existing appliance problems?
-
-Most home warranties exclude known pre-existing problems. Some plans may cover unknown pre-existing conditions, but terms vary by provider and contract.
-
-### Will a home warranty replace an old appliance?
-
-A home warranty may replace an old appliance if the failure is covered and repair is not practical, but replacement may be limited by payout caps, comparable model rules, or cash settlement terms.
-
-### Is a home warranty worth it for older appliances?
-
-A home warranty may be worth considering if several older appliances are still working but likely to need repair. It is less useful if appliances already have known issues or if coverage limits are low.

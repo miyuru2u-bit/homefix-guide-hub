@@ -460,8 +460,6 @@ When in doubt, get a diagnosis, compare repair and replacement costs, and choose
 
 > ⚠️ **Disclaimer:** This article is for general informational purposes only. Appliance repair costs, replacement costs, lifespans, warranty coverage, and product availability vary by brand, model, location, and technician. Always consult a qualified repair professional before making major repair or replacement decisions.
 
-## FAQ
-
 ## Is it better to repair or replace an appliance?
 
 Repair is usually better when the appliance is newer, the repair is affordable, and the appliance has been reliable. Replacement may be better when the repair cost is high, the appliance is old, parts are unavailable, or breakdowns are frequent.

@@ -90,23 +90,6 @@ Modern dishwashers are markedly more efficient than models from the early 2010s,
 
 Yes. Built-in dishwashers are commonly covered on home warranty appliance plans. A qualifying breakdown — control board, pump, motor, valve — means you pay only your service call fee, up to the plan's cap, instead of the full repair. That can make repairing an older dishwasher worthwhile. Just note that cosmetic issues and maintenance (like a clogged filter) aren't covered, and any water damage from a leak falls under homeowners insurance, not the warranty.
 
-## Frequently asked questions
-
-**Is it worth repairing a dishwasher that won't drain?**
-Usually yes — a no-drain is often a clogged filter, blocked drain hose, or an inexpensive drain pump. Clean the filter and hose first; if it's the pump, the repair is still affordable on a newer unit.
-
-**What is the most expensive dishwasher repair?**
-The circulation (wash) pump motor or the control board, at $250–$450. On an older dishwasher, either can justify replacement.
-
-**How long does a dishwasher last?**
-Typically 9–10 years — shorter than most kitchen appliances — which is why the replace threshold comes relatively early.
-
-**Why isn't my dishwasher cleaning well?**
-Most often a clogged filter, blocked spray-arm holes, hard-water buildup, or a worn wash pump. Cleaning fixes the first three; a worn pump is a repair.
-
-**Does a home warranty cover dishwasher repairs?**
-Yes, built-in dishwashers are commonly covered. A covered breakdown means you pay just the service fee up to the plan cap.
-
 ## The bottom line
 
 Because new dishwashers are relatively cheap and the typical lifespan is only 9–10 years, the repair-or-replace line arrives sooner than with other appliances. Fix the small stuff — latches, spray arms, valves, gaskets — especially under 8 years old. But a failed pump motor or control board on a 9+ year-old machine usually means it's time to replace. Always clean the filter and spray arms first; many "failures" disappear with a good cleaning.

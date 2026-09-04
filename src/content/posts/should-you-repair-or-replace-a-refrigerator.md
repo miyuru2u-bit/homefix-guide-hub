@@ -91,23 +91,6 @@ Refrigerators run 24/7, so efficiency matters more here than with any other appl
 
 Yes. If your refrigerator is covered under a home warranty, a qualifying breakdown — compressor, control board, fan motor, thermostat — means you pay only your service call fee (usually $75–$150) up to your plan's cap, instead of the full repair. That can make repairing an older fridge worthwhile when it otherwise wouldn't be. Just confirm the fridge is on your covered-items list, since some plans treat it as an add-on or exclude ice makers and built-ins.
 
-## Frequently asked questions
-
-**Is it worth repairing a 10-year-old refrigerator?**
-Only if the repair is minor (under about $300–$400) and the rest of the unit runs well. At 10+ years, a major repair like a compressor usually favors replacement.
-
-**What is the most expensive part to fix on a refrigerator?**
-The compressor and sealed refrigerant system, at $700–$1,250 or more. It's the repair most likely to justify buying a new fridge.
-
-**How long does a refrigerator last?**
-Typically 10–13 years. Built-in and premium models can last longer with maintenance, while heavily used or poorly ventilated units may fail sooner.
-
-**Should I replace my fridge just to save energy?**
-Not on its own if your current fridge works well, but energy savings (often $50–$120/year versus a decade-old model) should count toward replacement when you're already facing a significant repair.
-
-**Does a home warranty cover refrigerator repairs?**
-Often yes, though it may be an add-on. A covered breakdown means you pay just the service fee up to the plan cap. Ice makers and built-ins are sometimes excluded.
-
 ## The bottom line
 
 With a refrigerator, let the math lead: apply the 50% rule, weigh the fridge's age against its 10–13 year lifespan, and factor in energy savings. Minor fixes on a newer fridge — gaskets, thermostats, fan motors — are almost always worth it. But a failed compressor on a fridge that's 8+ years old is the textbook case for replacement. And always rule out dirty coils and bad seals before assuming the worst.

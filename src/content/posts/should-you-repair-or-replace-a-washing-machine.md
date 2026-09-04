@@ -118,23 +118,6 @@ Yes. If your washer is covered (laundry appliances are frequently a home-warrant
 
 Home warranty plans typically cover washer mechanical and electrical failures for a $75–$125 service fee. Common exclusions: hoses (treated as consumables), damage from overloading or unbalanced loads, inlet-valve failures caused by sediment, and cosmetic damage. Manufacturer warranties often cover the motor and transmission for 5–10 years separately from the 1-year full-unit warranty — check before paying out of pocket.
 
-## Frequently asked questions
-
-**Is it worth repairing a washing machine that won't spin?**
-Usually yes — a no-spin is often a cheap lid switch, door lock, or belt. Only if it's a failed motor or transmission on an older machine does replacement become the better call.
-
-**What is the most expensive washing machine repair?**
-The transmission, main bearings, or a cracked outer tub, at $350–$650+. These are the repairs most likely to justify a new washer.
-
-**How long does a washing machine last?**
-Typically 10–12 years. Front-loaders and well-maintained machines can reach the upper end; heavily used units may fall short.
-
-**Why is my washer leaking?**
-Common causes are a worn door boot seal (front-load), loose hose connections, a cracked tub, or a failed pump. Hose and seal leaks are cheap fixes; a cracked tub usually means replacement.
-
-**Does a home warranty cover washing machine repairs?**
-Often yes, frequently as a laundry add-on. A covered breakdown means you pay just the service fee up to the plan cap.
-
 ## The bottom line
 
 With a washing machine, the math is usually friendly: most faults — pumps, valves, belts, switches, seals — are common, affordable, and worth fixing, especially under 8 years old. Reserve replacement for the big structural failures (transmission, bearings, cracked tub) and machines past the 10-year mark facing a costly repair. Always rule out a clogged filter or simple switch before assuming the worst, and let the 50% rule make the final call.

@@ -83,26 +83,6 @@ Premium/imported brands (Bosch, Miele, Samsung, LG high-end lines) can be very r
 
 > ⚠️ **Cheapest to maintain ≠ cheapest to buy.** A bargain appliance with rare parts or poor build quality can cost more over its life than a slightly pricier, simpler model from a mainstream brand. Think total cost of ownership, not just sticker price.
 
-## Frequently asked questions
-
-**What appliance is the cheapest to maintain?**
-The dryer — it's mechanically simple, most upkeep is free (lint and vent cleaning), and common repair parts are inexpensive.
-
-**Which appliance brand is cheapest to maintain?**
-Whirlpool, GE, Maytag, and Frigidaire generally have the cheapest, most available parts and the widest service networks, keeping repair costs low.
-
-**Are front-load or top-load washers cheaper to maintain?**
-Basic top-load washers typically cost less to maintain, with fewer electronics and none of the door-seal and bearing issues common to front-loaders — though front-loaders are more water- and energy-efficient.
-
-**Do refrigerators with ice and water dispensers cost more to maintain?**
-Yes — dispensers, filters, and the related parts are among the most failure-prone systems in modern fridges. A standard model without a dispenser is cheaper to keep running.
-
-**How can I reduce appliance maintenance costs?**
-Buy simpler models from mainstream brands, do the free routine maintenance, fix small problems early, and avoid overloading or misusing your appliances.
-
-**Are premium brands more expensive to maintain?**
-They can be — premium and imported brands often have pricier parts and more specialized service, even if their failure rates are low.
-
 ## The bottom line
 
 The cheapest appliances to maintain are simple, mechanical models — dryers, basic top-load washers, dispenser-free refrigerators, and standard electric ranges — from mainstream brands like Whirlpool, GE, Maytag, and Frigidaire that have cheap, widely available parts. Avoid feature-heavy electronics if upkeep is your priority, do the free routine maintenance, and address small issues early. Lowest maintenance cost comes from buying simple, buying mainstream, and taking care of what you own.

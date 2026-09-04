@@ -91,23 +91,6 @@ Unlike refrigerators, dryers don't run constantly, so the energy savings from a 
 
 Yes. If your dryer is covered (laundry appliances are often a home-warranty add-on), a qualifying breakdown — motor, heating element, control board, thermostat — means you pay only your service call fee, up to the plan's cap. Since most dryer repairs are already inexpensive, coverage helps most with the pricier motor or board failures. Confirm laundry is on your covered list, and note that lint and venting maintenance isn't covered.
 
-## Frequently asked questions
-
-**Is it worth repairing a dryer that won't heat?**
-Almost always yes. No-heat is usually a heating element, igniter, thermal fuse, or thermostat — all inexpensive, common repairs.
-
-**What is the most expensive dryer repair?**
-The drive motor ($250–$450) or a cracked drum/seized bearing ($300–$500+). These are the only repairs likely to justify a new dryer, and mostly on older units.
-
-**How long does a dryer last?**
-Typically 10–13 years, often a bit longer than a washer thanks to simpler mechanics.
-
-**Why is my dryer taking forever to dry?**
-Usually a clogged lint filter or blocked vent duct — clean both first. If airflow is clear, a weak heating element or faulty thermostat may be the cause.
-
-**Does a home warranty cover dryer repairs?**
-Often yes, frequently as a laundry add-on. A covered breakdown means you pay just the service fee up to the plan cap.
-
 ## The bottom line
 
 The dryer is the appliance most worth repairing. Its common failures — heating element, igniter, thermal fuse, belt, rollers, thermostat — are inexpensive and worth fixing at nearly any age. Only a dead motor or a cracked drum on a 12+ year-old machine really argues for replacement. And before you call anyone, clean the lint filter and vent: a clogged vent is the most common cause of poor drying and a genuine fire risk.

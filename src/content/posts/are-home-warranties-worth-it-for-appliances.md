@@ -432,24 +432,3 @@ Before buying, compare the annual premium, service fee, appliance coverage caps,
 
 > ⚠️ **Disclaimer:** This article is for general informational purposes only. Home warranty pricing, coverage, exclusions, claim limits, repair costs, and provider practices vary by company, contract, appliance type, and location. Always read the full warranty agreement before purchasing coverage.
 
-## FAQ
-
-### Are home warranties worth it for appliances?
-
-Home warranties can be worth it for appliances if you have several older covered appliances, reasonable service fees, useful payout limits, and clear coverage. They may not be worth it for newer appliances, low-cost appliances, or plans with many exclusions.
-
-### What appliances are usually covered by a home warranty?
-
-Many home warranty appliance plans cover refrigerators, dishwashers, ovens, ranges, cooktops, built-in microwaves, washers, dryers, and garbage disposals, but coverage varies by provider.
-
-### What makes a home warranty not worth it?
-
-A home warranty may not be worth it if the annual cost and service fees are high, claim limits are low, contractors are limited, exclusions are broad, or your appliances are already covered by manufacturer warranties.
-
-### Is a home warranty better than an appliance extended warranty?
-
-A home warranty may be better for several older appliances and systems. An appliance extended warranty may be better for one expensive new appliance.
-
-### How much can a home warranty save on appliance repairs?
-
-Savings depend on the repair cost, service fee, coverage limits, and whether the claim is approved. A home warranty may save hundreds on a covered major repair, but it may save little on small repairs.

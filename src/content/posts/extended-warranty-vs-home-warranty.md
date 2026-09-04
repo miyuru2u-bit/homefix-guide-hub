@@ -160,26 +160,6 @@ Yes — and sometimes it makes sense. For example, keep an extended warranty on 
 4. **Factor in service fees and caps.** Home warranties add per-claim fees and per-item caps; extended warranties usually don't.
 5. **Check for overlap** with manufacturer warranties still in effect — don't pay for years you already have.
 
-## Frequently asked questions
-
-**What's the difference between an extended warranty and a home warranty?**
-An extended warranty covers one specific appliance beyond its manufacturer warranty; a home warranty covers many appliances (and often systems) across your home for an annual fee, regardless of age.
-
-**Is a home warranty better than an extended warranty?**
-For multiple aging appliances, yes — it covers them all under one plan. For a single new, expensive appliance, an extended warranty is usually the cheaper, simpler choice.
-
-**How much does an extended appliance warranty cost?**
-About $100–$250 for a major appliance for a 3–5 year term. It's usually a one-time cost with no per-claim service fee.
-
-**How much does a home warranty cost?**
-Roughly $350–$900 per year plus a $75–$150 service fee per claim, depending on coverage and add-ons.
-
-**Can I have both a home warranty and an extended warranty?**
-Yes, but avoid covering the same appliance twice. Some homeowners keep an extended warranty on one luxury unit and a home warranty for everything else.
-
-**Does either replace homeowners insurance?**
-No. Insurance covers sudden damage like fire and certain water damage; warranties cover mechanical breakdowns. You generally want both.
-
 ## The bottom line
 
 Extended warranties and home warranties solve different problems. An extended warranty is product-specific, cheap for one new appliance, and ends with its term. A home warranty is home-wide, covers appliances of any age (and often systems), and renews annually for a larger fee. If you're protecting one pricey new unit, go extended; if you're protecting a houseful of aging appliances, a home warranty usually wins on value. Count your appliances, compare the totals, and avoid paying twice for the same coverage.

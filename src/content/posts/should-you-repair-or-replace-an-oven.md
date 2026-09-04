@@ -90,23 +90,6 @@ Unlike a refrigerator, an oven's energy use depends on how often you cook, so ef
 
 Yes. Ovens and ranges are commonly covered on home warranty appliance and combo plans. A qualifying breakdown — control board, element, igniter, sensor, thermostat — means you pay only your service call fee, up to the plan's cap, instead of the full repair. That makes keeping an older oven running more attractive. Confirm the appliance is on your covered list, and remember that cosmetic damage and racks/knobs are typically excluded.
 
-## Frequently asked questions
-
-**Is it worth repairing an oven that won't heat?**
-Yes, in most cases. No-heat is usually a bake/broil element (electric) or igniter (gas) — both inexpensive, common repairs worth doing well into the oven's life.
-
-**What is the most expensive oven repair?**
-The electronic control board (ERC) or touchpad, at $200–$400. On an older range, it can justify replacement.
-
-**How long does an oven or range last?**
-Typically 13–15 years — the longest-lived of the major kitchen appliances, especially gas ranges with simpler controls.
-
-**Why is my oven not heating to the right temperature?**
-Commonly a failed temperature sensor (RTD) or thermostat, or a weakening bake element. A sensor test (about 1,080 ohms at room temperature on many models) helps pinpoint it.
-
-**Does a home warranty cover oven repairs?**
-Yes, ovens and ranges are commonly covered. A covered breakdown means you pay just the service fee up to the plan cap.
-
 ## The bottom line
 
 Ovens and ranges last 13–15 years and most of their common failures — elements, igniters, sensors, thermostats, burners — are affordable fixes worth making. Reserve replacement for an expensive control board on a 15+ year-old unit, multiple simultaneous failures, or a gas safety issue you can't safely repair. For built-in and premium models, repair is almost always the better value. And never ignore the smell of gas — that's a safety call, not a repair-or-replace one.
