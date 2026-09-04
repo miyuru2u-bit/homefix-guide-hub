@@ -222,6 +222,6 @@ A transparent model-level decision is more defensible than a broad brand ranking
 - [Most Expensive Appliances to Repair](/blog/most-expensive-appliances-to-repair)
 - [Cheapest Appliances to Maintain](/blog/cheapest-appliances-to-maintain)
 - [Appliance Lifespan Guide](/blog/appliance-lifespan-guide)
-- [Repair or Replace an Appliance?](/blog/repair-or-replace-appliance)
+- [Repair or Replace an Appliance?](/blog/appliance-repair-vs-replacement)
 
 > **Disclosure:** This article is informational and does not rank or endorse specific brands. The site may earn a commission from eligible links. Commercial relationships do not determine the guidance.
