@@ -7,16 +7,11 @@ type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
 };
 
-let serverEntryPromise: Promise<ServerEntry> | undefined;
-
-async function getServerEntry(): Promise<ServerEntry> {
-  if (!serverEntryPromise) {
-    serverEntryPromise = import("@tanstack/react-start/server-entry").then(
-      (m) => (m.default ?? m) as ServerEntry,
-    );
-  }
-  return serverEntryPromise;
-}
+// Start loading the framework handler during module initialization instead of
+// waiting for the first request to trigger the dynamic import.
+const serverEntryPromise: Promise<ServerEntry> = import(
+  "@tanstack/react-start/server-entry"
+).then((module) => (module.default ?? module) as ServerEntry);
 
 async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
   if (response.status < 500) return response;
@@ -62,7 +57,7 @@ export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     const started = Date.now();
     try {
-      const handler = await getServerEntry();
+      const handler = await serverEntryPromise;
       const response = await handler.fetch(request, env, ctx);
       const normalized = await normalizeCatastrophicSsrResponse(response);
       return addDeliveryHeaders(request, normalized, Date.now() - started);
