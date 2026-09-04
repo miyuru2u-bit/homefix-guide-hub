@@ -1,103 +1,60 @@
 ---
-title: "Liberty Home Guard vs American Home Shield: Which Is Better?"
+title: "Liberty Home Guard vs American Home Shield: 2026 Comparison"
 slug: "liberty-home-guard-vs-american-home-shield"
-metaDescription: "Liberty Home Guard vs American Home Shield compared on price, add-ons, claim approval, and coverage caps. See which home warranty is better for you in 2026."
+metaDescription: "Compare Liberty Home Guard and American Home Shield on current plans, add-ons, service fees, payout limits, exclusions, and service terms."
 category: "buyer-guides"
 tags: ["home warranty", "liberty home guard", "american home shield", "comparison"]
 date: "2026-06-15"
+updated: "2026-09-04"
+revisionSummary: "Removed unsupported approval-rate, satisfaction, price, add-on-count, complaint, and winner claims; added primary sources."
 author: "Editorial Team"
+factCheckStatus: "editor-checked"
 image: "liberty-vs-ahs"
-imageAlt: "Liberty Home Guard and American Home Shield comparison"
-quickAnswer: "Liberty Home Guard (LHG) wins on customer service, claim-approval reputation, and the widest selection of add-ons (40+) — making it the better experience for most buyers. American Home Shield wins on coverage caps, systems depth, and decades of track record. Pick LHG for service quality and customization; pick AHS for high-value systems and maximum payout limits."
+imageAlt: "Liberty Home Guard and American Home Shield contract comparison"
+quickAnswer: "Liberty and AHS should be compared using current quotes and agreements. Evaluate needed add-ons, systems and appliance limits, service fees, exclusions, contractor availability, and renewal terms."
 costTable: []
+sources:
+  - title: "Liberty Home Guard"
+    url: "https://www.libertyhomeguard.com/"
+    publisher: "Liberty Home Guard"
+  - title: "American Home Shield plans"
+    url: "https://www.ahs.com/home-warranty/plans/"
+    publisher: "American Home Shield"
 faq:
-  - q: "Is Liberty Home Guard better than American Home Shield?"
-    a: "For customer service and claim approval, LHG generally rates higher in independent surveys. For coverage caps and systems depth, AHS tends to win. The 'better' choice depends on whether you prioritize service experience or maximum payout limits."
+  - q: "Which provider is better?"
+    a: "The answer depends on the specific coverage, limits, add-ons, service availability, and total cost offered for your property."
   - q: "Which has more add-ons?"
-    a: "Liberty Home Guard, by a wide margin — it offers 40+ add-ons versus roughly 10 for AHS."
-  - q: "Which is cheaper?"
-    a: "AHS's entry ShieldSilver plan can be cheaper for systems-only coverage, but at comparable combined coverage the two are close. Promotions matter, so compare current offers."
-  - q: "Does Liberty Home Guard have a good reputation?"
-    a: "Yes — it frequently posts among the highest claim-approval rates and strong customer-satisfaction scores, though it has a shorter history than AHS."
+    a: "Add-on catalogs change. Compare only the optional items you need and their individual limits."
   - q: "Which is better for HVAC?"
-    a: "American Home Shield, due to higher coverage caps on systems."
+    a: "Compare the current HVAC component list, exclusions, refrigerant terms, and maximum benefit in both agreements."
 ---
 
-Liberty Home Guard is one of the fastest-rising names in the home warranty space, frequently topping independent surveys for claims approval and customer satisfaction. American Home Shield is the established giant with the deepest systems coverage. Putting them side by side highlights a classic trade-off: newcomer service quality versus veteran coverage depth.
+Liberty Home Guard and American Home Shield sell service contracts with different plan and add-on structures. Online ratings and marketing labels do not determine how a specific claim will be handled.
 
-## Liberty Home Guard vs AHS at a glance
+## What to compare
 
-| Feature | Liberty Home Guard | American Home Shield |
-| --- | --- | --- |
-| Monthly cost (typical) | $49–$60 | $30–$90+ |
-| Plans | 3 (Appliance Guard, Systems Guard, Total Home Guard) | 3 (Silver, Gold, Platinum) |
-| Service fee | ~$65–$125 | $100–$125 (you choose) |
-| Add-ons | 40+ (industry-leading) | ~10 |
-| Claim-approval reputation | Among the highest | Mixed (large volume) |
-| Coverage caps | Moderate | High |
-| Best for | Service + customization | High-value systems |
+- Equivalent appliance and systems coverage
+- Add-ons needed for your property
+- Premium, service fee, and renewal price
+- Per-item and aggregate limits
+- HVAC component and refrigerant language
+- Pre-existing-condition and maintenance exclusions
+- Contractor authorization and repeat-service terms
 
-## Pricing compared
+## Ratings and service claims
 
-Liberty Home Guard plans typically run $49–$60 per month, with a service fee that can range from about $65 to $125 depending on your plan and configuration. Pricing is competitive, and LHG often runs promotions adding free months.
+Customer-review averages change and may reflect different customer populations. Look for recent patterns, company responses, and local contractor feedback. Do not treat an unsupported claim-approval percentage or raw complaint count as a reliable comparison.
 
-American Home Shield spans $29.99 to $90+ per month across its three tiers and lets you choose your service-call fee to tune your premium. AHS's systems-only ShieldSilver is one of the cheapest entry points in the market, while ShieldPlatinum is a premium, high-cap plan.
+## How to decide
 
-> 💡 **Tip:** Liberty Home Guard's huge add-on catalog lets you build a highly customized plan — covering things like pool equipment, well pumps, gutter cleaning, and even pest control. If you have niche coverage needs, LHG can often cover them where AHS can't.
+Liberty may merit consideration when an available add-on matches a specific property feature. AHS may merit consideration when an available plan fits systems or appliances with higher expected repair costs. Compare the maximum benefit against realistic local costs.
 
-## Plans and coverage
+> Verify current plans, prices, add-ons, limits, and availability directly with both providers.
 
-Liberty Home Guard offers three core plans:
+## Related articles
 
-- **Appliance Guard** — major appliances.
-- **Systems Guard** — major systems (HVAC, plumbing, electrical).
-- **Total Home Guard** — combined appliances and systems.
+- [Liberty Home Guard Review](/blog/liberty-home-guard-review)
+- [American Home Shield Review](/blog/american-home-shield-review)
+- [Best Home Warranty for HVAC](/blog/best-home-warranty-for-hvac)
 
-What sets LHG apart is its 40+ add-ons — by far the widest selection in the industry — letting you tailor coverage to your exact home.
-
-American Home Shield runs its familiar three tiers (ShieldSilver, ShieldGold, ShieldPlatinum), with strength in systems coverage and higher payout caps. AHS covers items regardless of age and doesn't require maintenance records, which benefits older homes.
-
-## Claims, service, and reputation
-
-This is where Liberty Home Guard shines. In independent surveys, LHG frequently posts among the highest claim-approval rates and strong customer-service scores, with solid Trustpilot ratings — unusual for this industry. Its smaller, newer operation tends to deliver a more responsive experience.
-
-American Home Shield, as the largest and oldest provider, has a mixed reputation: deep coverage and experience, but a high absolute volume of complaints and more frequent criticism of its call-center and claim-dispute experience.
-
-> ⚠️ **Watch out:** AHS's high complaint volume partly reflects its enormous customer base, so don't judge on raw complaint counts alone. Conversely, LHG's strong reviews are encouraging but it has a shorter track record. Weigh both context and recency.
-
-## Coverage caps: AHS's edge
-
-While LHG wins on service, AHS generally offers higher coverage caps, particularly for systems like HVAC. For homeowners whose main concern is a single expensive system failure, AHS's higher dollar limits provide more protection. LHG's caps are competitive but more moderate.
-
-## Which should you choose?
-
-**Choose Liberty Home Guard** if you value customer service, a high claim-approval reputation, and the ability to customize with dozens of add-ons. It's the better all-around experience for most homeowners.
-
-**Choose American Home Shield** if you have older or high-value systems, want the highest coverage caps, and prefer a provider with decades of track record and premium flexibility.
-
-## Frequently asked questions
-
-**Is Liberty Home Guard better than American Home Shield?**
-For customer service and claim approval, LHG generally rates higher in independent surveys. For coverage caps and systems depth, AHS tends to win. The "better" choice depends on whether you prioritize service experience or maximum payout limits.
-
-**Which has more add-ons?**
-Liberty Home Guard, by a wide margin — it offers 40+ add-ons versus roughly 10 for AHS.
-
-**Which is cheaper?**
-AHS's entry ShieldSilver plan can be cheaper for systems-only coverage, but at comparable combined coverage the two are close. Promotions matter, so compare current offers.
-
-**Does Liberty Home Guard have a good reputation?**
-Yes — it frequently posts among the highest claim-approval rates and strong customer-satisfaction scores, though it has a shorter history than AHS.
-
-**Which is better for HVAC?**
-American Home Shield, due to higher coverage caps on systems.
-
-### Related articles
-
-- Best Home Warranty for Appliances in 2026
-- Liberty Home Guard Review: Is It Worth It?
-- American Home Shield Review 2026: Plans, Cost & Complaints
-- Best Home Warranty for HVAC Coverage
-- Why Home Warranty Claims Get Denied
-
-*📌 Disclaimer: This article is for general informational purposes only and reflects pricing and plan details that change over time. Always confirm current plans, prices, service fees, and contract terms directly with the provider before purchasing. We may earn a commission from links on this page at no extra cost to you.*
+> **Disclosure:** This article is informational. The site may earn a commission from eligible links at no additional cost to the reader.
