@@ -1,105 +1,202 @@
 ---
 title: "Should You Repair or Replace a Dryer?"
 slug: "should-you-repair-or-replace-a-dryer"
-metaDescription: "Repair or replace your clothes dryer? Most dryer repairs are cheap and worth doing. Use the 50% rule, age guidelines, repair costs, and a clear decision framework."
+metaDescription: "Decide whether to repair or replace a clothes dryer using diagnosis, complete quotes, fire and gas safety, venting, parts, coverage, efficiency, and installation."
 category: "repair-vs-replace"
-tags: ["dryer", "clothes dryer", "repair or replace", "heating element", "drum bearing", "50% rule"]
+tags: ["dryer", "clothes dryer", "repair or replace", "heating element", "drum bearing"]
 date: "2026-06-12"
+updated: "2026-09-04"
+revisionSummary: "Expanded the decision guide beyond 1,000 words without unsupported fixed prices, lifespan rules, universal diagnoses, efficiency claims, warranty promises, or automatic thresholds."
 author: "Editorial Team"
+factCheckStatus: "editor-checked"
 image: "repair-or-replace-dryer"
-imageAlt: "Clothes dryer with the drum open and a toolbox, illustrating repair vs replace"
-quickAnswer: "Repair your dryer in most cases — dryers are mechanically simple, and the common failures (heating element, igniter, thermal fuse, belt, rollers) are cheap fixes ($100–$400) that are almost always worth it. Lean toward replacement only if it's 12+ years old facing a motor or major bearing repair, or if the drum is cracked or rusted through."
+imageAlt: "Clothes dryer with the drum open and a toolbox, illustrating repair versus replacement"
+quickAnswer: "Use a written diagnosis and compare complete repair with installed replacement. Consider fire, gas, and electrical safety, vent condition, model, parts, access, coverage, matching, efficiency, timing, and household needs."
 costTable: []
+sources:
+  - title: "U.S. Fire Administration appliance and electrical fire safety"
+    url: "https://www.usfa.fema.gov/prevention/home-fires/prevent-fires/appliance-and-electrical/"
+    publisher: "U.S. Fire Administration"
 faq:
-  - q: "Is it worth repairing a dryer that won't heat?"
-    a: "Almost always yes. No-heat is usually a heating element, igniter, thermal fuse, or thermostat — all inexpensive, common repairs."
-  - q: "What is the most expensive dryer repair?"
-    a: "The drive motor ($250–$450) or a cracked drum/seized bearing ($300–$500+). These are the only repairs likely to justify a new dryer, and mostly on older units."
-  - q: "How long does a dryer last?"
-    a: "Typically 10–13 years, often a bit longer than a washer thanks to simpler mechanics."
-  - q: "Why is my dryer taking forever to dry?"
-    a: "Usually a clogged lint filter or blocked vent duct — clean both first. If airflow is clear, a weak heating element or faulty thermostat may be the cause."
-  - q: "Does a home warranty cover dryer repairs?"
-    a: "Often yes, frequently as a laundry add-on. A covered breakdown means you pay just the service fee up to the plan cap."
+  - q: "Is a dryer that will not heat worth repairing?"
+    a: "It depends on the diagnosed cause, complete repair cost, condition, parts, safety, and replacement scope. No-heat does not identify one component."
+  - q: "What dryer problems can favor replacement?"
+    a: "Severe fire or drum damage, multiple failures, unavailable parts, unsafe wiring or gas conditions, or costly repair relative to installed replacement can favor replacement."
+  - q: "Does a home warranty change the decision?"
+    a: "It may reduce an eligible repair or settlement, subject to coverage, cause, fee, limit, maintenance, venting, exclusions, and authorization."
 ---
 
-Good news up front: of all the major appliances, the dryer is usually the most worth repairing. It's a relatively simple machine — a motor, a heat source, a drum, and some controls — and most of its failures are inexpensive, common parts. This guide explains the 50% rule for dryers, what the typical repairs cost, and the few situations where buying new actually makes sense.
+A clothes-dryer repair-or-replace decision begins with safety and diagnosis. “No heat,” “no spin,” noise, or long drying time can involve airflow, power, gas supply, heating, sensors, controls, motors, belts, bearings, or installation. Generic ages and prices cannot decide the outcome.
 
-## The 50% rule for dryers
+Compare complete repair with complete installed replacement for the exact model and home.
 
-Use the **50% rule**: replace the dryer if a repair exceeds half the price of a comparable new one. A new mid-range dryer runs about **$600–$1,000**, so a repair would need to top **$300–$500** to favor replacement. The catch: most dryer repairs come in well *under* that line, which is why repair usually wins.
+## Address hazards first
 
-Add the **age rule**: dryers typically last **10–13 years**, often longer than washers. A simple repair on even a 10-year-old dryer is frequently worthwhile.
+Stop using the dryer for smoke, burning odor, scorching, arcing, repeated breaker trips, gas odor, damaged wiring, uncontrolled heat, or a visibly unsafe vent.
 
-> 💡 **Gas vs electric:** Gas dryers add an igniter, gas valve coils, and a flame sensor — all relatively inexpensive parts. Electric dryers rely on a heating element. Both are common, affordable repairs, so neither type changes the "usually repair" conclusion.
+Follow gas-utility and emergency guidance when gas is suspected. Do not operate switches in a hazardous atmosphere, bypass a safety device, or keep resetting a breaker. Qualified service should handle gas and internal high-voltage work.
 
-## Typical dryer repair costs
+## Check the exhaust system
 
-Here's what common dryer repairs run in 2026, including parts and labor.
+Restricted or unsuitable venting can reduce performance and create a fire hazard. Review the model instructions and applicable code for material, length, bends, termination, clearance, and shared-vent restrictions.
 
-| Problem | Typical repair cost | Repair or replace? |
-| --- | --- | --- |
-| Thermal fuse | $80 – $180 | Repair |
-| Drive belt | $100 – $250 | Repair |
-| Igniter (gas) | $100 – $250 | Repair |
-| Heating element (electric) | $150 – $300 | Repair |
-| Drum rollers / glides | $100 – $250 | Repair |
-| Thermostat / sensor | $100 – $250 | Repair |
-| Control board | $200 – $400 | Depends on age |
-| Drive motor | $250 – $450 | Depends on age |
-| Drum / bearing (cracked drum) | $300 – $500+ | Often replace |
+A part replacement without correcting the root airflow problem may not last. Include vent inspection or correction in both repair and replacement quotes when necessary.
 
-## When repair is the smart choice (usually)
+## Get a written diagnosis
 
-Repair wins in the large majority of dryer cases:
+Ask the technician to identify the failed component, cause, evidence, safety concern, vent or utility issue, required work, parts status, and repair warranty.
 
-- **A dryer that won't heat** is usually a heating element (electric), igniter or coils (gas), thermal fuse, or thermostat — all cheap, common fixes.
-- **A dryer that won't turn** is often a broken belt or worn rollers — inexpensive parts.
-- **A noisy dryer** typically needs new drum rollers, glides, or an idler pulley — minor repairs.
-- **The dryer is under 12 years old** and the repair is under half the cost of a new one.
-- **It's part of a matching laundry set** you want to keep together.
+A thermal protection device opening may be a result of overheating rather than the complete diagnosis. A drum that does not turn can involve more than a belt.
 
-## When replacement makes more sense
+## Identify the exact dryer
 
-Replacement only really makes sense when:
+Record the manufacturer, full model and serial number, gas or electric fuel, voltage, installation, vent route, approximate age, prior repairs, symptoms, and existing coverage.
 
-- **It's 12+ years old** and needs an expensive repair like the motor or control board.
-- **The drum is cracked, rusted through, or the rear bearing has seized** — labor-heavy repairs ($300–$500+) that approach the cost of a new unit on an older dryer.
-- **The motor has failed** on a dryer near or past its lifespan.
-- **It's been repaired repeatedly** or has multiple simultaneous failures.
-- **You want a major efficiency or feature upgrade**, such as a heat-pump or moisture-sensing model.
+Note stacked, closet, built-in, pedestal, or matching-set constraints. Closely related models can use different parts.
 
-> ⚠️ **Safety + the #1 free fix:** A dryer that runs but dries poorly usually has a **clogged lint filter or blocked vent**, not a broken part — and lint buildup is a serious fire hazard. Clean the lint screen every load and have the vent duct cleared regularly before assuming a heating fault. Always unplug an electric dryer (or shut the gas and power) before any internal work.
+## Complete repair cost
 
-## The motor and drum question
+Include diagnosis, part, labor, shipping, tax, moving, unstacking, gas or electrical disconnection, vent work, reconnection, leak or safety tests, and warranty.
 
-The failures that can justify replacing a dryer are a **dead drive motor** ($250–$450) or a **cracked drum / seized bearing** ($300–$500+). On a dryer that's **12+ years old**, these labor-intensive repairs can reach half the price of a new machine, tipping the math toward replacement. On a newer dryer, even a motor replacement is generally worth it given how long dryers last.
+Ask whether the diagnostic fee is credited and whether another condition could damage the new component.
 
-## Efficiency is a minor factor here
+## Installed replacement cost
 
-Unlike refrigerators, dryers don't run constantly, so the energy savings from a new conventional model are modest. The exception is a **heat-pump dryer**, which uses dramatically less electricity but costs more upfront. If you're already replacing and run many loads a week, a heat-pump model can pay back over time — but efficiency alone rarely justifies retiring a working dryer.
+Include the appliance, delivery, haul-away, stacking kit, pedestal compatibility, cord, receptacle work, gas connector, shutoff work, vent transition, duct correction, permits, code work, and tax.
 
-## A simple decision framework
+Confirm fuel, voltage, dimensions, door swing, capacity, and vent path. Retail price alone is incomplete.
 
-1. **Is it under warranty?** Repair — you may owe only labor.
-2. **Is the fix a heater, igniter, fuse, belt, roller, or thermostat?** Repair — these are cheap and common at almost any age.
-3. **Is it 12+ years old facing a motor, control board, or drum/bearing repair?** Consider replacement.
-4. **In between?** Apply the 50% rule; most dryer repairs fall well under the line.
-5. **Want a heat-pump upgrade and run heavy loads?** Replacement can be worth it for the efficiency.
+## No heat
 
-## Does a home warranty change the math?
+Electric no-heat conditions can involve supply voltage, heating components, thermal protection, sensors, wiring, controls, or airflow. Gas no-heat can involve supply, ignition, flame sensing, valves, controls, wiring, or airflow.
 
-Yes. If your dryer is covered (laundry appliances are often a home-warranty add-on), a qualifying breakdown — motor, heating element, control board, thermostat — means you pay only your service call fee, up to the plan's cap. Since most dryer repairs are already inexpensive, coverage helps most with the pricier motor or board failures. Confirm laundry is on your covered list, and note that lint and venting maintenance isn't covered.
+Do not replace an element or igniter from the symptom alone. Obtain model-specific testing by a qualified person.
 
-## The bottom line
+## Long drying time
 
-The dryer is the appliance most worth repairing. Its common failures — heating element, igniter, thermal fuse, belt, rollers, thermostat — are inexpensive and worth fixing at nearly any age. Only a dead motor or a cracked drum on a 12+ year-old machine really argues for replacement. And before you call anyone, clean the lint filter and vent: a clogged vent is the most common cause of poor drying and a genuine fire risk.
+Load size, washer spin performance, cycle settings, lint screen, venting, room conditions, fuel or power, heating, moisture sensors, and controls can affect time.
 
-### Related articles
+Correcting airflow or laundry practices may restore performance without replacing the dryer. Persistent weak airflow requires safe investigation.
 
-- Dryer Repair Cost Guide
-- Repair or Replace: How to Decide for Any Appliance
-- Does a Home Warranty Cover a Washer & Dryer?
-- Average Appliance Repair Cost in 2026
+## Drum does not turn
 
-*This guide is general information for 2026 and not a substitute for a professional diagnosis. Repair costs vary by brand, model, and region — always get a firm quote before deciding.*
+Possible causes include loading, belt, rollers, idler, motor, blower obstruction, controls, or power. Stop repeated attempts if the motor hums, overheats, or smells.
+
+The estimate should identify whether related wear parts should be replaced together and why.
+
+## Noise
+
+Rumbling, scraping, squealing, clicking, and thumping can arise from load objects, rollers, glides, idler, belt, motor, blower, drum, or cabinet contact.
+
+Record when the noise occurs. Do not operate a dryer that is damaging itself or overheating.
+
+## Gas versus electric replacement
+
+Changing fuel type can require new electrical service, gas work, ventilation review, permits, and building modifications. Compare this separately from replacing like for like.
+
+Do not assume a fuel switch will reduce cost without calculating local utility, equipment, and installation factors.
+
+## Parts availability
+
+Confirm the exact part number, condition, supplier, lead time, return policy, and warranty. Older or specialty models may have delayed or unavailable controls, drums, or motors.
+
+Unavailable parts can favor replacement, but ask whether authorized alternatives or rebuild services exist.
+
+## Current condition
+
+Inspect drum, cabinet, wiring, controls, door, seals, lint path, rollers, motor, gas or electrical connection, and vent. One isolated fault differs from fire damage, corrosion, repeated overheating, or several worn systems.
+
+Use documented condition rather than assuming more failures from age alone.
+
+## Repair warranty
+
+Ask who warrants parts and labor, for how long, and what happens if the same symptom returns. Determine whether travel or another diagnostic fee applies.
+
+A repair warranty reduces limited risk but does not cover unrelated future faults.
+
+## Manufacturer and recall coverage
+
+Check manufacturer parts and labor terms, motor or drum provisions, installer warranty, retailer plan, credit-card benefit, recall remedy, and authorized-service rules.
+
+Use the exact model and serial range. Obtain required authorization before repair.
+
+## Home-warranty coverage
+
+A service contract may cover an eligible dryer component, subject to fuel type, cause, effective date, maintenance, venting, service fee, limit, exclusions, and authorization.
+
+External ducts, gas lines, cords, access, and resulting damage can be treated separately. Compare the written approval with total project cost.
+
+## Fire or property damage
+
+The dryer failure and damage to walls, clothing, structure, or belongings may be treated differently by the warranty, homeowners insurance, manufacturer, installer, or no coverage.
+
+Protect life, document conditions when safe, preserve evidence, and notify relevant providers. Do not count uncertain payment in the decision.
+
+## Matching and stacking
+
+Replacing one appliance can affect stacking kits, pedestals, dimensions, controls, finish, door swing, and capacity relative to the washer. A repair agreement may not replace a matching washer.
+
+Compatibility can add real installation cost even when appearance alone is optional.
+
+## Efficiency
+
+Use official energy labels for the exact replacement and local utility rates. Conventional, ventless, and heat-pump products can differ in cycle time, electrical needs, moisture handling, maintenance, and installation.
+
+Do not rely on a universal payback claim. Calculate expected use and total cost.
+
+## Timing
+
+Compare technician availability, part lead time, replacement stock, delivery, installation, and vent or utility work. A product in stock may still require site changes.
+
+Ask for realistic schedules without treating them as guarantees.
+
+## Repeated failures
+
+List previous diagnoses, repairs, and costs. Distinguish a repeated root cause—such as unresolved airflow—from unrelated component wear.
+
+Repeated expense can favor replacement, but evidence is stronger than prediction.
+
+## Environmental considerations
+
+Repair can extend product life and avoid disposal. Replacement can improve standardized efficiency or support a safer installation. Local recycling, actual use, and product condition matter.
+
+Neither choice is universally better environmentally.
+
+## Decision worksheet
+
+Compare safety, complete cost, parts, warranty, timing, vent correction, utility work, remaining usefulness, efficiency, matching, and household preference. Mark unknowns.
+
+Run no-coverage and approved-coverage scenarios separately.
+
+## Questions for the technician
+
+- What failed and why?
+- Is airflow, gas, or electrical supply involved?
+- Is the dryer safe?
+- Is the part available?
+- Is access and reconnection included?
+- What tests follow repair?
+- What warranty applies?
+- What is the complete repair total?
+
+## Questions for the installer
+
+- Does the replacement fit and match the fuel and voltage?
+- Is the vent suitable?
+- Are cord, connector, stacking, and permits included?
+- What site work is required?
+- What is the complete installed total?
+
+## Final guidance
+
+Repair can fit when the diagnosis is clear, the dryer is otherwise sound, the root cause is corrected, parts are available, and total cost is acceptable. Replacement can fit when damage is extensive, safety cannot be restored economically, multiple failures exist, or parts and installation favor a new unit.
+
+No single age, component, or percentage rule decides every dryer.
+
+## Related articles
+
+- [Dryer Repair Cost Guide](/blog/dryer-repair-cost-guide)
+- [Does a Home Warranty Cover a Washer and Dryer?](/blog/does-home-warranty-cover-washer-dryer)
+- [Repair or Replace a Washing Machine?](/blog/should-you-repair-or-replace-a-washing-machine)
+
+> **Disclosure:** This article is informational and not a substitute for qualified diagnosis or installation. The site may earn a commission from eligible links. Commercial relationships do not determine the guidance.
