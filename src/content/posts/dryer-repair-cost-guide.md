@@ -1,120 +1,257 @@
 ---
 title: "Dryer Repair Cost Guide"
 slug: "dryer-repair-cost-guide"
-metaDescription: "Dryer repair cost guide for 2026: average prices by part, why it won't heat or spin, electric vs gas differences, DIY checks, and when to replace instead."
+metaDescription: "Estimate clothes-dryer repair cost using a written diagnosis, model-specific parts, local labor, fuel type, vent condition, access, warranty, and replacement quotes."
 category: "repair-cost-guides"
 tags: ["dryer repair", "dryer repair cost", "heating element", "appliance repair"]
 date: "2026-06-13"
+updated: "2026-09-04"
+revisionSummary: "Expanded the dryer repair guide beyond 1,000 words and replaced unsupported fixed prices, lifespan rules, DIY electrical diagnoses, warranty promises, and automatic replacement thresholds."
 author: "Editorial Team"
+factCheckStatus: "editor-checked"
 image: "dryer-repair-cost-guide"
 imageAlt: "Clothes dryer with the door open and a clean lint screen beside it"
-quickAnswer: "Most dryer repairs cost between $120 and $400 including parts and labor. Common fixes like a heating element, thermal fuse, belt, or roller run $120–$350, while a motor or control board can reach $350–$500. Dryers are among the most repair-worthy appliances — many fixes are cheap relative to a new unit — but past 10 years a major repair tips toward replacement."
-costTable:
-  - { item: "Thermal fuse", low: "$100", high: "$200" }
-  - { item: "Heating element (electric)", low: "$150", high: "$350" }
-  - { item: "Igniter (gas)", low: "$150", high: "$300" }
-  - { item: "Drive belt", low: "$120", high: "$250" }
-  - { item: "Drum rollers / idler pulley", low: "$150", high: "$300" }
-  - { item: "Thermostat / thermistor", low: "$120", high: "$250" }
-  - { item: "Door switch", low: "$100", high: "$200" }
-  - { item: "Drive motor", low: "$300", high: "$500" }
-  - { item: "Control board", low: "$250", high: "$500" }
+quickAnswer: "Dryer repair cost depends on the diagnosis, model, fuel type, parts, local labor, vent condition, access, and related work. Address gas, electrical, fire, and airflow hazards first, then compare an itemized repair quote with installed replacement."
+costTable: []
+sources:
+  - title: "U.S. Fire Administration clothes dryer safety"
+    url: "https://www.usfa.fema.gov/prevention/home-fires/prevent-fires/appliance-and-electrical/"
+    publisher: "U.S. Fire Administration"
+  - title: "Consumer Product Safety Commission recalls"
+    url: "https://www.cpsc.gov/Recalls"
+    publisher: "U.S. Consumer Product Safety Commission"
 faq:
-  - q: "How much does it cost to fix a dryer that won't heat?"
-    a: "Usually $100–$350 — a heating element on electric dryers or an igniter on gas dryers. Always clean the vent too, since restricted airflow can cause the failure."
+  - q: "How much does dryer repair cost?"
+    a: "There is no dependable universal price. Cost varies with the diagnosed failure, model, fuel type, parts, labor, venting, access, and location."
   - q: "Is it worth repairing a dryer?"
-    a: "Usually yes. Dryers are simple and most parts are cheap, so repairs are cost-effective well into the appliance's life. Only major motor or board failures on a 10+ year-old unit favor replacement."
-  - q: "Why is my dryer taking so long to dry clothes?"
-    a: "Most often a clogged lint screen or vent (free to fix), or a weakening heating element/thermostat. A blocked vent is also a fire hazard."
-  - q: "How long does a dryer last?"
-    a: "About 10–13 years on average — often longer than a washer with proper vent maintenance."
-  - q: "Are gas dryers more expensive to repair than electric?"
-    a: "Slightly, because of the gas burner components and the need for licensed gas handling."
-  - q: "Does a home warranty cover dryers?"
-    a: "Yes — dryers are commonly covered, often bundled with the washer, for wear-and-tear breakdowns subject to caps and exclusions."
+    a: "Compare an itemized repair quote with complete installed replacement, condition, parts availability, repeat failures, remaining coverage, and household priorities."
+  - q: "Why is a dryer taking too long to dry?"
+    a: "Restricted airflow is one possibility, but load, settings, electrical or gas supply, heating, sensors, controls, and installation can also matter."
 ---
 
-A dryer that won't heat, won't turn, or won't shut off is frustrating — but dryers are mechanically simple, and most failures come from a small set of inexpensive parts. That makes them one of the most repair-friendly appliances in the house. This guide breaks down 2026 dryer repair costs by part, explains the difference between electric and gas dryer repairs, covers the all-important safety issue of lint buildup, and shows when replacement makes more sense.
+Dryer repair cost cannot be determined from “no heat,” “no spin,” or “takes too long” alone. Similar symptoms can result from airflow, power, gas supply, controls, sensors, switches, motors, belts, heating components, or installation.
 
-## What you're paying for
+Start with safety, record the full model, and obtain a written diagnosis and itemized local quote.
 
-A dryer repair bill is made up of:
+## Fire, gas, and electrical safety
 
-- **Service / diagnostic fee:** $75–$150, usually credited toward the repair if you proceed.
-- **Parts:** Many dryer parts are inexpensive — a thermal fuse or belt might be $10–$40 — while a motor or control board runs $100–$300.
-- **Labor:** $50–$150 per hour. Most dryer repairs are quick once the cabinet is open, which keeps total costs reasonable.
+Stop using the dryer for burning odor, smoke, visible arcing, gas odor, damaged wiring, repeated breaker trips, uncontrolled overheating, or scorching.
 
-Because parts are often cheap, the diagnostic fee and labor make up a large share of the bill — which is why a $40 heating element can still cost ~$250 installed.
+Leave the building and contact the gas utility or emergency services when official guidance requires it. Do not search for a gas leak with a flame, operate switches in a suspected gas atmosphere, bypass safety devices, or keep resetting a tripping breaker.
 
-## Electric vs gas dryer repairs
+Dryers combine high voltage or gas, heat, moving parts, and combustible lint. Internal electrical and gas work requires appropriate qualifications.
 
-- **Electric dryers** are the most common and the simplest. The heating element is the typical "no heat" culprit ($150–$350).
-- **Gas dryers** add a gas burner assembly with an igniter, flame sensor, and gas valve coils. The igniter is the usual "no heat" cause ($150–$300). Gas work should always be handled by a qualified technician.
+## Record the equipment
 
-Gas dryer repairs can run slightly higher due to the extra components and the need for licensed handling of gas connections.
+Save:
 
-## The most common dryer problems
+- Manufacturer
+- Complete model and serial number
+- Gas or electric fuel
+- Voltage and connection type
+- Freestanding, stacked, or built-in installation
+- Vent route and termination
+- Symptoms and codes
+- Start date
+- Prior repairs
+- Existing warranty or service contract
 
-### Dryer won't heat
+Photograph the rating label and accessible installation.
 
-The top complaint. On electric dryers it's usually the heating element or thermal fuse; on gas dryers, the igniter. Expect $100–$350. A blown thermal fuse is often caused by restricted airflow from a clogged vent — so clean the vent too, or it'll blow again.
+## What an estimate should include
 
-### Dryer won't turn / drum won't spin
+Request:
 
-Usually a broken drive belt, worn drum rollers, or a seized idler pulley — $120–$300. A failed drive motor is the pricier cause ($300–$500).
+1. Diagnostic or service charge
+2. Failed component and cause
+3. Part number and price
+4. Labor
+5. Travel or minimum charge
+6. Stacking or access work
+7. Vent or utility work
+8. Shipping and tax
+9. Permit or code work where applicable
+10. Repair warranty
+11. Complete total
 
-### Dryer won't start
+Clarify whether diagnosis is credited toward repair.
 
-Commonly a faulty door switch, thermal fuse, or start switch — $100–$250.
+## Dryer will not heat
 
-### Clothes take too long to dry
+For an electric dryer, possibilities include supply voltage, heating components, thermal protection, controls, sensors, wiring, or airflow. For a gas dryer, possibilities include supply, ignition, flame sensing, valve components, controls, or airflow.
 
-Most often a clogged lint screen or vent (free to fix and a fire hazard if ignored), or a failing heating element/thermostat.
+The drum turning does not prove that every electrical supply condition is correct. Do not perform live-voltage or gas tests without qualifications and model-specific procedures.
 
-### Dryer is noisy
+## Dryer will not start
 
-Worn rollers, a bad idler pulley, or a failing motor bearing — $150–$400 depending on the part.
+Possible causes include power, door switch, start controls, thermal protection, motor, belt monitoring, wiring, or control board.
 
-> **Safety note:** Clogged dryer vents are a leading cause of house fires. Always unplug an electric dryer (or shut off the gas and power for a gas dryer) before servicing. Never run a dryer with a disconnected or blocked vent, and leave all gas-line work to a licensed professional.
+Check only accessible loading and power conditions described in the manual. Never bypass a switch or fuse.
 
-## What you can check yourself
+## Drum will not turn
 
-Several dryer issues have safe, free DIY fixes:
+A stopped drum can involve loading, belt, rollers, idler, motor, obstruction, or controls. A humming motor does not prove a broken belt.
 
-1. **Clean the lint screen every load** and deep-clean it monthly — the simplest way to keep a dryer healthy and safe.
-2. **Clean the vent duct.** A clogged vent causes long dry times, overheating, and blown fuses. Disconnect and clear the duct from the dryer to the exterior vent at least once a year.
-3. **Check the power.** Electric dryers use a 240V outlet — if there's no heat but the drum spins, one leg of power (or a breaker) may have failed.
-4. **Inspect the door switch.** If the dryer won't start, make sure the door is closing fully and the switch clicks.
-5. **Listen for the belt.** If the motor hums but the drum won't turn, a broken belt is likely.
+Stop repeated start attempts if the motor overheats or smells. Obtain a diagnosis before ordering parts.
 
-If the dryer still won't heat or spin after these checks, call a professional.
+## Long drying time
 
-## What drives dryer repair costs up
+Restricted airflow is an important safety possibility, but load size, selected cycle, spin performance from the washer, lint screen, vent, outside termination, room conditions, fuel or power supply, heating, moisture sensors, and controls can all affect time.
 
-- **Gas vs electric:** Gas units have more components and require licensed handling.
-- **Brand and features:** Steam, smart, and premium models have pricier electronics.
-- **Stacked units:** Stacked or closet-installed dryers add labor to access.
-- **Part availability:** Older or discontinued models can be costlier to source parts for.
+If the exterior vent has weak airflow or excessive heat, stop and arrange appropriate inspection. Do not operate the dryer with disconnected, damaged, or unsuitable venting.
 
-## Repair vs replace: the dryer math
+## Dryer noise
 
-Dryers typically last **10–13 years** — often the longest-lived of the laundry pair. Apply the **50% rule**: if the repair exceeds half the cost of a comparable new dryer, lean toward replacing. But because most dryer repairs are inexpensive, repair usually wins well into a dryer's life.
+Rumbling, squealing, scraping, clicking, and thumping can arise from load items, seams, rollers, idler, belt, motor, blower, foreign objects, or cabinet contact.
 
-> **Rule of thumb:** A $250 heating-element or belt repair is almost always worth it — even on an older dryer. Only a $450–$500 motor or control-board failure on a 10+ year-old unit really justifies replacement.
+Record when the noise occurs and whether the drum moves normally. Do not open the cabinet while energized.
 
-## Does a home warranty cover dryers?
+## Dryer will not stop or overheats
 
-Dryers are commonly covered by home warranty plans, often bundled with the washer. With coverage, you'd pay just the service call fee instead of the full repair, up to your plan's cap. Coverage applies to mechanical wear-and-tear breakdowns, not vent cleaning, cosmetic damage, or pre-existing issues.
+Stop the unit and disconnect it safely. Causes can involve airflow, controls, sensors, relays, wiring, or incorrect installation.
 
-## How to save on dryer repair
+Uncontrolled heat is not a condition for continued testing. Seek qualified service.
 
-1. **Clean the lint screen and vent first** — it fixes many "won't dry" and "won't heat" complaints for free and prevents fires.
-2. **Have the model and serial number ready** when booking.
-3. **Ask if the diagnostic fee is credited** toward the repair.
-4. **Get an itemized quote.**
-5. **Replace the thermal fuse and clear the vent together** — fixing one without the other invites a repeat failure.
-6. **Get a second opinion** on motor or control-board quotes over ~$400.
+## Vent inspection
 
-## The bottom line
+The exhaust system is part of dryer safety and performance. Check the manual and applicable codes for material, diameter, length, bends, termination, clearances, and shared-vent restrictions.
 
-Most dryer repairs cost $120–$400, and because dryers are simple with inexpensive parts, repair usually beats replacement well into the unit's life. Clean the lint screen and vent first — it solves many problems for free and prevents fires — then match any quote to the ranges above. Only a major motor or control-board failure on a 10+ year-old dryer really justifies buying new.
+Cleaning frequency depends on use and installation. Use qualified service when the vent is long, hidden, damaged, inaccessible, or contaminated.
+
+A dryer part replacement may fail again if the root airflow problem is not corrected.
+
+## Gas versus electric scope
+
+Gas dryer estimates may involve ignition, combustion, supply, connectors, venting, and qualified gas work. Electric dryers may involve high-voltage supply, cords, receptacles, terminals, heating, and controls.
+
+Ask whether utility diagnosis, disconnection, reconnection, and leak or electrical safety checks are included.
+
+## Parts cost
+
+Prices vary by model, supplier, availability, shipping, and part status. Confirm the exact part number and whether it is new, authorized, aftermarket, rebuilt, or used.
+
+Low-cost components can still produce a significant bill because diagnosis, travel, access, installation, and testing require labor.
+
+## Labor and access
+
+Laundry closets, stacked installations, pedestals, cabinetry, narrow halls, gas connections, and rigid vents can increase access work.
+
+Confirm whether moving, unstacking, floor protection, reconnection, leveling, and test operation are included. Ask who is responsible if another trade is required.
+
+## Diagnosis quality
+
+Ask the technician to identify:
+
+- Failed component
+- Root cause
+- Test evidence
+- Required repair
+- Safety concern
+- Vent or utility issue
+- Parts availability
+- Total scope
+
+Replacing a thermal protection device without correcting overheating or airflow may not solve the problem.
+
+## Manufacturer coverage and recalls
+
+Check the purchase date, parts and labor terms, motor or drum provisions, registration, authorized-service requirements, installer warranty, and recall notices.
+
+Use the full model and serial range. Contact the manufacturer before outside repair where coverage may apply.
+
+## Home-warranty coverage
+
+A service contract may cover a listed dryer and eligible component, but terms vary by fuel type, cause, effective date, maintenance, installation, fee, limit, and authorization.
+
+External vent cleaning, gas lines, cords, and cosmetic parts may be treated separately. Review the actual agreement.
+
+## Comparing repair quotes
+
+Provide each servicer with identical model, symptoms, fuel type, access, and vent information. Compare diagnosis, part, labor, related work, tax, timing, and warranty.
+
+A low quote may omit vent correction, stacking, gas reconnection, or another necessary step.
+
+## Repair or replace
+
+Compare:
+
+- Written diagnosis
+- Complete repair total
+- Installed replacement total
+- Safety condition
+- Parts availability
+- Prior failures
+- Remaining coverage
+- Capacity and features
+- Vent and utility compatibility
+- Matching or stacking requirements
+
+Do not use one age, dollar, or percentage threshold automatically.
+
+## Installed replacement cost
+
+Replacement can involve delivery, haul-away, stacking kit, pedestal, gas connector, cord, receptacle, vent transition, duct correction, permits, code work, and tax.
+
+Confirm dimensions, door swing, fuel, voltage, capacity, and vent route. A retail appliance price is not the full installed comparison.
+
+## Matching laundry pairs
+
+Replacing one dryer may create finish, height, control, capacity, pedestal, or stacking incompatibility with the washer. A repair decision should consider those practical constraints.
+
+A warranty or repair agreement does not necessarily pay to replace the matching washer.
+
+## Homeowners insurance
+
+A mechanical failure, dryer fire, smoke damage, and resulting property damage can be treated differently. Review insurance policy terms and deductibles.
+
+Make the situation safe, document damage, and notify relevant providers. Do not assume either policy covers every part of the event.
+
+## Safe owner maintenance
+
+Follow the model manual. Typical tasks can include cleaning the lint screen, inspecting the accessible transition duct, keeping the area clear, and arranging vent maintenance.
+
+Do not improvise solvents, operate without safe venting, or disassemble gas or energized electrical components.
+
+## Estimate worksheet
+
+Record:
+
+- Diagnostic charge
+- Diagnosis and cause
+- Part and labor
+- Gas or electrical scope
+- Vent scope
+- Access and stacking
+- Shipping and tax
+- Repair warranty
+- Repair total
+- Installed replacement total
+- Timing
+
+## Questions for the technician
+
+1. What failed and why?
+2. Is airflow or utility supply involved?
+3. Is the dryer safe to leave connected?
+4. What exact part is required?
+5. Is it available?
+6. Is all access included?
+7. Who handles gas, electrical, or vent work?
+8. What safety test follows repair?
+9. What warranty applies?
+10. What is the complete total?
+
+## Final guidance
+
+A dependable dryer repair estimate is diagnosis-based, model-specific, fuel-specific, local, and itemized. Address fire, gas, electrical, and airflow hazards first. Then compare complete repair with installed replacement and existing protection.
+
+Avoid symptom-only diagnoses, fixed national prices, and automatic age thresholds.
+
+## Related articles
+
+- [Repair or Replace a Dryer?](/blog/should-you-repair-or-replace-a-dryer)
+- [Does a Home Warranty Cover a Washer and Dryer?](/blog/does-home-warranty-cover-washer-dryer)
+- [Washing Machine Repair Cost Guide](/blog/washing-machine-repair-cost-guide)
+- [Average Appliance Repair Cost by Type](/blog/average-appliance-repair-cost-by-type)
+
+> **Disclosure:** This article is informational and not a substitute for manufacturer instructions or qualified service. The site may earn a commission from eligible links. Commercial relationships do not determine the guidance.
