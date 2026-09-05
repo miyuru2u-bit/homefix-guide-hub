@@ -9,12 +9,28 @@ const required = ["title", "slug", "metaDescription", "category", "tags", "date"
 const validCategories = new Set(["repair-cost-guides", "home-warranty-guides", "repair-vs-replace", "appliance-error-codes", "buyer-guides"]);
 const commercial = /(?:review|best-|cheapest-home-warranty|\bvs\b|warranty)/i;
 const numeric = /(?:cost|price|lifespan|reliable|expensive|cheapest)/i;
+const minimumBodyWords = 1000;
 const slugs = new Map();
 const errors = [];
 const warnings = [];
 
 function report(level, file, message) {
   (level === "error" ? errors : warnings).push({ file, message });
+}
+
+function countBodyWords(markdown) {
+  const text = markdown
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/~~~[\s\S]*?~~~/g, " ")
+    .replace(/`[^`]*`/g, " ")
+    .replace(/!\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/https?:\/\/\S+/g, " ")
+    .replace(/<!--[\s\S]*?-->/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&(?:[a-zA-Z]+|#\d+|#x[\da-fA-F]+);/g, " ");
+
+  return (text.match(/[\p{L}\p{N}]+(?:['’.-][\p{L}\p{N}]+)*/gu) ?? []).length;
 }
 
 for (const file of files) {
@@ -31,6 +47,8 @@ for (const file of files) {
     continue;
   }
   const body = match[2];
+  const bodyWordCount = countBodyWords(body);
+  if (bodyWordCount < minimumBodyWords) report("error", file, `Markdown body has ${bodyWordCount} words; minimum is ${minimumBodyWords}`);
   for (const key of required) {
     if (data[key] == null || data[key] === "" || (Array.isArray(data[key]) && data[key].length === 0)) report("error", file, `missing required field: ${key}`);
   }
@@ -61,7 +79,7 @@ for (const file of files) {
   if (commercial.test(`${data.slug} ${data.title}`) && !/affiliate|commission|no paid|editorial independence/i.test(body)) report("warning", file, "commercial article lacks an in-body disclosure");
 }
 
-console.log(`Audited ${files.length} Markdown articles.`);
+console.log(`Audited ${files.length} Markdown articles (minimum ${minimumBodyWords} body words each).`);
 for (const item of errors) console.error(`ERROR ${item.file}: ${item.message}`);
 for (const item of warnings) console.warn(`WARN  ${item.file}: ${item.message}`);
 console.log(`Summary: ${errors.length} errors, ${warnings.length} warnings.`);
