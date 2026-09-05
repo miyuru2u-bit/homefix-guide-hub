@@ -13,6 +13,9 @@ const serverEntryPromise: Promise<ServerEntry> = import(
   "@tanstack/react-start/server-entry"
 ).then((module) => (module.default ?? module) as ServerEntry);
 
+const EDGE_CACHE_CONTROL =
+  "public, max-age=0, s-maxage=3600, stale-while-revalidate=604800, stale-if-error=604800";
+
 async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
   if (response.status < 500) return response;
   const contentType = response.headers.get("content-type") ?? "";
@@ -35,15 +38,20 @@ function addDeliveryHeaders(request: Request, response: Response, durationMs: nu
   headers.append("Server-Timing", `app;dur=${durationMs}`);
 
   const contentType = headers.get("content-type") ?? "";
+  const isPublicDocument =
+    contentType.includes("text/html") ||
+    contentType.includes("application/xml") ||
+    contentType.includes("text/xml") ||
+    contentType.includes("text/plain");
   const cacheable =
     request.method === "GET" &&
     response.status >= 200 &&
     response.status < 400 &&
-    contentType.includes("text/html") &&
+    isPublicDocument &&
     !headers.has("set-cookie");
 
   if (cacheable && !headers.has("cache-control")) {
-    headers.set("Cache-Control", "public, max-age=0, s-maxage=300, stale-while-revalidate=86400");
+    headers.set("Cache-Control", EDGE_CACHE_CONTROL);
   }
 
   return new Response(response.body, {
